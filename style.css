@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}

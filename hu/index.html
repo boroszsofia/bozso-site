@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <title>Zsófi Boros Coaching</title>
+
+  <!-- Vercel Analytics -->
+  <script src="https://vercel.com/_vercel/insights/script.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f3f3;
+      color: darkslategray;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+
+      opacity: 0;
+      animation: textFade 1s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    .fade-text span {
+      opacity: 0;
+      display: inline-block;
+      animation: letterFade 0.8s ease forwards;
+    }
+
+    @keyframes letterFade {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes textFade {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="fade-text">hamarosan jön</h1>
+  <script>
+    const text = document.querySelector('.fade-text');
+    const letters = text.innerText.split('');
+    text.innerHTML = '';
+    letters.forEach((letter, i) => {
+      const span = document.createElement('span');
+      span.textContent = letter === ' ' ? '\u00A0' : letter;
+      span.style.animationDelay = `${i * 0.05}s`;
+      text.appendChild(span);
+    });
+  </script>
+</body>
+</html>
