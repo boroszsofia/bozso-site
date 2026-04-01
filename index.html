@@ -1,81 +1,546 @@
-
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zsófia Boros | Business Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-950: #0e1a14;
+            --green-900: #16261e;
+            --green-800: #21372c;
+            --green-700: #305040;
+            --green-600: #466c59;
+            --gray-100: #f1f3f1;
+            --gray-200: #e3e6e3;
+            --gray-300: #cdd3ce;
+            --gray-500: #6d756f;
+            --gray-700: #404741;
+            --white: #fbfcfb;
+            --ink: #1b221d;
+            --line: rgba(22, 38, 30, 0.12);
+            --card: rgba(251, 252, 251, 0.88);
+            --shadow: 0 18px 40px rgba(18, 29, 23, 0.08);
+            --shadow-strong: 0 24px 56px rgba(18, 29, 23, 0.18);
+            --container: min(1120px, calc(100vw - 28px));
+            --radius-xl: 18px;
+            --radius-lg: 14px;
+            --radius-md: 10px;
+            --radius-sm: 8px;
+        }
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <title>Zsófi Boros Coaching</title>
+        body {
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.7;
+            color: var(--gray-500);
+            background: 
+                radial-gradient(circle at top left, rgba(70,108,89,0.15), transparent 24%),
+                radial-gradient(circle at right top, rgba(109,117,111,0.14), transparent 24%),
+                linear-gradient(180deg, #f4f6f4 0%, #eef1ee 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-  <!-- Vercel Analytics -->
-  <script src="https://vercel.com/_vercel/insights/script.js"></script>
+        html {
+            scroll-behavior: smooth;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f3f3f3;
-      color: darkslategray;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--green-950);
+            letter-spacing: -0.02em;
+            font-weight: 600;
+        }
 
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
-    }
+        .container {
+            width: var(--container);
+            margin: 0 auto;
+        }
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: 0.5px;
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(251, 252, 251, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            z-index: 1000;
+        }
 
-      opacity: 0;
-      animation: textFade 1s ease forwards;
-      animation-delay: 0.4s;
-    }
+        .header-container {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    .fade-text span {
-      opacity: 0;
-      display: inline-block;
-      animation: letterFade 0.8s ease forwards;
-    }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    @keyframes letterFade {
-      to {
-        opacity: 1;
-      }
-    }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--green-950);
+            text-decoration: none;
+            white-space: nowrap;
+        }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
+        .nav-desktop {
+            display: none;
+            gap: 32px;
+        }
 
-    @keyframes textFade {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+        .nav-desktop a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .nav-desktop a:hover {
+            color: var(--green-700);
+        }
+
+        .button-sm {
+            padding: 10px 18px;
+            font-size: 0.8rem;
+        }
+
+        .cta-desktop {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--green-950);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--white);
+            padding: 0;
+        }
+
+        .mobile-menu.is-active {
+            display: block;
+        }
+
+        .nav-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .nav-mobile a {
+            text-decoration: none;
+            color: var(--green-950);
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            height: 72px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-mobile a:last-child {
+            border-bottom: none;
+        }
+
+        /* Hero Layout */
+        .hero {
+            padding: 100px 0 80px 0;
+            display: flex;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .menu-toggle { display: none; }
+            .nav-desktop { display: flex; }
+            .header-container { height: 84px; }
+            .hero { padding-top: calc(84px + 2rem); }
+            .mobile-menu { display: none !important; }
+            .cta-desktop { display: inline; }
+            .cta-mobile { display: none; }
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+            }
+        }
+
+        .section-kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--green-700);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            max-width: 540px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 16px 32px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid transparent;
+            line-height: 1.2;
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, var(--green-700), var(--green-900));
+            color: var(--white);
+            font-weight: 800;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+        }
+
+        .button-secondary {
+            background: rgba(255,255,255,0.7);
+            border: 1px solid var(--line);
+            color: var(--green-900);
+            font-weight: 800;
+            border-radius: var(--radius-sm);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+            aspect-ratio: 4/5;
+            background-color: var(--gray-200);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Reveal Animation */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: 0.7s ease;
+        }
+
+        [data-reveal].is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section Styles */
+        .about-section {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        @media (min-width: 1024px) {
+            .about-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+            }
+            .about-row.reverse {
+                direction: rtl;
+            }
+            .about-row.reverse > * {
+                direction: ltr;
+            }
+        }
+
+        .emphasis {
+            color: var(--green-800);
+            font-weight: 600;
+            font-size: 1.5rem;
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        .accordion {
+            border-top: 1px solid var(--line);
+            margin-top: 2rem;
+        }
+
+        .accordion summary {
+            font-weight: 800;
+            cursor: pointer;
+            list-style: none;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--green-900);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+        }
+
+        .accordion summary::after {
+            content: "+";
+            font-size: 1.4rem;
+            font-weight: 400;
+            transition: transform 0.2s ease;
+        }
+
+        .accordion[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            padding-bottom: 1.5rem;
+        }
+
+        .page-bg {
+            position: fixed;
+            filter: blur(32px);
+            opacity: 0.5;
+            border-radius: 999px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
-  <h1 class="fade-text">coming soon</h1>
-  <script>
-    const text = document.querySelector('.fade-text');
-    const letters = text.innerText.split('');
-    text.innerHTML = '';
-    letters.forEach((letter, i) => {
-      const span = document.createElement('span');
-      span.textContent = letter === ' ' ? '\u00A0' : letter;
-      span.style.animationDelay = `${i * 0.05}s`;
-      text.appendChild(span);
-    });
-  </script>
+    <div class="page-bg" style="top: -10%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.12;"></div>
+    <div class="page-bg" style="top: 25%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <a href="#" class="logo">Zsófia Boros</a>
+                </div>
+
+                <nav class="nav-desktop">
+                    <a href="#about">About</a>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Magyar</a>
+                </nav>
+
+                <div class="header-right">
+                    <a href="mailto:boros.zsofia@gmail.com?subject=Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary button-sm">
+                        <span class="cta-mobile">Book a Chat</span>
+                        <span class="cta-desktop">Book a Free Coffee Chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <nav class="nav-mobile">
+                    <a href="#about">About</a>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Magyar</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content" data-reveal>
+                    <span class="section-kicker">Business Coach | Brand & People Builder</span>
+                    <h1 class="hero-title">Zsófia Boros</h1>
+                    <p class="hero-description">
+                        I support you in a structured ICF coaching process, using my 10 years of international leadership experience and a sports mindset to partner with you in solving your challenges.
+                    </p>
+                    <div class="cta-group">
+                        <a href="mailto:boros.zsofia@gmail.com?subject=Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary">Book a Free Coffee Chat</a>
+                        <a href="#" class="button button-secondary">Learn more</a>
+                    </div>
+                </div>
+                <div class="hero-image-container" data-reveal>
+                    <div class="hero-image-wrapper">
+                        <img src="zsofia.jpg" alt="Zsófia Boros - Business Coach">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <!-- Subsection 1: Philosophy -->
+            <div class="about-row" data-reveal>
+                <div class="about-text">
+                    <span class="section-kicker">My Philosophy</span>
+                    <h2 class="hero-title" style="font-size: 3rem;">A Partnership for Growth</h2>
+                    <p>I believe in the power of coaching because I’ve seen and personally experienced how it can shift lives and careers from a standstill, providing fresh momentum and a new sense of direction.</p>
+                    <details class="accordion">
+                        <summary>The Coaching Framework</summary>
+                        <div class="accordion-content">
+                            <p>I guide you through a structured process within the framework of the ICF (International Coaching Federation). My practice is rooted in the latest international standards. You bring the topic; I bring the framework.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="introduction-talk.jpg" alt="Zsófia Boros Coaching">
+                </div>
+            </div>
+
+            <!-- Subsection 2: Corporate -->
+            <div class="about-row reverse" data-reveal>
+                <div class="about-text">
+                    <span class="section-kicker">Corporate Experience</span>
+                    <h2 class="hero-title" style="font-size: 3rem;">I Understand the Corporate World</h2>
+                    <p>I don’t just understand the corporate world—I lived it. I bring over 10 years of international experience, most recently as a Marketing Director at Procter & Gamble.</p>
+                    <span class="emphasis">"Been there, done that."</span>
+                    <details class="accordion">
+                        <summary>Leadership & Resilience</summary>
+                        <div class="accordion-content">
+                            <p>I have personally experienced the weight of executive expectations and the risk of burnout. I learned how to keep a team motivated even under the highest pressure, experience I now use to support you.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="introduction-present.jpg" alt="Zsófia Boros Business Experience">
+                </div>
+            </div>
+
+            <!-- Subsection 3: Sports -->
+            <div class="about-row" data-reveal>
+                <div class="about-text">
+                    <span class="section-kicker">Sport Mindset</span>
+                    <h2 class="hero-title" style="font-size: 3rem;">The Athlete’s Edge</h2>
+                    <p>Following 13 years of competitive handball, I continue to look for new challenges. Sports build an inner strength and mindset that translate perfectly from the pitch to the business world.</p>
+                    <details class="accordion">
+                        <summary>Mental Coaching in Sport</summary>
+                        <div class="accordion-content">
+                            <p>I am expanding my expertise in sports mental coaching to complement my business background. Maintaining sharp focus and navigating failure are vital roles in any coaching process.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="introduction-sport.jpg" alt="Zsófia Boros Sports Mindset">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // Toggle mobile menu
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (mobileMenu.classList.contains('is-active')) {
+                    mobileMenu.classList.remove('is-active');
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-reveal]').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
