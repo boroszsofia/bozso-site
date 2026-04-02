@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zsófia Boros | Business Coach</title>
+    <link rel="icon" type="image/png" href="sun.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
@@ -36,6 +37,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -291,7 +293,7 @@
             transform: translateY(0);
         }
 
-        /* About Section Styles */
+        /* About Me Section Styles */
         .about-section {
             padding: 100px 0;
             background: var(--white);
@@ -391,15 +393,15 @@
                 </div>
 
                 <nav class="nav-desktop">
-                    <a href="#about">About</a>
+                    <a href="#about">About Me</a>
                     <a href="#coaching">Coaching</a>
-                    <a href="#testimonials">Testimonials</a>
+                    <a href="#endorsement">Endorsement</a>
                     <a href="#contact">Contact</a>
                     <a href="#">Magyar</a>
                 </nav>
 
                 <div class="header-right">
-                    <a href="mailto:boros.zsofia@gmail.com?subject=Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary button-sm">
+                    <a href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary button-sm">
                         <span class="cta-mobile">Book a Chat</span>
                         <span class="cta-desktop">Book a Free Coffee Chat</span>
                     </a>
@@ -409,9 +411,9 @@
         <div class="mobile-menu" id="mobileMenu">
             <div class="container">
                 <nav class="nav-mobile">
-                    <a href="#about">About</a>
+                    <a href="#about">About Me</a>
                     <a href="#coaching">Coaching</a>
-                    <a href="#testimonials">Testimonials</a>
+                    <a href="#endorsement">Endorsement</a>
                     <a href="#contact">Contact</a>
                     <a href="#">Magyar</a>
                 </nav>
@@ -429,7 +431,7 @@
                         I support you in a structured ICF coaching process, using my 10 years of international leadership experience and a sports mindset to partner with you in solving your challenges.
                     </p>
                     <div class="cta-group">
-                        <a href="mailto:boros.zsofia@gmail.com?subject=Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary">Book a Free Coffee Chat</a>
+                        <a href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary">Book a Free Coffee Chat</a>
                         <a href="#about" class="button button-secondary">Learn more</a>
                     </div>
                 </div>
@@ -508,6 +510,16 @@
         // Toggle mobile menu
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('is-active');
+        });
+
+        // Close mobile menu when clicking outside the header
+        document.addEventListener('click', (event) => {
+            const header = document.querySelector('.header');
+            const isClickInside = header.contains(event.target);
+
+            if (!isClickInside && mobileMenu.classList.contains('is-active')) {
+                mobileMenu.classList.remove('is-active');
+            }
         });
 
         // Smooth scroll for navigation links
