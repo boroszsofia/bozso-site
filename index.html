@@ -51,6 +51,7 @@
                 linear-gradient(180deg, #f4f6f4 0%, #eef1ee 100%);
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
 
         html {
@@ -102,6 +103,15 @@
             color: var(--green-950);
             text-decoration: none;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            height: 24px;
+            width: auto;
+            display: none;
         }
 
         .nav-desktop {
@@ -206,6 +216,7 @@
             .mobile-menu { display: none !important; }
             .cta-desktop { display: inline; }
             .cta-mobile { display: none; }
+            .logo-icon { display: block; }
             .hero-grid {
                 grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
             }
@@ -304,8 +315,8 @@
 
         @media (min-width: 1024px) {
             .about-row {
-                grid-template-columns: 1fr 1fr;
-                gap: 80px;
+                grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+                gap: 50px;
             }
             .about-row.reverse {
                 direction: rtl;
@@ -360,7 +371,7 @@
         }
 
         .page-bg {
-            position: fixed;
+            position: absolute;
             filter: blur(32px);
             opacity: 0.5;
             border-radius: 999px;
@@ -455,11 +466,227 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+
+        /* Endorsement Section Styles */
+        .endorsement-section {
+            padding: 100px 0;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .endorsement-carousel {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 64px 24px;
+            margin: 0 -24px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+            -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+            mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+        }
+
+        .endorsement-carousel::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .endorsement-card {
+            flex: 0 0 calc(100% - 40px);
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .endorsement-card:hover {
+            box-shadow: var(--shadow-strong);
+        }
+
+        @media (min-width: 768px) {
+            .endorsement-card {
+                flex: 0 0 500px;
+            }
+        }
+
+        .endorsement-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .endorsement-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gray-200);
+        }
+
+        .endorsement-info h4 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.1rem;
+            color: var(--green-950);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .endorsement-info p {
+            font-size: 0.85rem;
+            color: var(--green-700);
+            font-weight: 500;
+        }
+
+        .endorsement-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+            font-style: italic;
+            position: relative;
+        }
+
+        .endorsement-text::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--gray-200);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: -1;
+        }
+
+        /* Carousel Controls */
+        .carousel-nav {
+            display: none;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: -60px; /* Pulls it up level with the title area */
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-nav { display: flex; }
+        }
+
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: var(--white);
+            color: var(--green-950);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: var(--gray-100);
+            border-color: var(--gray-300);
+        }
+
+        .nav-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            border: 1px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--green-600);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon-box {
+            width: 52px;
+            height: 52px;
+            background: var(--gray-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green-700);
+            flex-shrink: 0;
+        }
+
+        .contact-icon-box svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--green-700);
+            font-weight: 800;
+        }
+
+        .contact-value {
+            font-size: 1rem;
+            color: var(--green-950);
+            font-weight: 500;
+        }
+
+        .footer {
+            padding: 60px 0;
+            background: var(--white);
+            text-align: center;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
     </style>
 </head>
 <body>
-    <div class="page-bg" style="top: -10%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.12;"></div>
-    <div class="page-bg" style="top: 25%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
+    <div class="page-bg" style="top: 0%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.15;"></div>
+    <div class="page-bg" style="top: 15%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
+    <div class="page-bg" style="top: 35%; left: -15%; width: 50vw; height: 50vw; background: var(--gray-200); opacity: 0.15;"></div>
+    <div class="page-bg" style="top: 55%; right: -10%; width: 45vw; height: 45vw; background: var(--green-700); opacity: 0.1;"></div>
+    <div class="page-bg" style="top: 75%; left: -5%; width: 40vw; height: 40vw; background: var(--gray-300); opacity: 0.12;"></div>
+    <div class="page-bg" style="top: 90%; right: 5%; width: 50vw; height: 35vw; background: var(--green-600); opacity: 0.11;"></div>
 
     <header class="header">
         <div class="container">
@@ -470,7 +697,10 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <a href="#" class="logo">Zsófia Boros</a>
+                    <a href="#" class="logo">
+                        <img src="pics/sun.png" alt="" class="logo-icon">
+                        Zsófia Boros
+                    </a>
                 </div>
 
                 <nav class="nav-desktop">
@@ -672,6 +902,120 @@
         </div>
     </section>
 
+    <section id="endorsement" class="endorsement-section">
+        <div class="container">
+            <span class="section-kicker">Testimonials</span>
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 0;">Client Endorsements</h2>
+            <p style="text-align: center; font-size: 0.8rem; color: var(--gray-500); margin: 40px 0 0 0;" class="cta-mobile">
+                ← Swipe to read more →
+            </p>
+
+            <div class="carousel-nav">
+                <button class="nav-btn" id="prevBtn" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </button>
+                <button class="nav-btn" id="nextBtn" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </div>
+            
+            <div class="endorsement-carousel">
+                <!-- Emese -->
+                <div class="endorsement-card">
+                    <div class="endorsement-header">
+                        <img src="pics/emese.jpg" alt="Emese" class="endorsement-img">
+                        <div class="endorsement-info">
+                            <h4>Emese</h4>
+                            <p>Sales Executive Director - FLP Hungary</p>
+                        </div>
+                    </div>
+                    <p class="endorsement-text">
+                        I had the opportunity to work with Zsófi in an Executive Business Coaching series as I was stepping into a new leadership role. Zsófi didn’t offer tools—she created strategic clarity. Together we explored the leadership attitude and decision patterns that are truly mine. Her reflections helped me separate role expectations from my authentic identity, allowing me to step into my new position with confidence. I highly recommend her to leaders seeking clear self-alignment and a stable presence.
+                    </p>
+                </div>
+
+                <!-- Ferenc -->
+                <div class="endorsement-card">
+                    <div class="endorsement-header">
+                        <img src="pics/ferenc.png" alt="Ferenc" class="endorsement-img">
+                        <div class="endorsement-info">
+                            <h4>Ferenc</h4>
+                            <p>Professional Poker Player & Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="endorsement-text">
+                        I’ve worked with several coaches before, so I had a basis for comparison. With Zsófi, it was the first time I felt someone is truly present and pours real energy into the process, rather than just 'going through the motions.' Her questions often lead me in directions I wouldn't have reached on my own, and I’ve noticed the impact of our conversations in my daily life. What’s also unique is how intense and focused each session is—time just flies by.
+                    </p>
+                </div>
+
+                <!-- Dávid -->
+                <div class="endorsement-card">
+                    <div class="endorsement-header">
+                        <img src="pics/david.jpg" alt="Dávid" class="endorsement-img">
+                        <div class="endorsement-info">
+                            <h4>Dávid</h4>
+                            <p>Senior Supply Planner - Vodafone</p>
+                        </div>
+                    </div>
+                    <p class="endorsement-text">
+                        When I reached out to Zsófi, I felt I was completely pushing my own needs aside, with my goals ending up at the very bottom of my priority list. The most vital breakthrough during our work together was realizing the importance of setting healthy boundaries: I learned how to say no without guilt. The biggest shift is that I am finally moving toward my goals, gaining a huge boost in self-confidence along the way. I make decisions more boldly now.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <span class="section-kicker">Get in Touch</span>
+            <h2 class="hero-title" style="font-size: 3rem;">Let's Start a Conversation</h2>
+            
+            <div style="margin-bottom: 3rem;">
+                <a href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="button button-primary">
+                    Book a Free Coffee Chat
+                </a>
+            </div>
+            
+            <div class="contact-grid">
+                <a href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%20would%20like%20to%20learn%20more%20about%20your%20coaching%20process%20and%20book%20a%20free%20coffee%20chat.%0D%0A%0D%0ABest%20regards%2C" class="contact-card">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">boros.zsofia@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="tel:+36206611198" class="contact-card">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+36 20 661 1198</span>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/zsofia-boros" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">zsofia-boros</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Zsófia Boros. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -706,6 +1050,104 @@
                 }
             });
         });
+
+        // Infinite Carousel Logic
+        const carousel = document.querySelector('.endorsement-carousel');
+        if (carousel) {
+            const originalCards = Array.from(carousel.querySelectorAll('.endorsement-card'));
+            const baseCardCount = originalCards.length; // Should be 3 unique cards
+
+            if (baseCardCount > 0) {
+                // Store the original HTML content to re-insert after cloning
+                const originalHTML = carousel.innerHTML;
+
+                // Clear the carousel to build the new structure
+                carousel.innerHTML = '';
+
+                // 1. Prepend clones of the last `baseCardCount` cards
+                for (let i = baseCardCount - 1; i >= 0; i--) {
+                    carousel.prepend(originalCards[i].cloneNode(true));
+                }
+
+                // 2. Add the original cards
+                carousel.insertAdjacentHTML('beforeend', originalHTML);
+
+                // 3. Append clones of the first `baseCardCount` cards
+                for (let i = 0; i < baseCardCount; i++) {
+                    carousel.appendChild(originalCards[i].cloneNode(true));
+                }
+
+                // Now the carousel has the structure: [cloned_last_N, original_N, cloned_first_N]
+                // The original cards start at index `baseCardCount`.
+
+                let isJumping = false;
+                let initialScrollPosition = 0;
+                let stride = 0;
+
+                const updateDimensions = () => {
+                    // Force re-calculation of offsets based on current layout
+                    const firstOriginal = carousel.children[baseCardCount];
+                    const secondOriginal = carousel.children[baseCardCount + 1];
+                    
+                    // Calculate actual distance between card centers
+                    stride = secondOriginal.offsetLeft - firstOriginal.offsetLeft;
+                    // Calculate the scroll position required to center the first original card
+                    initialScrollPosition = firstOriginal.offsetLeft - (carousel.offsetWidth / 2) + (firstOriginal.offsetWidth / 2);
+                };
+
+                // Initialize dimensions and starting position
+                updateDimensions();
+                carousel.scrollTo({ left: initialScrollPosition, behavior: 'auto' });
+
+                // Recalculate on resize to prevent breaking the loop
+                window.addEventListener('resize', updateDimensions);
+
+                carousel.addEventListener('scroll', () => {
+                    if (isJumping) return;
+
+                    const scrollLeft = carousel.scrollLeft;
+                    const totalStride = baseCardCount * stride;
+
+                    // Teleport when we've scrolled one full set past the center
+                    // A 10px threshold handles sub-pixel rounding errors
+                    if (scrollLeft >= initialScrollPosition + totalStride - 10) {
+                        isJumping = true;
+                        carousel.style.scrollSnapType = 'none';
+                        carousel.scrollLeft = scrollLeft - totalStride;
+                        setTimeout(() => {
+                            carousel.style.scrollSnapType = 'x mandatory';
+                            isJumping = false;
+                        }, 50);
+                    } else if (scrollLeft <= initialScrollPosition - totalStride + 10) {
+                        isJumping = true;
+                        carousel.style.scrollSnapType = 'none';
+                        carousel.scrollLeft = scrollLeft + totalStride;
+                        setTimeout(() => {
+                            carousel.style.scrollSnapType = 'x mandatory';
+                            isJumping = false;
+                        }, 50);
+                    }
+                });
+
+                // Button Navigation
+                const nextBtn = document.getElementById('nextBtn');
+                const prevBtn = document.getElementById('prevBtn');
+
+                nextBtn.addEventListener('click', () => {
+                    carousel.scrollBy({ left: stride, behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    carousel.scrollBy({ left: -stride, behavior: 'smooth' });
+                });
+
+                // Keyboard Navigation
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') nextBtn.click();
+                    if (e.key === 'ArrowLeft') prevBtn.click();
+                });
+            }
+        }
     </script>
 </body>
 </html>
