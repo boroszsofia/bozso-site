@@ -55,6 +55,7 @@
         }
 
         html {
+            overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
@@ -379,6 +380,17 @@
             pointer-events: none;
         }
 
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
         /* Coaching Section Styles */
         .coaching-section {
             padding: 100px 0;
@@ -681,12 +693,14 @@
     </style>
 </head>
 <body>
-    <div class="page-bg" style="top: 0%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.15;"></div>
-    <div class="page-bg" style="top: 15%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
-    <div class="page-bg" style="top: 35%; left: -15%; width: 50vw; height: 50vw; background: var(--gray-200); opacity: 0.15;"></div>
-    <div class="page-bg" style="top: 55%; right: -10%; width: 45vw; height: 45vw; background: var(--green-700); opacity: 0.1;"></div>
-    <div class="page-bg" style="top: 75%; left: -5%; width: 40vw; height: 40vw; background: var(--gray-300); opacity: 0.12;"></div>
-    <div class="page-bg" style="top: 90%; right: 5%; width: 35vw; height: 35vw; background: var(--green-600); opacity: 0.11;"></div>
+    <div class="bg-container">
+        <div class="page-bg" style="top: 0%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.15;"></div>
+        <div class="page-bg" style="top: 15%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
+        <div class="page-bg" style="top: 35%; left: -15%; width: 50vw; height: 50vw; background: var(--gray-200); opacity: 0.15;"></div>
+        <div class="page-bg" style="top: 55%; right: -10%; width: 45vw; height: 45vw; background: var(--green-700); opacity: 0.1;"></div>
+        <div class="page-bg" style="top: 75%; left: -5%; width: 40vw; height: 40vw; background: var(--gray-300); opacity: 0.12;"></div>
+        <div class="page-bg" style="top: 90%; right: 5%; width: 35vw; height: 35vw; background: var(--green-600); opacity: 0.11;"></div>
+    </div>
 
     <header class="header">
         <div class="container">
@@ -761,7 +775,7 @@
             <div class="about-row" data-reveal>
                 <div class="about-text">
                     <span class="section-kicker">My Philosophy</span>
-                    <h2 class="hero-title" style="font-size: 3rem;">A Partnership for Growth</h2>
+                    <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">A Partnership for Growth</h2>
                     <p>I believe in the power of coaching because I’ve seen and personally experienced how it can shift lives and careers from a standstill, providing fresh momentum and a new sense of direction.</p>
                     <details class="accordion">
                         <summary>The Coaching Framework</summary>
@@ -779,7 +793,7 @@
             <div class="about-row reverse" data-reveal>
                 <div class="about-text">
                     <span class="section-kicker">Corporate Experience</span>
-                    <h2 class="hero-title" style="font-size: 3rem;">I Understand the Corporate World</h2>
+                    <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">I Understand the Corporate World</h2>
                     <p>I don’t just understand the corporate world—I lived it. I bring over 10 years of international experience, most recently as a Marketing Director at Procter & Gamble.</p>
                     <span class="emphasis">"Been there, done that."</span>
                     <details class="accordion">
@@ -798,7 +812,7 @@
             <div class="about-row" data-reveal>
                 <div class="about-text">
                     <span class="section-kicker">Sport Mindset</span>
-                    <h2 class="hero-title" style="font-size: 3rem;">The Athlete’s Edge</h2>
+                    <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">The Athlete’s Edge</h2>
                     <p>Following 13 years of competitive handball, I continue to look for new challenges. Sports build an inner strength and mindset that translate perfectly from the pitch to the business world.</p>
                     <details class="accordion">
                         <summary>Mental Coaching in Sport</summary>
