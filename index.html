@@ -282,18 +282,6 @@
             display: block;
         }
 
-        /* Reveal Animation */
-        [data-reveal] {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: 0.7s ease;
-        }
-
-        [data-reveal].is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         /* About Me Section Styles */
         .about-section {
             padding: 100px 0;
@@ -308,6 +296,10 @@
             gap: 40px;
             align-items: center;
             margin-bottom: 100px;
+        }
+
+        .about-row:last-child {
+            margin-bottom: 0;
         }
 
         @media (min-width: 1024px) {
@@ -375,6 +367,94 @@
             z-index: -1;
             pointer-events: none;
         }
+
+        /* Coaching Section Styles */
+        .coaching-section {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+
+        .coaching-intro {
+            max-width: 800px;
+            margin-bottom: 32px;
+        }
+
+        .distinction-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .distinction-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .distinction-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--green-600);
+        }
+
+        .distinction-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .scenario-card {
+            background: var(--card);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            border-color: var(--green-600);
+            box-shadow: var(--shadow);
+        }
+
+        .scenario-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--green-700);
+            margin-bottom: 24px;
+        }
+
+        .process-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 32px;
+            padding: 40px;
+            background: var(--green-950);
+            color: var(--gray-300);
+            border-radius: var(--radius-xl);
+        }
+
+        .process-item h4 {
+            color: var(--white);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .process-item p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -416,7 +496,7 @@
                     <a href="#coaching">Coaching</a>
                     <a href="#endorsement">Endorsement</a>
                     <a href="#contact">Contact</a>
-                    <a href="#">Magyar</a>
+                    <a href="/hu">Magyar</a>
                 </nav>
             </div>
         </div>
@@ -504,6 +584,94 @@
         </div>
     </section>
 
+    <section id="coaching" class="coaching-section">
+        <div class="container">
+            <div class="coaching-intro">
+                <span class="section-kicker">The Methodology</span>
+                <h2 class="hero-title" style="font-size: 3rem;">What is Coaching?</h2>
+                <p>For me, coaching is a <strong>creative partnership</strong>. It is a thought-provoking process centered on self-awareness: we identify your inner resources and opportunities so you can move forward with greater authenticity—whether in your career or your personal life.</p>
+                <details class="accordion">
+                    <summary>No instant solutions</summary>
+                    <div class="accordion-content">
+                        <p>I don’t provide ready-made solutions, because you hold the best answers to your own business and life situations. My role is to guide you with the right questions and a structured mindset to help you find your own, most confident path.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="distinction-grid">
+                <div class="distinction-card">
+                    <h3>It’s not Consulting</h3>
+                    <p>I don’t tell you what to do; I empower you to make your own best decisions.</p>
+                </div>
+                <div class="distinction-card">
+                    <h3>It’s not Therapy</h3>
+                    <p>We don’t analyze the past; we focus on the present, your goals, and concrete actions.</p>
+                </div>
+            </div>
+
+            <span class="section-kicker">Support Scenarios</span>
+            <h2 class="hero-title" style="font-size: 2.5rem;">How can I support you?</h2>
+            <p style="margin-bottom: 40px;">Coaching is most effective when you want to level up or facing a transition.</p>
+
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Leadership Challenges</h3>
+                    <p style="font-size: 0.95rem;">New roles, promotions, or overcoming "executive loneliness" through structured thinking.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Efficiency & Focus</h3>
+                    <p style="font-size: 0.95rem;">Moving from operational hurdles toward strategic vision and conscious boundary setting.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Change & Stress</h3>
+                    <p style="font-size: 0.95rem;">Career pivots, returning to work after a break, or active burnout prevention.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Finding Direction</h3>
+                    <p style="font-size: 0.95rem;">Consciously building your next chapter instead of just drifting with the current.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Whatever is on your mind</h3>
+                    <p style="font-size: 0.95rem;">If you feel stuck RIGHT NOW and need a structured, collaborative thinking process.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 80px;">
+                <span class="section-kicker">The Process</span>
+                <h2 class="hero-title" style="font-size: 3rem;">How do we work together?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px;">An action- and results-oriented journey focused entirely on you.</p>
+            </div>
+
+            <div class="process-info">
+                <div class="process-item">
+                    <h4>Duration</h4>
+                    <p>Typically 5–8 sessions for meaningful change.</p>
+                </div>
+                <div class="process-item">
+                    <h4>Sessions</h4>
+                    <p>50 minutes per session,<br>every 1–3 weeks.</p>
+                </div>
+                <div class="process-item">
+                    <h4>Location</h4>
+                    <p>Online or in person sessions based in Budapest.</p>
+                </div>
+                <div class="process-item">
+                    <h4>Session 0</h4>
+                    <p>Free 30-minute online call to define the framework.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -537,22 +705,6 @@
                     mobileMenu.classList.remove('is-active');
                 }
             });
-        });
-
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('[data-reveal]').forEach((el) => {
-            observer.observe(el);
         });
     </script>
 </body>
