@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "zsofiaboros.hu"
+        }
+      ],
+      "destination": "https://zsofiaboros.coach/hu",
+      "permanent": true
+    }
+  ]
+}
