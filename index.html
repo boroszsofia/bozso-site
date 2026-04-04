@@ -34,6 +34,34 @@
             --radius-sm: 8px;
         }
 
+        /* Theme Definitions */
+        body.theme-green {
+            --green-950: #0e1a14;
+            --green-900: #16261e;
+            --green-800: #21372c;
+            --green-700: #305040;
+            --green-600: #466c59;
+            --accent-rgb: 70, 108, 89;
+        }
+
+        body.theme-brown {
+            --green-950: #1a120e;
+            --green-900: #261c16;
+            --green-800: #372821;
+            --green-700: #503c30;
+            --green-600: #6c5446;
+            --accent-rgb: 108, 84, 70;
+        }
+
+        body.theme-indianred {
+            --green-950: #1a0e0e;
+            --green-900: #261616;
+            --green-800: #372121;
+            --green-700: #503030;
+            --green-600: #cd5c5c;
+            --accent-rgb: 205, 92, 92;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -46,12 +74,13 @@
             line-height: 1.7;
             color: var(--gray-500);
             background: 
-                radial-gradient(circle at top left, rgba(70,108,89,0.15), transparent 24%),
+                radial-gradient(circle at top left, rgba(var(--accent-rgb), 0.15), transparent 24%),
                 radial-gradient(circle at right top, rgba(109,117,111,0.14), transparent 24%),
                 linear-gradient(180deg, #f4f6f4 0%, #eef1ee 100%);
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
+            transition: background 0.5s ease;
         }
 
         html {
@@ -257,12 +286,11 @@
             font-size: 0.9rem;
             display: inline-block;
             text-align: center;
-            border: 1px solid transparent;
             line-height: 1.2;
         }
 
         .button-primary {
-            background: linear-gradient(135deg, var(--green-700), var(--green-900));
+            background: linear-gradient(135deg, var(--green-600), var(--green-900));
             color: var(--white);
             font-weight: 800;
             border-radius: var(--radius-sm);
@@ -692,7 +720,7 @@
         }
     </style>
 </head>
-<body>
+<body class="theme-green">
     <div class="bg-container">
         <div class="page-bg" style="top: 0%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.15;"></div>
         <div class="page-bg" style="top: 15%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
@@ -1162,6 +1190,20 @@
                 });
             }
         }
+
+        // Theme Rotation Mechanism
+        const themes = ['theme-green', 'theme-brown', 'theme-indianred'];
+        let currentThemeIndex = 0;
+
+        window.addEventListener('keydown', (e) => {
+            // Check for Space key and ensure user isn't typing in an input (if any were added)
+            if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault(); // Prevent page scrolling
+                document.body.classList.remove(themes[currentThemeIndex]);
+                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+                document.body.classList.add(themes[currentThemeIndex]);
+            }
+        });
     </script>
 </body>
 </html>
