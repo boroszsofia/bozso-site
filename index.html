@@ -44,22 +44,13 @@
             --accent-rgb: 70, 108, 89;
         }
 
-        body.theme-brown {
-            --green-950: #1a120e;
-            --green-900: #261c16;
-            --green-800: #372821;
-            --green-700: #503c30;
-            --green-600: #6c5446;
-            --accent-rgb: 108, 84, 70;
-        }
-
-        body.theme-indianred {
-            --green-950: #1a0e0e;
-            --green-900: #261616;
-            --green-800: #372121;
-            --green-700: #503030;
-            --green-600: #cd5c5c;
-            --accent-rgb: 205, 92, 92;
+        body.theme-ochre {
+            --green-950: #1a1408;
+            --green-900: #261e0b;
+            --green-800: #372b10;
+            --green-700: #503f17;
+            --green-600: #b8860b;
+            --accent-rgb: 184, 134, 11;
         }
 
         * {
@@ -290,7 +281,7 @@
         }
 
         .button-primary {
-            background: linear-gradient(135deg, var(--green-600), var(--green-900));
+            background: linear-gradient(135deg, var(--green-600), var(--green-700));
             color: var(--white);
             font-weight: 800;
             border-radius: var(--radius-sm);
@@ -1192,7 +1183,7 @@
         }
 
         // Theme Rotation Mechanism
-        const themes = ['theme-green', 'theme-brown', 'theme-indianred'];
+        const themes = ['theme-green', 'theme-ochre'];
         let currentThemeIndex = 0;
 
         window.addEventListener('keydown', (e) => {
