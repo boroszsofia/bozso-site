@@ -1,82 +1,1216 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zsófia Boros | Business Coach</title>
-  <link rel="icon" type="image/png" href="pics/sun.png">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boros Zsófia | Business Coach</title>
+    <meta name="description" content="ICF minősített Business Coach 10+ év nemzetközi vezetői tapasztalattal. Támogatás az önismeret és a gyakorlati tapasztalat erejével.">
+    <meta property="og:title" content="Boros Zsófia | Business Coach">
+    <meta property="og:description" content="ICF minősített Business Coach 10+ év nemzetközi vezetői tapasztalattal. Támogatás az önismeret és a gyakorlati tapasztalat erejével.">
+    <meta property="og:image" content="https://zsofiaboros.coach/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zsofiaboros.coach/">
+    <meta property="og:site_name" content="Zsófia Boros Coaching">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boros Zsófia | Business Coach">
+    <meta name="twitter:description" content="ICF minősített Business Coach 10+ év nemzetközi vezetői tapasztalattal.">
+    <meta name="twitter:image" content="https://zsofiaboros.coach/preview.png">
+    <meta name="msapplication-TileImage" content="../pics/sun.png">
+    <link rel="canonical" href="https://zsofiaboros.coach/">
+    <link rel="icon" type="image/png" href="../pics/sun.png">
+    <link rel="apple-touch-icon" href="../pics/sun.png">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;800&display=swap" rel="stylesheet">
+    <script src="https://vercel.com/_vercel/insights/script.js"></script>
+    <style>
+        :root {
+            --green-950: #0e1a14;
+            --green-900: #16261e;
+            --green-800: #21372c;
+            --green-700: #305040;
+            --green-600: #466c59;
+            --gray-100: #f1f3f1;
+            --gray-200: #e3e6e3;
+            --gray-300: #cdd3ce;
+            --gray-500: #6d756f;
+            --gray-700: #404741;
+            --white: #fbfcfb;
+            --ink: #1b221d;
+            --line: rgba(22, 38, 30, 0.12);
+            --card: rgba(251, 252, 251, 0.88);
+            --shadow: 0 18px 40px rgba(18, 29, 23, 0.08);
+            --shadow-strong: 0 24px 56px rgba(18, 29, 23, 0.18);
+            --container: min(1120px, calc(100vw - 28px));
+            --radius-xl: 18px;
+            --radius-lg: 14px;
+            --radius-md: 10px;
+            --radius-sm: 8px;
+        }
 
-  <title>Zsófi Boros Coaching</title>
+        /* Theme Definitions */
+        body.theme-green {
+            --green-950: #0e1a14;
+            --green-900: #16261e;
+            --green-800: #21372c;
+            --green-700: #305040;
+            --green-600: #466c59;
+            --accent-rgb: 70, 108, 89;
+        }
 
-  <!-- Vercel Analytics -->
-  <script src="https://vercel.com/_vercel/insights/script.js"></script>
+        body.theme-ochre {
+            --green-950: #1a1408;
+            --green-900: #261e0b;
+            --green-800: #372b10;
+            --green-700: #503f17;
+            --green-600: #b8860b;
+            --accent-rgb: 184, 134, 11;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f3f3f3;
-      color: darkslategray;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
-    }
+        body {
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.7;
+            color: var(--gray-500);
+            background: 
+                radial-gradient(circle at top left, rgba(var(--accent-rgb), 0.15), transparent 24%),
+                radial-gradient(circle at right top, rgba(109,117,111,0.14), transparent 24%),
+                linear-gradient(180deg, #f4f6f4 0%, #eef1ee 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            transition: background 0.5s ease;
+        }
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: 0.5px;
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-      opacity: 0;
-      animation: textFade 1s ease forwards;
-      animation-delay: 0.4s;
-    }
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--green-950);
+            letter-spacing: -0.02em;
+            font-weight: 600;
+        }
 
-    .fade-text span {
-      opacity: 0;
-      display: inline-block;
-      animation: letterFade 0.8s ease forwards;
-    }
+        .container {
+            width: var(--container);
+            margin: 0 auto;
+        }
 
-    @keyframes letterFade {
-      to {
-        opacity: 1;
-      }
-    }
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(251, 252, 251, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            z-index: 1000;
+        }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
+        .header-container {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    @keyframes textFade {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--green-950);
+            text-decoration: none;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            height: 24px;
+            width: auto;
+            display: none;
+        }
+
+        .nav-desktop {
+            display: none;
+            gap: 32px;
+        }
+
+        .nav-desktop a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+        }
+
+        .nav-desktop a:hover {
+            color: var(--green-700);
+        }
+
+        .button-sm {
+            padding: 10px 18px;
+            font-size: 0.8rem;
+        }
+
+        .cta-desktop {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--green-950);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: var(--white);
+            padding: 0;
+        }
+
+        .mobile-menu.is-active {
+            display: block;
+        }
+
+        .nav-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .nav-mobile a {
+            text-decoration: none;
+            color: var(--green-950);
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            height: 72px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-mobile a:last-child {
+            border-bottom: none;
+        }
+
+        /* Hero Layout */
+        .hero {
+            padding: 100px 0 80px 0;
+            display: flex;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .menu-toggle { display: none; }
+            .nav-desktop { display: flex; }
+            .header-container { height: 84px; }
+            .hero { padding-top: calc(84px + 2rem); }
+            .mobile-menu { display: none !important; }
+            .cta-desktop { display: inline; }
+            .cta-mobile { display: none; }
+            .logo-icon { display: block; }
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+            }
+        }
+
+        .section-kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--green-700);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            max-width: 540px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 16px 32px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, var(--green-600), var(--green-700));
+            color: var(--white);
+            font-weight: 800;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow);
+        }
+
+        .button-secondary {
+            background: rgba(255,255,255,0.7);
+            border: 1px solid var(--line);
+            color: var(--green-900);
+            font-weight: 800;
+            border-radius: var(--radius-sm);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+            aspect-ratio: 4/5;
+            background-color: var(--gray-200);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* About Me Section Styles */
+        .about-section {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .about-row:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 1024px) {
+            .about-row {
+                grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+                gap: 50px;
+            }
+            .about-row.reverse {
+                direction: rtl;
+            }
+            .about-row.reverse > * {
+                direction: ltr;
+            }
+        }
+
+        .emphasis {
+            color: var(--green-800);
+            font-weight: 600;
+            font-size: 1.5rem;
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        .accordion {
+            border-top: 1px solid var(--line);
+            margin-top: 2rem;
+        }
+
+        .accordion summary {
+            font-weight: 800;
+            cursor: pointer;
+            list-style: none;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--green-900);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+        }
+
+        .accordion summary::after {
+            content: "+";
+            font-size: 1.4rem;
+            font-weight: 400;
+            transition: transform 0.2s ease;
+        }
+
+        .accordion[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            padding-bottom: 1.5rem;
+        }
+
+        .page-bg {
+            position: absolute;
+            filter: blur(32px);
+            opacity: 0.5;
+            border-radius: 999px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Coaching Section Styles */
+        .coaching-section {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+
+        .coaching-intro {
+            max-width: 800px;
+            margin-bottom: 32px;
+        }
+
+        .distinction-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .distinction-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .distinction-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--green-600);
+        }
+
+        .distinction-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .scenario-card {
+            background: var(--card);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            border-color: var(--green-600);
+            box-shadow: var(--shadow);
+        }
+
+        .scenario-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--green-700);
+            margin-bottom: 24px;
+        }
+
+        .process-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 32px;
+            padding: 40px;
+            background: var(--green-950);
+            color: var(--gray-300);
+            border-radius: var(--radius-xl);
+        }
+
+        .process-item h4 {
+            color: var(--white);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .process-item p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Endorsement Section Styles */
+        .endorsement-section {
+            padding: 100px 0 30px;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .endorsement-carousel {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 40px 24px 80px;
+            margin: 0 -24px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+            -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+            mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+        }
+
+        .endorsement-carousel::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .endorsement-card {
+            flex: 0 0 calc(100% - 40px);
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .endorsement-card:hover {
+            box-shadow: var(--shadow-strong);
+        }
+
+        @media (min-width: 768px) {
+            .endorsement-card {
+                flex: 0 0 500px;
+            }
+        }
+
+        .endorsement-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .endorsement-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gray-200);
+        }
+
+        .endorsement-info h4 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.1rem;
+            color: var(--green-950);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .endorsement-info p {
+            font-size: 0.85rem;
+            color: var(--green-700);
+            font-weight: 500;
+        }
+
+        .endorsement-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+            font-style: italic;
+            position: relative;
+        }
+
+        .endorsement-text::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--gray-200);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: -1;
+        }
+
+        /* Carousel Controls */
+        .carousel-nav {
+            display: none;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: -60px; /* Pulls it up level with the title area */
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-nav { display: flex; }
+        }
+
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--line);
+            background: var(--white);
+            color: var(--green-950);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: var(--gray-100);
+            border-color: var(--gray-300);
+        }
+
+        .nav-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            border: 1px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--green-600);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon-box {
+            width: 52px;
+            height: 52px;
+            background: var(--gray-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green-700);
+            flex-shrink: 0;
+        }
+
+        .contact-icon-box svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--green-700);
+            font-weight: 800;
+        }
+
+        .contact-value {
+            font-size: 1rem;
+            color: var(--green-950);
+            font-weight: 500;
+        }
+
+        .footer {
+            padding: 60px 0;
+            background: var(--white);
+            text-align: center;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+    </style>
 </head>
-<body>
-  <h1 class="fade-text">hamarosan jön</h1>
-  <script>
-    const text = document.querySelector('.fade-text');
-    const letters = text.innerText.split('');
-    text.innerHTML = '';
-    letters.forEach((letter, i) => {
-      const span = document.createElement('span');
-      span.textContent = letter === ' ' ? '\u00A0' : letter;
-      span.style.animationDelay = `${i * 0.05}s`;
-      text.appendChild(span);
-    });
-  </script>
+<body class="theme-green">
+    <div class="bg-container">
+        <div class="page-bg" style="top: 0%; left: -10%; width: 40vw; height: 40vw; background: var(--green-600); opacity: 0.1;"></div>
+        <div class="page-bg" style="top: 15%; right: -5%; width: 30vw; height: 30vw; background: var(--gray-300); opacity: 0.2;"></div>
+        <div class="page-bg" style="top: 35%; left: -15%; width: 50vw; height: 50vw; background: var(--gray-200); opacity: 0.15;"></div>
+        <div class="page-bg" style="top: 55%; right: -10%; width: 45vw; height: 45vw; background: var(--green-700); opacity: 0.1;"></div>
+        <div class="page-bg" style="top: 75%; left: -5%; width: 40vw; height: 40vw; background: var(--gray-300); opacity: 0.12;"></div>
+        <div class="page-bg" style="top: 90%; right: 5%; width: 35vw; height: 35vw; background: var(--green-600); opacity: 0.1;"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                <a href="/hu" class="logo">
+                        <img src="../pics/sun.png" alt="" class="logo-icon">
+                    Boros Zsófia
+                    </a>
+                </div>
+
+                <nav class="nav-desktop">
+                <a href="#about">Rólam</a>
+                    <a href="#coaching">Coaching</a>
+                <a href="#endorsement">Ajánlások</a>
+                <a href="#contact">Kapcsolat</a>
+                <a href="/">Hu | En</a>
+                </nav>
+
+                <div class="header-right">
+                <a href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Érdeklődés%20%7C%20Ingyenes%200.%20Beszélgetés%20Foglalása&body=Szia%20Zsófi%2C%0D%0A%0D%0ASzeretnék%20időpontot%20kérni%20hozzád%20egy%200.%20beszélgetésre.%20Érdekelne%20a%20coaching%20folyamatod,%20és%20az,%20hogyan%20tudnánk%20együtt%20dolgozni.%0D%0A%0D%0AÜdvözlettel%2C" class="button button-primary button-sm">
+                    <span class="cta-mobile">Beszéljünk!</span>
+                    <span class="cta-desktop">Ingyenes 0. találkozó foglalása</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <nav class="nav-mobile">
+                <a href="#about">Rólam</a>
+                    <a href="#coaching">Coaching</a>
+                <a href="#endorsement">Ajánlások</a>
+                <a href="#contact">Kapcsolat</a>
+                <a href="/">Hu | En</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content" data-reveal>
+                    <span class="section-kicker">Business Coach | Emberközpontú vezető</span>
+                    <h1 class="hero-title">Boros Zsófia</h1>
+                    <h2 style="font-size: 2rem; margin-bottom: 2rem; line-height: 1.3; font-style: italic; color: var(--gray-700);">Emberközpontú szemlélettel és vezetői tapasztalattal támogatlak a fejlődésedben.</h2>
+                    <p class="hero-description">
+                        Hiszem, hogy a valódi siker alapja az, ha ismerjük magunkat és merünk az egyedi erősségeinkre építeni. <b>ICF Business Coachként</b> és 10 év nemzetközi vezetői múlttal a hátam mögött, partnered vagyok abban, hogy elérd a következő mérföldkövedet.
+                    </p>
+                    <div class="cta-group">
+                        <a href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Érdeklődés%20%7C%20Ingyenes%200.%20Beszélgetés%20Foglalása&body=Szia%20Zsófi%2C%0D%0A%0D%0ASzeretnék%20időpontot%20kérni%20hozzád%20egy%200.%20beszélgetésre.%20Érdekelne%20a%20coaching%20folyamatod,%20és%20az,%20hogyan%20tudnánk%20együtt%20dolgozni.%0D%0A%0D%0AÜdvözlettel%2C" class="button button-primary">Ingyenes 0. találkozó foglalása</a>
+                        <a href="#about" class="button button-secondary">Tudj meg többet</a>
+                    </div>
+                </div>
+                <div class="hero-image-container" data-reveal>
+                    <div class="hero-image-wrapper">
+                        <img src="../pics/zsofia.jpg" alt="Zsófia Boros - Business Coach">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <!-- Subsection 1: Philosophy -->
+            <div class="about-row" data-reveal>
+                <div class="about-text">
+                    <span class="section-kicker">Rólam</span>
+                    <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">Szia, Zsófi vagyok!</h2>
+                    <p>Egy Emberközpontú Business Coach, akit a fejlődés és az önismeret ereje hajt, tapasztalt nemezetközi marketingvezető és örök sportimádó. Hiszek a coaching erejében, mert láttam és a saját bőrömön is tapasztaltam, hogyan mozdít ki életeket és karriereket a holtpontról, új lendületet és irányt adva nekik.</p>
+                    <details class="accordion">
+                        <summary>Filozófiám</summary>
+                        <div class="accordion-content">
+                            <p>Coachként az ígéretem egyszerű: támogatlak abban, hogy megoldjuk azokat a kihívásaidat és elakadásaidat, amikkel eddig egyedül küzdöttél. Igen, megoldjuk – KÖZÖSEN! Legyen szó vezetői dilemmáról vagy személyes elakadásról, az ICF (International Coaching Federation) szemléletében kísérlek az utadon. Te hozod a témád, én hozom a kereteket.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="../pics/introduction-talk.jpg" alt="Zsófia Boros Coaching">
+                </div>
+            </div>
+
+            <!-- Subsection 2: Corporate -->
+            <div class="about-row reverse" data-reveal>
+                <div class="about-text">
+                    <span class="section-kicker">Vállalati Tapasztalat</span>
+                    <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">Értem a multik világát!</h2>
+                    <p>Nemcsak értem, hanem át is éltem a vállalati lét sok magasságát és mélységét. 10+ év nemzetközi tapasztalat van mögöttem, legutóbb a Procter & Gamble Marketing igazgatójaként. Ebben az évtizedben éltem külföldön, vezettem multikulturális és multifunkcionális csapatokat, valamint feleltem dollármilliós márkák stratégiai növekedéséért.</p>
+                    <details class="accordion">
+                        <summary>Én is átéltem</summary>
+                        <div class="accordion-content">
+                            <p>Kezeltem komplex piaci válságokat, és ünnepeltem nagy sikereket. Pontosan tudom, mit jelent a valódi, számokban mérhető felelősség. Saját bőrömön tapasztaltam meg a döntéshozókra nehezedő elvárások súlyát, a stresszt és a kiégés valós kockázatát.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="../pics/introduction-present.jpg" alt="Zsófia Boros Business Experience">
+                </div>
+            </div>
+
+            <!-- Subsection 3: Sports -->
+            <div class="about-row" data-reveal>
+                <div class="about-text">
+                    <span class="section-kicker">Sport szemlélet</span>
+                    <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">Sport Mentál Coaching</h2>
+                    <p>
+Sport Mentál és Team Coaching módszertanával is bővítem a szakmai eszköztáramat. Hiszek abban, hogy a sport nem csupán az állóképességről szól, hanem egy olyan belső tartásról és szemléletről, amely a versenypályán és az üzleti életben is ugyanúgy működik, és tökéletesen átültethető a pályáról az üzleti világba.</p>
+                    <details class="accordion">
+                        <summary>A sport nekem</summary>
+                        <div class="accordion-content">
+                            <p>A sport mindig is az a fix pont volt az életemben, ami a nehéz időszakokban megtartott, vagy éppen feltöltött. 13 év versenyszerű kézilabda után is folyamatosan kihívások elé állítom magam, legyen szó 30 km-es futásról, búvárkodásról vagy teniszről. A fókusz megtartása, a nyugalom megőrzése nyomás alatt és a kudarcok kezelése mind létfontosságú szerepet játszhatnak egy coaching folyamatban.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="../pics/introduction-sport.jpg" alt="Zsófia Boros Sports Mindset">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coaching" class="coaching-section">
+        <div class="container">
+            <div class="coaching-intro">
+                <span class="section-kicker">A Módszertan</span>
+                <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">Mi a Coaching?</h2>
+                <p>Számomra a coaching egy <strong>kreatív partnerség</strong>. Olyan gondolatébresztő folyamat, amelynek középpontjában az önismeret áll: azonosítjuk a belső erőforrásaidat és a lehetőségeidet, hogy könnyebben haladhass előre a karrieredben vagy a magánéletedben.</p>
+                <details class="accordion">
+                    <summary>Nincsenek instant megoldások</summary>
+                    <div class="accordion-content">
+                        <p>Nem adok kész megoldásokat, mert a saját üzleti és élethelyzeteidre te tudod a legjobb válaszokat. Az én szerepem az, hogy a megfelelő kérdésekkel és strukturált szemlélettel segítselek megtalálni a saját, magabiztos utadat.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="distinction-grid">
+                <div class="distinction-card">
+                    <h3>Nem Tanácsadás</h3>
+                    <p>Nem mondom meg, mit tegyél; támogatlak abban, hogy meghozd a számodra legjobb döntéseket.</p>
+                </div>
+                <div class="distinction-card">
+                    <h3>Nem Terápia</h3>
+                    <p>Nem a múltat elemezzük, hanem a jelenre, a céljaidra és a konkrét cselekvésre fókuszálunk.</p>
+                </div>
+            </div>
+
+            <span class="section-kicker">Coaching témák</span>
+            <h2 class="hero-title" style="font-size: 2.5rem;">Miben tudlak támogatni?</h2>
+            <p style="margin-bottom: 40px;">A Coaching folyamat sokféle kihívásban támogathat. Íme néhány terület, ahol az ügyfeleimmel leggyakrabban együttműködöm.</p>
+
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Vezetői kihívások</h3>
+                    <p style="font-size: 0.95rem;">Új szerepkörök, előléptetések vagy a „vezetői magány” leküzdése.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Hatékonyság és fókusz</h3>
+                    <p style="font-size: 0.95rem;">Operatív elakadások helyett stratégiai látásmód és tudatos határhúzás.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Változás és stressz</h3>
+                    <p style="font-size: 0.95rem;">Karrierváltás, visszatérés a munkába vagy a kiégés megelőzése, leküzdese.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Iránykeresés</h3>
+                    <p style="font-size: 0.95rem;">Tudatos tervezés és építkezés a sodródás helyett.</p>
+                </div>
+
+                <div class="scenario-card">
+                    <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <h3 style="margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--green-950);">Bármi, ami épp foglalkoztat</h3>
+                    <p style="font-size: 0.95rem;">Ha úgy érzed, hogy most elakadtál, és egy strukturált, közös gondolkodási folyamatra van szükséged.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 80px;">
+                <span class="section-kicker">A folyamat</span>
+                <h2 class="hero-title" style="font-size: 3rem;">Hogyan dolgozunk együtt?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px;">Cselekvés- és eredményorientált folyamat, ami teljes mértékben rólad szól.</p>
+            </div>
+
+            <div class="process-info">
+                <div class="process-item">
+                    <h4>0. alkalom</h4>
+                    <p>Ingyenes 30 perces online ismerkedés.</p>
+                </div>
+                <div class="process-item">
+                    <h4>Ülések</h4>
+                    <p>50 perc / alkalom,<br>1–3 hetente.</p>
+                </div>
+                <div class="process-item">
+                    <h4>Időtartam</h4>
+                    <p>Általában 5–8 alkalom.</p></div>
+                <div class="process-item">
+                    <h4>Helyszín</h4>
+                    <p>Online vagy személyesen Budapesten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="endorsement" class="endorsement-section">
+        <div class="container">
+            <span class="section-kicker">Ajánlások</span>
+            <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem); margin-bottom: 0;">Ügyfélvélemények</h2>
+            <p style="text-align: center; font-size: 0.8rem; color: var(--gray-500); margin: 30px 0 0 0;" class="cta-mobile">
+                ← Lapozz a továbbiakért →
+            </p>
+
+            <div class="carousel-nav">
+                <button class="nav-btn" id="prevBtn" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </button>
+                <button class="nav-btn" id="nextBtn" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </div>
+            
+            <div class="endorsement-carousel">
+                <!-- Emese -->
+                <div class="endorsement-card">
+                    <div class="endorsement-header">
+                        <img src="../pics/emese.jpg" alt="Emese" class="endorsement-img">
+                        <div class="endorsement-info">
+                            <h4>Emese</h4>
+                            <p>Sales Executive Director - FLP Hungary</p>
+                        </div>
+                    </div>
+                    <p class="endorsement-text">
+                        Egy új vezetői pozícióba való kinevezésem kapcsán dolgoztam együtt Zsófival Executive Business Coaching keretében. Nem eszközöket adott, hanem stratégiai tisztázást: mi az a vezetői attitűd, döntési minta és kommunikációs irány, amely valóban az enyém, és amelyre tudatosan építhetek. <b>Azoknak a vezetőknek ajánlom, akik tiszta önazonosságot, stratégiai gondolkodást és stabil jelenlétet keresnek egy magasabb felelősségi szinten.</b>
+                    </p>
+                </div>
+
+                <!-- Ferenc -->
+                <div class="endorsement-card">
+                    <div class="endorsement-header">
+                        <img src="../pics/ferenc.png" alt="Ferenc" class="endorsement-img">
+                        <div class="endorsement-info">
+                            <h4>Ferenc</h4>
+                            <p>Professional Poker Player & Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="endorsement-text">
+                         Dolgoztam már több Coach-csal, ezért volt összehasonlítási alapom. Zsófinál azt éreztem először, hogy valóban jelen van és energiát tesz a folyamatba, nem csak végigkíséri. A kérdései sokszor olyan irányba visznek, amire magamtól nem jutottam volna el, és ezeknek a beszélgetéseknek a hatását a hétköznapokban is észrevettem. <b>Annyira intenzív és fókuszált egy-egy alkalom, hogy szinte észrevétlenül telik az idő.</b>
+                    </p>
+                </div>
+
+                <!-- Dávid -->
+                <div class="endorsement-card">
+                    <div class="endorsement-header">
+                        <img src="../pics/david.jpg" alt="Dávid" class="endorsement-img">
+                        <div class="endorsement-info">
+                            <h4>Dávid</h4>
+                            <p>Senior Supply Planner - Vodafone</p>
+                        </div>
+                    </div>
+                    <p class="endorsement-text">
+                        Amikor Zsooooofihoz fordultam, azt éreztem, hogy teljesen háttérbe szorítom saját magamat. A közös munka során a legfontosabb felismerésem az volt, hogy mennyire lényeges egészséges határokat húzni: megtanultam nemet mondani bűntudat nélkül. Magabiztosabban hozok döntéseket, és hiszek abban, hogy képes vagyok megvalósítani, amit szeretnék. <b>A közös munka során egy rendkívül támogató, inspiráló és erőt adó segítséget kaptam.</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <span class="section-kicker">Kapcsolat</span>
+            <h2 class="hero-title" style="font-size: clamp(2.2rem, 6vw, 3rem);">Kezdjük el a közös munkát!</h2>
+            
+            <div style="margin-bottom: 3rem;">
+                <a href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Érdeklődés%20%7C%20Ingyenes%200.%20Beszélgetés%20Foglalása&body=Szia%20Zsófi%2C%0D%0A%0D%0ASzeretnék%20időpontot%20kérni%20hozzád%20egy%200.%20beszélgetésre.%20Érdekelne%20a%20coaching%20folyamatod,%20és%20az,%20hogyan%20tudnánk%20együtt%20dolgozni.%0D%0A%0D%0AÜdvözlettel%2C" class="button button-primary">
+                    Ingyenes 0. találkozó foglalása
+                </a>
+            </div>
+            
+            <div class="contact-grid">
+                <a href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Érdeklődés%20%7C%20Ingyenes%200.%20Beszélgetés%20Foglalása&body=Szia%20Zsófi%2C%0D%0A%0D%0ASzeretnék%20időpontot%20kérni%20hozzád%20egy%200.%20beszélgetésre.%20Érdekelne%20a%20coaching%20folyamatod,%20és%20az,%20hogyan%20tudnánk%20együtt%20dolgozni.%0D%0A%0D%0AÜdvözlettel%2C" class="contact-card">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">E-mail</span>
+                        <span class="contact-value">boros.zsofia@gmail.com</span>
+                    </div>
+                </a>
+
+                <a href="tel:+36206611198" class="contact-card">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Telefon</span>
+                        <span class="contact-value">+36 20 661 1198</span>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/zsofia-boros" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">zsofia-boros</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Boros Zsófia. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // Toggle mobile menu
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+        });
+
+        // Close mobile menu when clicking outside the header
+        document.addEventListener('click', (event) => {
+            const header = document.querySelector('.header');
+            const isClickInside = header.contains(event.target);
+
+            if (!isClickInside && mobileMenu.classList.contains('is-active')) {
+                mobileMenu.classList.remove('is-active');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (mobileMenu.classList.contains('is-active')) {
+                    mobileMenu.classList.remove('is-active');
+                }
+            });
+        });
+
+        // Infinite Carousel Logic
+        const carousel = document.querySelector('.endorsement-carousel');
+        if (carousel) {
+            const originalCards = Array.from(carousel.querySelectorAll('.endorsement-card'));
+            const baseCardCount = originalCards.length; // Should be 3 unique cards
+
+            if (baseCardCount > 0) {
+                // Store the original HTML content to re-insert after cloning
+                const originalHTML = carousel.innerHTML;
+
+                // Clear the carousel to build the new structure
+                carousel.innerHTML = '';
+
+                // 1. Prepend clones of the last `baseCardCount` cards
+                for (let i = baseCardCount - 1; i >= 0; i--) {
+                    carousel.prepend(originalCards[i].cloneNode(true));
+                }
+
+                // 2. Add the original cards
+                carousel.insertAdjacentHTML('beforeend', originalHTML);
+
+                // 3. Append clones of the first `baseCardCount` cards
+                for (let i = 0; i < baseCardCount; i++) {
+                    carousel.appendChild(originalCards[i].cloneNode(true));
+                }
+
+                // Now the carousel has the structure: [cloned_last_N, original_N, cloned_first_N]
+                // The original cards start at index `baseCardCount`.
+
+                let isJumping = false;
+                let initialScrollPosition = 0;
+                let stride = 0;
+
+                const updateDimensions = () => {
+                    // Force re-calculation of offsets based on current layout
+                    const firstOriginal = carousel.children[baseCardCount];
+                    const secondOriginal = carousel.children[baseCardCount + 1];
+                    
+                    // Calculate actual distance between card centers
+                    stride = secondOriginal.offsetLeft - firstOriginal.offsetLeft;
+                    // Calculate the scroll position required to center the first original card
+                    initialScrollPosition = firstOriginal.offsetLeft - (carousel.offsetWidth / 2) + (firstOriginal.offsetWidth / 2);
+                };
+
+                // Initialize dimensions and starting position
+                updateDimensions();
+                carousel.scrollTo({ left: initialScrollPosition, behavior: 'auto' });
+
+                // Recalculate on resize to prevent breaking the loop
+                window.addEventListener('resize', updateDimensions);
+
+                carousel.addEventListener('scroll', () => {
+                    if (isJumping) return;
+
+                    const scrollLeft = carousel.scrollLeft;
+                    const totalStride = baseCardCount * stride;
+
+                    // Teleport when we've scrolled one full set past the center
+                    // A 10px threshold handles sub-pixel rounding errors
+                    if (scrollLeft >= initialScrollPosition + totalStride - 10) {
+                        isJumping = true;
+                        carousel.style.scrollSnapType = 'none';
+                        carousel.scrollLeft = scrollLeft - totalStride;
+                        setTimeout(() => {
+                            carousel.style.scrollSnapType = 'x mandatory';
+                            isJumping = false;
+                        }, 50);
+                    } else if (scrollLeft <= initialScrollPosition - totalStride + 10) {
+                        isJumping = true;
+                        carousel.style.scrollSnapType = 'none';
+                        carousel.scrollLeft = scrollLeft + totalStride;
+                        setTimeout(() => {
+                            carousel.style.scrollSnapType = 'x mandatory';
+                            isJumping = false;
+                        }, 50);
+                    }
+                });
+
+                // Button Navigation
+                const nextBtn = document.getElementById('nextBtn');
+                const prevBtn = document.getElementById('prevBtn');
+
+                nextBtn.addEventListener('click', () => {
+                    carousel.scrollBy({ left: stride, behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    carousel.scrollBy({ left: -stride, behavior: 'smooth' });
+                });
+
+                // Keyboard Navigation
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') nextBtn.click();
+                    if (e.key === 'ArrowLeft') prevBtn.click();
+                });
+            }
+        }
+
+        // Theme Rotation Mechanism
+        const themes = ['theme-green', 'theme-ochre'];
+        let currentThemeIndex = 0;
+        /*window.addEventListener('keydown', (e) => {
+            // Check for Space key and ensure user isn't typing in an input (if any were added)
+            if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault(); // Prevent page scrolling
+                document.body.classList.remove(themes[currentThemeIndex]);
+                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+                document.body.classList.add(themes[currentThemeIndex]);
+            }
+        });*/
+    </script>
 </body>
 </html>
