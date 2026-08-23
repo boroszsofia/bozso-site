@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rólam | Boros Zsófia</title>
+        <meta
+            name="description"
+            content="Boros Zsófia ICF ACC minősített Business és Mentál Coach bemutatkozó oldala – történet, szakmai háttér, expatévek és sport mentál tapasztalat."
+        />
+        <meta property="og:title" content="Rólam | Boros Zsófia" />
+        <meta
+            property="og:description"
+            content="Boros Zsófia ICF ACC minősített Business és Mentál Coach bemutatkozó oldala – történet, szakmai háttér, expatévek és sport mentál tapasztalat."
+        />
+        <meta
+            property="og:image"
+            content="https://zsofiaboros.coach/preview.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://zsofiaboros.coach/hu/rolam.html"
+        />
+        <meta property="og:site_name" content="Zsófia Boros Coaching" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Rólam | Boros Zsófia" />
+        <meta
+            name="twitter:description"
+            content="Boros Zsófia ICF ACC minősített Business és Mentál Coach bemutatkozó oldala."
+        />
+        <meta
+            name="twitter:image"
+            content="https://zsofiaboros.coach/preview.png"
+        />
+        <meta name="msapplication-TileImage" content="../pics/sun.png" />
+        <link rel="canonical" href="https://zsofiaboros.coach/hu/rolam.html" />
+        <link rel="icon" type="image/png" href="../pics/sun.png" />
+        <link rel="apple-touch-icon" href="../pics/sun.png" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;800&family=Playfair+Display:wght@500;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://vercel.com/_vercel/insights/script.js"></script>
+        <style>
+            :root {
+                --green-950: #0e1a14;
+                --green-900: #16261e;
+                --green-800: #21372c;
+                --green-700: #305040;
+                --green-600: #466c59;
+                --gray-100: #f1f3f1;
+                --gray-200: #e3e6e3;
+                --gray-300: #cdd3ce;
+                --gray-500: #6d756f;
+                --gray-700: #404741;
+                --white: #fbfcfb;
+                --ink: #1b221d;
+                --line: rgba(22, 38, 30, 0.12);
+                --card: rgba(251, 252, 251, 0.88);
+                --shadow: 0 18px 40px rgba(18, 29, 23, 0.08);
+                --shadow-strong: 0 24px 56px rgba(18, 29, 23, 0.18);
+                --container: min(1120px, calc(100vw - 28px));
+                --radius-xl: 18px;
+                --radius-lg: 14px;
+                --radius-md: 10px;
+                --radius-sm: 8px;
+                --radius-xs: 3px;
+                --accent-rgb: 70, 108, 89;
+                --ochre: #d6a62f;
+                --ochre-light: #e9cd73;
+                --cream-card: #f0e9d9;
+                --sage-card: #dce4d7;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            body {
+                font-family: "Manrope", sans-serif;
+                line-height: 1.7;
+                color: var(--gray-500);
+                background:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(var(--accent-rgb), 0.15),
+                        transparent 24%
+                    ),
+                    radial-gradient(
+                        circle at right top,
+                        rgba(109, 117, 111, 0.14),
+                        transparent 24%
+                    ),
+                    linear-gradient(180deg, #f4f6f4 0%, #eef1ee 100%);
+                min-height: 100vh;
+                overflow-x: hidden;
+                position: relative;
+            }
+
+            html {
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-family: "Cormorant Garamond", serif;
+                color: var(--green-800);
+                letter-spacing: -0.02em;
+                font-weight: 600;
+            }
+
+            .container {
+                width: var(--container);
+                margin: 0 auto;
+            }
+
+            .bg-container {
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                z-index: -1;
+                pointer-events: none;
+            }
+
+            .page-bg {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(60px);
+            }
+
+            /* Header */
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: rgba(251, 252, 251, 0.85);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--line);
+                z-index: 1000;
+            }
+
+            .header-container {
+                height: 72px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.35rem;
+                font-weight: 600;
+                color: var(--green-950);
+                text-decoration: none;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .logo-icon {
+                height: 24px;
+                width: auto;
+                display: none;
+            }
+
+            .nav-desktop {
+                display: none;
+                gap: 32px;
+            }
+
+            .nav-desktop a {
+                text-decoration: none;
+                color: var(--gray-700);
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: all 0.2s;
+                padding: 8px 16px;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-desktop a:hover {
+                color: var(--green-700);
+            }
+
+            .button-sm {
+                padding: 10px 18px;
+                font-size: 0.8rem;
+                border-radius: var(--radius-xs);
+            }
+
+            .cta-desktop {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 4px;
+            }
+
+            .menu-toggle span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: var(--green-950);
+            }
+
+            .mobile-menu {
+                display: none;
+                background: var(--white);
+                padding: 0;
+            }
+
+            .mobile-menu.is-active {
+                display: block;
+            }
+
+            .nav-mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .nav-mobile a {
+                text-decoration: none;
+                color: var(--green-950);
+                font-weight: 500;
+                font-size: 1.1rem;
+                padding: 0 16px;
+                display: flex;
+                align-items: center;
+                height: 72px;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .nav-mobile a:last-child {
+                border-bottom: none;
+            }
+
+            @media (min-width: 1024px) {
+                .menu-toggle {
+                    display: none;
+                }
+                .nav-desktop {
+                    display: flex;
+                }
+                .header-container {
+                    height: 84px;
+                }
+                .mobile-menu {
+                    display: none !important;
+                }
+                .cta-desktop {
+                    display: inline;
+                }
+                .cta-mobile {
+                    display: none;
+                }
+                .logo-icon {
+                    display: block;
+                }
+            }
+
+            .button {
+                padding: 16px 32px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                display: inline-block;
+                text-align: center;
+                line-height: 1.2;
+                text-transform: uppercase;
+            }
+
+            .button-primary {
+                background: linear-gradient(
+                    135deg,
+                    var(--green-600),
+                    var(--green-700)
+                );
+                color: var(--white);
+                font-weight: 800;
+                border-radius: var(--radius-xs);
+                box-shadow: var(--shadow);
+            }
+
+            .button-secondary {
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid var(--line);
+                color: var(--green-900);
+                font-weight: 800;
+                border-radius: var(--radius-xs);
+                backdrop-filter: blur(8px);
+            }
+
+            /* Page hero */
+            .page-hero {
+                padding: 160px 0 20px;
+                text-align: center;
+            }
+
+            .story-heading {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                max-width: 720px;
+                margin: 0 auto 40px;
+            }
+
+            .section-kicker {
+                text-transform: uppercase;
+                letter-spacing: 0.16em;
+                font-size: 0.7rem;
+                font-weight: 800;
+                color: var(--green-700);
+                margin-bottom: 1.5rem;
+                display: block;
+            }
+
+            .section-title {
+                font-family: "Playfair Display", Georgia, serif;
+                font-size: clamp(2.1rem, 4vw, 3.5rem);
+                line-height: 1.15;
+                letter-spacing: -0.03em;
+                margin-bottom: 1.4rem;
+            }
+
+            .section-title.sm {
+                font-size: clamp(1.7rem, 3vw, 2.5rem);
+            }
+
+            .page-hero p {
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1.1rem;
+                max-width: 620px;
+                margin: 0 auto;
+                color: var(--gray-700);
+            }
+
+            /* Story sections */
+            .story-section {
+                padding: 80px 0;
+            }
+
+            .story-section.alt {
+                background: #dce1dd;
+            }
+
+            .story-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 40px;
+                align-items: center;
+            }
+
+            @media (min-width: 900px) {
+                .story-grid {
+                    grid-template-columns: 1.1fr 0.9fr;
+                    gap: 60px;
+                }
+            }
+
+            .story-copy p {
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1.2rem;
+            }
+
+            .story-copy strong {
+                color: inherit;
+                font-weight: 700;
+            }
+
+            .story-image {
+                position: relative;
+                max-width: 380px;
+                margin: 0 0 0 auto;
+                border-radius: var(--radius-xl);
+                overflow: hidden;
+                box-shadow: var(--shadow-strong);
+                aspect-ratio: 4 / 5;
+                background-color: var(--gray-200);
+            }
+
+            .story-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            @media (max-width: 899px) {
+                .story-image {
+                    margin: 0 auto;
+                }
+            }
+
+            .icf-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 6px;
+                padding: 8px 14px;
+                background: var(--white);
+                border: 1px solid var(--line);
+                border-radius: var(--radius-md);
+                font-size: 0.82rem;
+                font-weight: 700;
+                color: var(--green-800);
+            }
+
+            .icf-badge img {
+                height: 26px;
+                width: auto;
+            }
+
+            /* Manifesto */
+            .manifesto-list {
+                max-width: 860px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .manifesto-item {
+                display: grid;
+                grid-template-columns: 64px 1fr;
+                gap: 24px;
+                padding: 28px 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .manifesto-item:last-child {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .manifesto-number {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 2rem;
+                font-weight: 600;
+                color: var(--ochre);
+            }
+
+            .manifesto-item.highlight .manifesto-number {
+                color: var(--green-700);
+            }
+
+            @media (max-width: 640px) {
+                .manifesto-item {
+                    grid-template-columns: 48px 1fr;
+                    padding: 24px 12px;
+                }
+
+                .manifesto-number {
+                    text-align: center;
+                }
+            }
+
+            .manifesto-title {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .manifesto-text {
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1.12rem;
+                color: var(--gray-700);
+                margin: 0;
+            }
+
+            /* CTA */
+            .cta-section {
+                padding: 100px 0;
+                background: #dce1dd;
+                text-align: center;
+            }
+
+            .cta-section .container {
+                max-width: 640px;
+            }
+
+            .cta-section h2 {
+                font-size: clamp(2.1rem, 4vw, 3.5rem);
+                line-height: 1.15;
+                letter-spacing: -0.03em;
+                margin-bottom: 14px;
+            }
+
+            .cta-title-line {
+                width: 70px;
+                height: 3px;
+                margin: 0 auto 26px;
+                background: var(--ochre, #d6a62f);
+            }
+
+            .cta-section p {
+                font-family: "DM Sans", Arial, sans-serif;
+                margin-bottom: 26px;
+                color: var(--gray-700);
+            }
+
+            .footer {
+                padding: 60px 0;
+                background: var(--white);
+                text-align: center;
+                border-top: 1px solid var(--line);
+            }
+
+            .footer p {
+                font-size: 0.85rem;
+                color: var(--gray-500);
+            }
+        </style>
+    </head>
+    <body class="theme-green">
+        <div class="bg-container">
+            <div
+                class="page-bg"
+                style="
+                    top: 0%;
+                    left: -10%;
+                    width: 40vw;
+                    height: 40vw;
+                    background: var(--green-600);
+                    opacity: 0.1;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 30%;
+                    right: -5%;
+                    width: 35vw;
+                    height: 35vw;
+                    background: var(--gray-300);
+                    opacity: 0.15;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 70%;
+                    left: -10%;
+                    width: 40vw;
+                    height: 40vw;
+                    background: var(--green-700);
+                    opacity: 0.1;
+                "
+            ></div>
+        </div>
+
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div class="header-left">
+                        <button
+                            class="menu-toggle"
+                            id="menuToggle"
+                            aria-label="Toggle menu"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <a href="index.html#top" class="logo">
+                            <img
+                                src="../pics/sun.png"
+                                alt=""
+                                class="logo-icon"
+                            />
+                            Boros Zsófia
+                        </a>
+                    </div>
+
+                    <nav class="nav-desktop">
+                        <a href="coaching.html">Coaching</a>
+                        <a href="ugyfelvelemenyek.html">Ajánlások</a>
+                        <a href="#top">Rólam</a>
+                        <a href="index.html#contact">Kapcsolat</a>
+                        <a href="/">Hu | En</a>
+                    </nav>
+
+                    <div class="header-right">
+                        <a
+                            href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Érdeklődés%20%7C%20Ingyenes%200.%20Beszélgetés%20Foglalása&body=Szia%20Zsófi%2C%0D%0A%0D%0ASzeretnék%20időpontot%20kérni%20hozzád%20egy%200.%20beszélgetésre.%20Érdekelne%20a%20coaching%20folyamatod,%20és%20az,%20hogyan%20tudnánk%20együtt%20dolgozni.%0D%0A%0D%0AÜdvözlettel%2C"
+                            class="button button-primary button-sm"
+                        >
+                            <span class="cta-mobile">Beszéljünk</span>
+                            <span class="cta-desktop"
+                                >Ingyenes konzultáció foglalása</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="container">
+                    <nav class="nav-mobile">
+                        <a href="coaching.html">Coaching</a>
+                        <a href="ugyfelvelemenyek.html">Ajánlások</a>
+                        <a href="#top">Rólam</a>
+                        <a href="index.html#contact">Kapcsolat</a>
+                        <a href="/">Hu | En</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="story-section" id="top">
+            <div class="container">
+                <div class="page-hero" style="padding: 70px 0 40px">
+                    <span class="section-kicker">Az én történetem</span>
+                    <h1 class="section-title">Szia, Zsófi vagyok!</h1>
+                </div>
+                <div class="story-grid">
+                    <div class="story-copy">
+                        <p>
+                            <strong
+                                >Akkreditált Business és Mentál Coachként (ICF
+                                ACC) dolgozom az ügyfeleimmel.</strong
+                            >
+                            Több mint tíz évet töltöttem regionális vezetőként
+                            egy olyan multinacionális környezetben, ahol a
+                            bizonytalan túlteljesítés a mindennapok része volt.
+                            Sőt, még díjazták is.
+                        </p>
+                        <p>
+                            Hiszek a coaching erejében, mert láttam, és a saját
+                            bőrömön is megtapasztaltam, hogyan mozdít ki
+                            életeket és karriereket a holtpontról, új lendületet
+                            és irányt adva nekik.
+                        </p>
+                        <p>
+                            Számomra fontos a hitelesség és a szakmaiság, ezért
+                            a Nemzetközi Coaching Szövetségnél (International
+                            Coaching Federation, ICF) megszereztem az Associate
+                            Certified Coach (ACC) minősítést.
+                        </p>
+                        <div class="icf-badge">
+                            <img src="../pics/icf-badge.png" alt="" />
+                            ICF ACC minősített coach
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <img
+                            src="../pics/zsofia.jpg"
+                            alt="Boros Zsófia portré"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section alt" id="multis">
+            <div class="container">
+                <div class="story-heading">
+                    <span class="section-kicker">Szakmai háttér</span>
+                    <h2 class="section-title sm">Értem a multik világát!</h2>
+                </div>
+                <div class="story-grid">
+                    <div class="story-copy">
+                        <p>
+                            Nemcsak értem, hanem át is éltem a vállalati lét sok
+                            magasságát és mélységét. 10+ év nemzetközi
+                            tapasztalat van mögöttem, legutóbb a Procter &amp;
+                            Gamble Közép-európai marketingigazgatójaként.
+                        </p>
+                        <p>
+                            Ebben az évtizedben éltem külföldön, vezettem
+                            multikulturális és multifunkcionális csapatokat,
+                            valamint feleltem dollármilliós márkák stratégiai
+                            növekedéséért.
+                        </p>
+                        <p>
+                            Megtapasztaltam a döntéshozókra nehezedő elvárások
+                            súlyát, a stresszt és a kiégést is.
+                        </p>
+                    </div>
+                    <div class="story-image">
+                        <img
+                            src="../pics/introduction-present.jpg"
+                            alt="Boros Zsófia előadás közben"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="expat">
+            <div class="container">
+                <div class="story-heading">
+                    <span class="section-kicker">Expatévek Svájcban</span>
+                    <h2 class="section-title sm">Két év külföldön</h2>
+                </div>
+                <div class="story-grid">
+                    <div class="story-copy">
+                        <p>
+                            Két évet éltem expatként Svájcban, így saját
+                            tapasztalatból tudom, milyen kihívást jelenthet
+                            karriert építeni, egy új szerepkörben helytállni, és
+                            közben távol lenni a családtól és a barátoktól.
+                        </p>
+                        <p>
+                            A Covid-járvány tetőpontján költöztem külföldre. A
+                            nehéz kezdet ellenére ez az életem egyik
+                            legmeghatározóbb és legszebb fejezetévé vált.
+                            Mélyítette az önismeretemet, megtanított a mentális
+                            kitartásra, valamint arra, hogyan építsek ki új
+                            kapcsolatokat, és hogyan tartsam meg a régieket több
+                            ezer kilométer távolságból.
+                        </p>
+                    </div>
+                    <div class="story-image">
+                        <img
+                            src="../pics/introduction-toblerone.jpeg"
+                            alt="Boros Zsófia Svájcban"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section alt" id="sport">
+            <div class="container">
+                <div class="story-heading">
+                    <span class="section-kicker"
+                        >Sport Mentál és Team Coaching</span
+                    >
+                    <h2 class="section-title sm">Mentális erő nyomás alatt</h2>
+                </div>
+                <div class="story-grid">
+                    <div class="story-copy">
+                        <p>
+                            Sport Mentál és Team Coaching képesítésem októberben
+                            fogom megszerezni. Nekem a sport nem csupán az
+                            állóképességről szól, hanem egy olyan belső
+                            tartásról és szemléletről, amely a versenypályán és
+                            az üzleti életben is ugyanúgy működik. A fókusz
+                            megtartása, a nyugalom megőrzése nyomás alatt és a
+                            kudarcok kezelése mind létfontosságú képesség.
+                        </p>
+                        <p>
+                            A sport mindig is az a fix pont volt az életemben:
+                            13 év versenyszerű kézilabda után ma is folyamatosan
+                            kihívások elé állítom magam, legyen szó 30 km-es
+                            futásról, búvárkodásról vagy teniszről.
+                        </p>
+                    </div>
+                    <div class="story-image">
+                        <img
+                            src="../pics/introduction-sport.jpg"
+                            alt="Boros Zsófia sport közben"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="indokok">
+            <div class="container">
+                <div class="page-hero" style="padding: 0 0 20px">
+                    <span class="section-kicker">A hitvallásom</span>
+                    <h2 class="section-title sm">
+                        4 + 1 ok, amiért dolgozz – vagy éppen ne dolgozz velem
+                    </h2>
+                </div>
+                <div class="manifesto-list">
+                    <article class="manifesto-item">
+                        <div class="manifesto-number">01</div>
+                        <div>
+                            <h3 class="manifesto-title">
+                                Hiszem, hogy nem attól vagy értékes, hogy éppen
+                                mit értél el.
+                            </h3>
+                            <p class="manifesto-text">
+                                Nem a pozíciód, a teljesítményértékelésed vagy a
+                                legutóbbi sikered mondja meg, mennyit érsz. Nem
+                                csak ezek határoznak meg téged.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="manifesto-item">
+                        <div class="manifesto-number">02</div>
+                        <div>
+                            <h3 class="manifesto-title">
+                                Hiszem, hogy a heti 60+ óra munka nem siker.
+                            </h3>
+                            <p class="manifesto-text">
+                                A túlórázás önmagában nem tesz értékesebbé.
+                                Könnyű beleragadni abba, hogy mindig még többet
+                                kell teljesítened.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="manifesto-item">
+                        <div class="manifesto-number">03</div>
+                        <div>
+                            <h3 class="manifesto-title">
+                                Hiszem, hogy lehetsz egyszerre ambiciózus és
+                                bizonytalan.
+                            </h3>
+                            <p class="manifesto-text">
+                                Lehetsz sikeres, ambiciózus és tehetséges, és
+                                mégis néha megkérdőjelezheted magad. A
+                                bizonytalanság nem jelenti azt, hogy nem vagy
+                                elég jó.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="manifesto-item">
+                        <div class="manifesto-number">04</div>
+                        <div>
+                            <h3 class="manifesto-title">
+                                Hiszem, hogy nem a gyors trükkök vagy a
+                                motivációs gondolatok hozzák el a valódi
+                                változást.
+                            </h3>
+                            <p class="manifesto-text">
+                                Nem fogom megmondani, mit kell tenned.
+                                Kérdéseket fogok feltenni – néha olyanokat is,
+                                amelyekre nem kényelmes válaszolni.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="manifesto-item highlight">
+                        <div class="manifesto-number">+1</div>
+                        <div>
+                            <h3 class="manifesto-title">
+                                Hiszem, hogy már most elég vagy.
+                            </h3>
+                            <p class="manifesto-text">
+                                A coachingban az erősségeidre is ránézünk, hogy
+                                te is jobban lásd és elhidd őket.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="kapcsolat">
+            <div class="container">
+                <h2 class="section-title">Szívesen dolgoznál velem?</h2>
+                <div class="cta-title-line" aria-hidden="true"></div>
+                <p>
+                    Foglalj egy ingyenes 30 perces konzultációt, és nézzük meg,
+                    hogyan tudlak támogatni.
+                </p>
+                <a
+                    class="button button-primary"
+                    href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Érdeklődés%20%7C%20Ingyenes%200.%20Beszélgetés%20Foglalása&body=Szia%20Zsófi%2C%0D%0A%0D%0ASzeretnék%20időpontot%20kérni%20hozzád%20egy%200.%20beszélgetésre.%20Érdekelne%20a%20coaching%20folyamatod,%20és%20az,%20hogyan%20tudnánk%20együtt%20dolgozni.%0D%0A%0D%0AÜdvözlettel%2C"
+                    >Ingyenes konzultáció foglalása</a
+                >
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Boros Zsófia. Minden jog fenntartva.</p>
+            </div>
+        </footer>
+
+        <script>
+            const menuToggle = document.getElementById("menuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            menuToggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("is-active");
+            });
+
+            document.addEventListener("click", (event) => {
+                const header = document.querySelector(".header");
+                const isClickInside = header.contains(event.target);
+
+                if (
+                    !isClickInside &&
+                    mobileMenu.classList.contains("is-active")
+                ) {
+                    mobileMenu.classList.remove("is-active");
+                }
+            });
+        </script>
+    </body>
+</html>
