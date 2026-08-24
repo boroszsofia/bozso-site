@@ -341,6 +341,35 @@
                 color: var(--gray-700);
             }
 
+            @media (max-width: 1023px) {
+                .hero-grid {
+                    gap: 28px;
+                }
+
+                .hero-content {
+                    display: contents;
+                }
+
+                .hero-content .hero-title {
+                    order: 1;
+                    margin-bottom: 0;
+                }
+
+                .hero-content .hero-description {
+                    order: 2;
+                    margin-bottom: 0;
+                }
+
+                .hero-image-container {
+                    order: 3;
+                }
+
+                .hero-content .cta-group {
+                    order: 4;
+                    justify-content: center;
+                }
+            }
+
             .cta-group {
                 display: flex;
                 gap: 16px;
@@ -749,6 +778,11 @@
             }
 
             @media (max-width: 850px) {
+                .source-testimonials {
+                    padding-top: 40px;
+                    padding-bottom: 20px;
+                }
+
                 .source-testimonial-grid {
                     grid-template-columns: 1fr;
                 }
@@ -779,7 +813,7 @@
 
             @media (max-width: 560px) {
                 .benefits-section {
-                    padding: 72px 0;
+                    padding: 72px 0 40px;
                 }
 
                 .benefits-grid {
@@ -878,6 +912,11 @@
                 color: var(--green-800);
             }
 
+            .about-values {
+                padding-left: 18px;
+                border-left: 3px solid var(--ochre, #d6a62f);
+            }
+
             .about-intro-highlight {
                 background: linear-gradient(
                     transparent 62%,
@@ -908,7 +947,47 @@
             @media (max-width: 850px) {
                 .about-intro-grid {
                     grid-template-columns: 1fr;
-                    gap: 40px;
+                    gap: 28px;
+                }
+
+                .about-section {
+                    padding-top: 28px;
+                    padding-bottom: 40px;
+                }
+
+                .about-intro-copy {
+                    display: contents;
+                }
+
+                .about-intro-copy h2 {
+                    order: 1;
+                    margin-bottom: 0;
+                }
+
+                .about-intro-copy .about-lead {
+                    order: 2;
+                }
+
+                .about-intro-grid > div:last-child {
+                    order: 3;
+                }
+
+                .about-intro-copy .about-background {
+                    order: 4;
+                }
+
+                .about-intro-copy .about-values {
+                    order: 5;
+                    margin-top: 0;
+                }
+
+                .about-intro-copy .about-coaching {
+                    order: 6;
+                    margin-top: 0;
+                }
+
+                .about-intro-copy .button {
+                    order: 7;
                 }
 
                 .about-intro-image {
@@ -983,7 +1062,7 @@
 
             @media (max-width: 560px) {
                 .faq-section {
-                    padding: 72px 0;
+                    padding: 40px 0 72px;
                 }
 
                 .faq-item {
@@ -1691,10 +1770,7 @@
                 <div class="sign-conclusion">
                     <strong>Kettő, vagy több ismerős?</strong>
                     <p>
-                        Nem vagy egyedül, és nem kell ugyanígy folytatnod. Egy
-                        ingyenes, 30 perces konzultáción átbeszélhetjük, mi
-                        foglalkoztat most, és hogy a coaching tud-e abban
-                        hatékonyan támogatni.
+                        Nem vagy egyedül, és nem kell ugyanígy folytatnod. 
                     </p>
                     <a
                         class="button button-primary"
@@ -1707,7 +1783,11 @@
 
         <section id="coaching" class="benefits-section">
             <div class="container">
-                <h2>Mit kapsz a coachingban?</h2>
+                <h2>
+                    <span class="yellow-underline"
+                        >Mit kapsz a coachingban?</span
+                    >
+                </h2>
                 <p class="benefits-intro">
                     A coachingban megnézzük, mi hajt előre, mi merít ki, és
                     hogyan tudsz úgy haladni a céljaiddal, hogy ne kelljen
@@ -2060,11 +2140,13 @@
                 <div class="about-intro-copy" data-reveal>
                     <h2>Szia, Zsófi vagyok!</h2>
 
-                    <p>
+                    <p class="about-lead">
                         <strong
                             >ICF ACC minősítéssel rendelkező Business és Mentál
                             Coachként dolgozom.</strong
-                        > <br /> <br />
+                        >
+                    </p>
+                    <p class="about-background">
                         Több mint tíz évig dolgoztam regionális vezetőként egy
                         olyan multinacionális környezetben, ahol a
                         <strong
@@ -2076,17 +2158,20 @@
                         közben azonban a belső szorongás és az állandó
                         bizonyítás fizikailag és mentálisan is kimeríthet.
                     </p>
-                    <p>
+                    <p class="about-values">
                         <strong
                             >Értem a multik világát, és azt is, milyen érzés
                             kivülről sikeresnek lenni, belül mégis folyamatosan
                             kételkedni magadban.</strong
                         >
                     </p>
-                    <p>
-                        A coachignban nem kész megoldásokat adok. Kérdésekkel segítelek közelebb ahhoz, hogy 
+                    <p class="about-coaching">
+                        A coachingban nem kész megoldásokat adok. Kérdésekkel
+                        segítelek közelebb ahhoz, hogy
                         <span class="about-intro-highlight"
-                            >jobban lásd a saját erősségeidet, tisztábban dönts, és elhidd: már most elég jó vagy!
+                            >jobban lásd a saját erősségeidet, tisztábban dönts,
+                            és elhidd: már most elég jó vagy!</span
+                        >
                     </p>
                     <a class="button button-secondary" href="rolam.html"
                         >Többet rólam</a

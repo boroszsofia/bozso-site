@@ -421,6 +421,22 @@
                 }
             }
 
+            @media (min-width: 900px) {
+                .intro-story-grid {
+                    grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+                    gap: 0;
+                }
+
+                .intro-story-grid .story-image {
+                    margin: 0 auto 0 0;
+                }
+
+                .intro-story-grid .story-copy {
+                    width: min(100%, 560px);
+                    justify-self: center;
+                }
+            }
+
             .icf-badge {
                 display: inline-flex;
                 align-items: center;
@@ -641,7 +657,13 @@
                         Mentál Coach.
                     </h1>
                 </div>
-                <div class="story-grid">
+                <div class="story-grid intro-story-grid">
+                    <div class="story-image">
+                        <img
+                            src="../pics/zsoficoffe.jpg"
+                            alt="Boros Zsófia portré"
+                        />
+                    </div>
                     <div class="story-copy">
                         <p>
                             <strong
@@ -668,12 +690,6 @@
                             <img src="../pics/icf-badge.png" alt="" />
                             ICF ACC minősített coach
                         </div>
-                    </div>
-                    <div class="story-image">
-                        <img
-                            src="../pics/zsoficoffe.jpg"
-                            alt="Boros Zsófia portré"
-                        />
                     </div>
                 </div>
             </div>
