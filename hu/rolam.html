@@ -356,12 +356,25 @@
                 font-size: clamp(1.7rem, 3vw, 2.5rem);
             }
 
+            .green-highlight {
+                background: linear-gradient(
+                    transparent 62%,
+                    #a8bd82 62%
+                );
+            }
+
             .page-hero p {
                 font-family: "DM Sans", Arial, sans-serif;
                 font-size: 1.1rem;
                 max-width: 620px;
                 margin: 0 auto;
                 color: var(--gray-700);
+            }
+
+            .icf-qualification {
+                margin: -0.7rem auto 0;
+                font-size: 0.9rem;
+                color: var(--green-700);
             }
 
             /* Story sections */
@@ -395,6 +408,13 @@
             .story-copy strong {
                 color: inherit;
                 font-weight: 700;
+            }
+
+            .story-copy .blog-highlight {
+                display: block;
+                padding: 12px 16px;
+                border-left: 3px solid var(--green-700);
+                background: rgba(220, 228, 215, 0.45);
             }
 
             .story-image {
@@ -653,16 +673,26 @@
                 <div class="page-hero" style="padding: 70px 0 40px">
                     <span class="section-kicker">Rólam</span>
                     <h1 class="section-title">
-                        Szia! Zsófi vagyok, ICF ACC minősített Business és
-                        Mentál Coach.
+                        <span class="green-highlight"
+                            >Szia! Zsófi vagyok!</span
+                        >
                     </h1>
+                    <p class="icf-qualification">
+                        ICF ACC minősített Business és Mentál Coach.
+                    </p>
                 </div>
                 <div class="story-grid intro-story-grid">
-                    <div class="story-image">
-                        <img
-                            src="../pics/zsoficoffe.jpg"
-                            alt="Boros Zsófia portré"
-                        />
+                    <div class="story-media">
+                        <div class="story-image">
+                            <img
+                                src="../pics/zsoficoffe.jpg"
+                                alt="Boros Zsófia portré"
+                            />
+                        </div>
+                        <div class="icf-badge">
+                            <img src="../pics/icf-badge.png" alt="" />
+                            ICF ACC minősített coach
+                        </div>
                     </div>
                     <div class="story-copy">
                         <p>
@@ -676,7 +706,7 @@
                             belül megjelent a következő elvárás. <br /><br />
                         </p>
                         <p>
-                            <strong
+                            <strong class="blog-highlight"
                                 >Idővel megértettem, hogy a teljesítmény fontos,
                                 de önmagában nem ad tartós biztonságot.</strong
                             ><br /><br />A coachinghoz ez a felismerés vezetett.
@@ -685,11 +715,6 @@
                             és olyan működést alakítsanak ki, amely hosszú távon
                             is fenntartható számukra.
                         </p>
-                        <p></p>
-                        <div class="icf-badge">
-                            <img src="../pics/icf-badge.png" alt="" />
-                            ICF ACC minősített coach
-                        </div>
                     </div>
                 </div>
             </div>
@@ -699,7 +724,11 @@
             <div class="container">
                 <div class="story-heading">
                     <span class="section-kicker">Szakmai háttér</span>
-                    <h2 class="section-title sm">Értem a multik világát!</h2>
+                    <h2 class="section-title sm">
+                        <span class="green-highlight"
+                            >Értem a multik világát!</span
+                        >
+                    </h2>
                 </div>
                 <div class="story-grid">
                     <div class="story-copy">
@@ -742,7 +771,9 @@
             <div class="container">
                 <div class="story-heading">
                     <span class="section-kicker">Expatévek Svájcban</span>
-                    <h2 class="section-title sm">Két év külföldön</h2>
+                    <h2 class="section-title sm">
+                        <span class="green-highlight">Két év külföldön</span>
+                    </h2>
                 </div>
                 <div class="story-grid">
                     <div class="story-copy">
@@ -781,7 +812,11 @@
                     <span class="section-kicker"
                         >Sport Mentál és Team Coaching</span
                     >
-                    <h2 class="section-title sm">Sport és mentális erő</h2>
+                    <h2 class="section-title sm">
+                        <span class="green-highlight"
+                            >Sport és mentális erő</span
+                        >
+                    </h2>
                 </div>
                 <div class="story-grid">
                     <div class="story-copy">
@@ -793,7 +828,7 @@
                             futásról, búvárkodásról vagy teniszről. <br /><br />
                         </p>
                         <p>
-                            <strong>
+                            <strong class="blog-highlight">
                                 A sport számomra nem csupán az állóképességről
                                 vagy a fizikai teljesítményről szól, hanem egy
                                 olyan belső tartásról és szemléletről is, amely
@@ -825,7 +860,9 @@
                 <div class="page-hero" style="padding: 0 0 20px">
                     <span class="section-kicker">A hitvallásom</span>
                     <h2 class="section-title sm">
-                        5 ok, miért (ne) dolgozz velem
+                        <span class="green-highlight"
+                            >5 ok, miért (ne) dolgozz velem</span
+                        >
                     </h2>
                 </div>
                 <div class="manifesto-list">
