@@ -1,0 +1,1972 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zsófia Boros | Business Coach</title>
+        <meta
+            name="description"
+            content="ICF-certified Business Coach with 10+ years of international leadership experience."
+        />
+        <meta property="og:title" content="Zsófia Boros | Business Coach" />
+        <meta
+            property="og:description"
+            content="ICF-certified Business Coach with 10+ years of international leadership experience."
+        />
+        <meta
+            property="og:image"
+            content="https://zsofiaboros.coach/preview.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zsofiaboros.coach/" />
+        <meta property="og:site_name" content="Zsófia Boros Coaching" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zsófia Boros | Business Coach" />
+        <meta
+            name="twitter:description"
+            content="ICF-certified Business Coach with 10+ years of international leadership experience."
+        />
+        <meta
+            name="twitter:image"
+            content="https://zsofiaboros.coach/preview.png"
+        />
+        <meta name="msapplication-TileImage" content="pics/sun.png" />
+        <link rel="canonical" href="https://zsofiaboros.coach/" />
+        <link rel="icon" type="image/png" href="pics/sun.png" />
+        <link rel="apple-touch-icon" href="pics/sun.png" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://vercel.com/_vercel/insights/script.js"></script>
+        <style>
+            :root {
+                --green-950: #0e1a14;
+                --green-900: #16261e;
+                --green-800: #21372c;
+                --green-700: #305040;
+                --green-600: #466c59;
+                --gray-100: #f1f3f1;
+                --gray-200: #e3e6e3;
+                --gray-300: #cdd3ce;
+                --gray-500: #6d756f;
+                --gray-700: #404741;
+                --white: #fbfcfb;
+                --ink: #1b221d;
+                --line: rgba(22, 38, 30, 0.12);
+                --card: rgba(251, 252, 251, 0.88);
+                --shadow: 0 18px 40px rgba(18, 29, 23, 0.08);
+                --shadow-strong: 0 24px 56px rgba(18, 29, 23, 0.18);
+                --container: min(1120px, calc(100vw - 28px));
+                --radius-xl: 18px;
+                --radius-lg: 14px;
+                --radius-md: 10px;
+                --radius-sm: 8px;
+            }
+
+            /* Theme Definitions */
+            body.theme-green {
+                --green-950: #0e1a14;
+                --green-900: #16261e;
+                --green-800: #21372c;
+                --green-700: #305040;
+                --green-600: #466c59;
+                --accent-rgb: 70, 108, 89;
+            }
+
+            body.theme-ochre {
+                --green-950: #1a1408;
+                --green-900: #261e0b;
+                --green-800: #372b10;
+                --green-700: #503f17;
+                --green-600: #b8860b;
+                --accent-rgb: 184, 134, 11;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            body {
+                font-family: "Manrope", sans-serif;
+                line-height: 1.7;
+                color: var(--gray-500);
+                background:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(var(--accent-rgb), 0.15),
+                        transparent 24%
+                    ),
+                    radial-gradient(
+                        circle at right top,
+                        rgba(109, 117, 111, 0.14),
+                        transparent 24%
+                    ),
+                    linear-gradient(180deg, #f4f6f4 0%, #eef1ee 100%);
+                min-height: 100vh;
+                overflow-x: hidden;
+                position: relative;
+                transition: background 0.5s ease;
+            }
+
+            html {
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-family: "Cormorant Garamond", serif;
+                color: var(--green-950);
+                letter-spacing: -0.02em;
+                font-weight: 600;
+            }
+
+            .container {
+                width: var(--container);
+                margin: 0 auto;
+            }
+
+            /* Header Styles */
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: rgba(251, 252, 251, 0.85);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--line);
+                z-index: 1000;
+            }
+
+            .header-container {
+                height: 72px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .logo {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.35rem;
+                font-weight: 600;
+                color: var(--green-950);
+                text-decoration: none;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .logo-icon {
+                height: 24px;
+                width: auto;
+                display: none;
+            }
+
+            .nav-desktop {
+                display: none;
+                gap: 32px;
+            }
+
+            .nav-desktop a {
+                text-decoration: none;
+                color: var(--gray-700);
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: all 0.2s;
+                padding: 8px 16px;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-desktop a:hover {
+                color: var(--green-700);
+            }
+
+            .button-sm {
+                padding: 10px 18px;
+                font-size: 0.8rem;
+            }
+
+            .cta-desktop {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 4px;
+            }
+
+            .menu-toggle span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background: var(--green-950);
+            }
+
+            .mobile-menu {
+                display: none;
+                background: var(--white);
+                padding: 0;
+            }
+
+            .mobile-menu.is-active {
+                display: block;
+            }
+
+            .nav-mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .nav-mobile a {
+                text-decoration: none;
+                color: var(--green-950);
+                font-weight: 500;
+                font-size: 1.1rem;
+                padding: 0 16px;
+                display: flex;
+                align-items: center;
+                height: 72px;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .nav-mobile a:last-child {
+                border-bottom: none;
+            }
+
+            /* Hero Layout */
+            .hero {
+                padding: 100px 0 80px 0;
+                display: flex;
+                align-items: center;
+                min-height: 90vh;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 50px;
+                align-items: center;
+            }
+
+            @media (min-width: 1024px) {
+                .menu-toggle {
+                    display: none;
+                }
+                .nav-desktop {
+                    display: flex;
+                }
+                .header-container {
+                    height: 84px;
+                }
+                .hero {
+                    padding-top: calc(84px + 2rem);
+                }
+                .mobile-menu {
+                    display: none !important;
+                }
+                .cta-desktop {
+                    display: inline;
+                }
+                .cta-mobile {
+                    display: none;
+                }
+                .logo-icon {
+                    display: block;
+                }
+                .hero-grid {
+                    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+                }
+            }
+
+            .section-kicker {
+                text-transform: uppercase;
+                letter-spacing: 0.16em;
+                font-size: 0.7rem;
+                font-weight: 800;
+                color: var(--green-700);
+                margin-bottom: 1.5rem;
+                display: block;
+            }
+
+            .hero-title {
+                font-size: clamp(3rem, 8vw, 4.5rem);
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.125rem;
+                max-width: 540px;
+                margin-bottom: 2.5rem;
+            }
+
+            .cta-group {
+                display: flex;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .button {
+                padding: 16px 32px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                display: inline-block;
+                text-align: center;
+                line-height: 1.2;
+            }
+
+            .button-primary {
+                background: linear-gradient(
+                    135deg,
+                    var(--green-600),
+                    var(--green-700)
+                );
+                color: var(--white);
+                font-weight: 800;
+                border-radius: var(--radius-sm);
+                box-shadow: var(--shadow);
+            }
+
+            .button-secondary {
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid var(--line);
+                color: var(--green-900);
+                font-weight: 800;
+                border-radius: var(--radius-sm);
+                backdrop-filter: blur(8px);
+            }
+
+            .hero-image-wrapper {
+                position: relative;
+                border-radius: var(--radius-xl);
+                overflow: hidden;
+                box-shadow: var(--shadow-strong);
+                aspect-ratio: 4/5;
+                background-color: var(--gray-200);
+            }
+
+            .hero-image-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            /* About Me Section Styles */
+            .about-section {
+                padding: 100px 0;
+                background: var(--white);
+                position: relative;
+                z-index: 1;
+            }
+
+            .about-row {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 40px;
+                align-items: center;
+                margin-bottom: 100px;
+            }
+
+            .about-row:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 1024px) {
+                .about-row {
+                    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+                    gap: 50px;
+                }
+                .about-row.reverse {
+                    direction: rtl;
+                }
+                .about-row.reverse > * {
+                    direction: ltr;
+                }
+            }
+
+            .emphasis {
+                color: var(--green-800);
+                font-weight: 600;
+                font-size: 1.5rem;
+                display: block;
+                margin: 1.5rem 0;
+                font-family: "Cormorant Garamond", serif;
+                font-style: italic;
+            }
+
+            .accordion {
+                border-top: 1px solid var(--line);
+                margin-top: 2rem;
+            }
+
+            .accordion summary {
+                font-weight: 800;
+                cursor: pointer;
+                list-style: none;
+                padding: 1.5rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: var(--green-900);
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.16em;
+            }
+
+            .accordion summary::after {
+                content: "+";
+                font-size: 1.4rem;
+                font-weight: 400;
+                transition: transform 0.2s ease;
+            }
+
+            .accordion[open] summary::after {
+                transform: rotate(45deg);
+            }
+
+            .accordion-content {
+                padding-bottom: 1.5rem;
+            }
+
+            .page-bg {
+                position: absolute;
+                filter: blur(32px);
+                opacity: 0.5;
+                border-radius: 999px;
+                z-index: -1;
+                pointer-events: none;
+            }
+
+            .bg-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1;
+                pointer-events: none;
+            }
+
+            /* Coaching Section Styles */
+            .coaching-section {
+                padding: 100px 0;
+                background: var(--gray-100);
+            }
+
+            .coaching-intro {
+                max-width: 800px;
+                margin-bottom: 32px;
+            }
+
+            .distinction-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin-bottom: 80px;
+            }
+
+            @media (min-width: 768px) {
+                .distinction-grid {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+
+            .distinction-card {
+                background: var(--white);
+                padding: 32px;
+                border-radius: var(--radius-lg);
+                border-left: 4px solid var(--green-600);
+            }
+
+            .distinction-card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+
+            .scenarios-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 24px;
+                margin-top: 40px;
+            }
+
+            .scenario-card {
+                background: var(--card);
+                padding: 40px;
+                border-radius: var(--radius-xl);
+                border: 1px solid var(--line);
+                transition: all 0.3s ease;
+            }
+
+            .scenario-card:hover {
+                border-color: var(--green-600);
+                box-shadow: var(--shadow);
+            }
+
+            .scenario-icon {
+                width: 40px;
+                height: 40px;
+                color: var(--green-700);
+                margin-bottom: 24px;
+            }
+
+            .process-info {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 40px;
+                margin-top: 32px;
+                padding: 40px;
+                background: var(--green-950);
+                color: var(--gray-300);
+                border-radius: var(--radius-xl);
+            }
+
+            .process-item h4 {
+                color: var(--white);
+                font-family: "Manrope", sans-serif;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 12px;
+            }
+
+            .process-item p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            /* Endorsement Section Styles */
+            .endorsement-section {
+                padding: 100px 0 30px;
+                background: var(--white);
+                overflow: hidden;
+            }
+
+            .endorsement-carousel {
+                display: flex;
+                gap: 24px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding: 40px 24px 80px;
+                margin: 0 -24px;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE/Edge */
+                -webkit-mask-image: linear-gradient(
+                    to right,
+                    transparent,
+                    black 30px,
+                    black calc(100% - 30px),
+                    transparent
+                );
+                mask-image: linear-gradient(
+                    to right,
+                    transparent,
+                    black 30px,
+                    black calc(100% - 30px),
+                    transparent
+                );
+            }
+
+            .endorsement-carousel::-webkit-scrollbar {
+                display: none; /* Chrome/Safari */
+            }
+
+            .endorsement-card {
+                flex: 0 0 calc(100% - 40px);
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+                background: var(--white);
+                padding: 40px;
+                border-radius: var(--radius-xl);
+                border: 1px solid var(--line);
+                box-shadow: var(--shadow);
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                transition: box-shadow 0.3s ease;
+            }
+
+            .endorsement-card:hover {
+                box-shadow: var(--shadow-strong);
+            }
+
+            @media (min-width: 768px) {
+                .endorsement-card {
+                    flex: 0 0 500px;
+                }
+            }
+
+            .endorsement-header {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .endorsement-img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid var(--gray-200);
+            }
+
+            .endorsement-info h4 {
+                font-family: "Manrope", sans-serif;
+                font-size: 1.1rem;
+                color: var(--green-950);
+                font-weight: 800;
+                line-height: 1.2;
+            }
+
+            .endorsement-info p {
+                font-size: 0.85rem;
+                color: var(--green-700);
+                font-weight: 500;
+            }
+
+            .endorsement-text {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: var(--gray-700);
+                font-style: italic;
+                position: relative;
+            }
+
+            .endorsement-text::before {
+                content: '"';
+                font-family: "Cormorant Garamond", serif;
+                font-size: 3rem;
+                color: var(--gray-200);
+                position: absolute;
+                top: -20px;
+                left: -10px;
+                z-index: -1;
+            }
+
+            /* Carousel Controls */
+            .carousel-nav {
+                display: none;
+                justify-content: flex-end;
+                gap: 12px;
+                margin-top: -60px; /* Pulls it up level with the title area */
+                margin-bottom: 20px;
+                position: relative;
+                z-index: 10;
+            }
+
+            @media (min-width: 1024px) {
+                .carousel-nav {
+                    display: flex;
+                }
+            }
+
+            .nav-btn {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid var(--line);
+                background: var(--white);
+                color: var(--green-950);
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .nav-btn:hover {
+                background: var(--gray-100);
+                border-color: var(--gray-300);
+            }
+
+            .nav-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            /* Contact Section */
+            .contact-section {
+                padding: 100px 0;
+            }
+
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 24px;
+                margin-top: 48px;
+            }
+
+            .contact-card {
+                background: var(--white);
+                padding: 32px;
+                border-radius: var(--radius-xl);
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                text-decoration: none;
+                border: 1px solid var(--line);
+                transition: all 0.3s ease;
+            }
+
+            .contact-card:hover {
+                border-color: var(--green-600);
+                box-shadow: var(--shadow);
+            }
+
+            .contact-icon-box {
+                width: 52px;
+                height: 52px;
+                background: var(--gray-100);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--green-700);
+                flex-shrink: 0;
+            }
+
+            .contact-icon-box svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contact-label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: var(--green-700);
+                font-weight: 800;
+            }
+
+            .contact-value {
+                font-size: 1rem;
+                color: var(--green-950);
+                font-weight: 500;
+            }
+
+            .footer {
+                padding: 60px 0;
+                background: var(--white);
+                text-align: center;
+                border-top: 1px solid var(--line);
+            }
+
+            .footer p {
+                font-size: 0.85rem;
+                color: var(--gray-500);
+            }
+        </style>
+    </head>
+    <body class="theme-green">
+        <div class="bg-container">
+            <div
+                class="page-bg"
+                style="
+                    top: 0%;
+                    left: -10%;
+                    width: 40vw;
+                    height: 40vw;
+                    background: var(--green-600);
+                    opacity: 0.1;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 15%;
+                    right: -5%;
+                    width: 30vw;
+                    height: 30vw;
+                    background: var(--gray-300);
+                    opacity: 0.2;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 35%;
+                    left: -15%;
+                    width: 50vw;
+                    height: 50vw;
+                    background: var(--gray-200);
+                    opacity: 0.15;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 55%;
+                    right: -10%;
+                    width: 45vw;
+                    height: 45vw;
+                    background: var(--green-700);
+                    opacity: 0.1;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 75%;
+                    left: -5%;
+                    width: 40vw;
+                    height: 40vw;
+                    background: var(--gray-300);
+                    opacity: 0.12;
+                "
+            ></div>
+            <div
+                class="page-bg"
+                style="
+                    top: 90%;
+                    right: 5%;
+                    width: 35vw;
+                    height: 35vw;
+                    background: var(--green-600);
+                    opacity: 0.1;
+                "
+            ></div>
+        </div>
+
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div class="header-left">
+                        <button
+                            class="menu-toggle"
+                            id="menuToggle"
+                            aria-label="Toggle menu"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <a href="#" class="logo">
+                            <img src="pics/sun.png" alt="" class="logo-icon" />
+                            Zsófia Boros
+                        </a>
+                    </div>
+
+                    <nav class="nav-desktop">
+                        <a href="#about">About Me</a>
+                        <a href="#coaching">Coaching</a>
+                        <a href="#endorsement">Endorsement</a>
+                        <a href="#contact">Contact</a>
+                        <a href="/hu">Hu | En</a>
+                    </nav>
+
+                    <div class="header-right">
+                        <a
+                            href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                            class="button button-primary button-sm"
+                        >
+                            <span class="cta-mobile">Book a Chat</span>
+                            <span class="cta-desktop"
+                                >Book a Free Coffee Chat</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="container">
+                    <nav class="nav-mobile">
+                        <a href="#about">About Me</a>
+                        <a href="#coaching">Coaching</a>
+                        <a href="#endorsement">Endorsement</a>
+                        <a href="#contact">Contact</a>
+                        <a href="/hu">Hu | En</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content" data-reveal>
+                        <span class="section-kicker"
+                            >Business & Mental Coach</span
+                        >
+                        <h1 class="hero-title">Zsófia Boros</h1>
+                        <h2
+                            style="
+                                font-size: 2rem;
+                                margin-bottom: 2rem;
+                                margin-right: 2rem;
+                                line-height: 1.3;
+                                font-style: italic;
+                                color: var(--gray-700);
+                            "
+                        >
+                            Empowering you to build on your unique strengths as
+                            an ICF-certified business coach.
+                        </h2>
+                        <p class="hero-description">
+                            If you are ready to consciously design your next
+                            chapter, you are in the right place. I provide a
+                            collaborative thinking process for professionals,
+                            internationals, and leaders to turn challenges into
+                            growth and build a path aligned with their
+                            strengths.
+                        </p>
+                        <div class="cta-group">
+                            <a
+                                href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                                class="button button-primary"
+                                >Book a Free Coffee Chat</a
+                            >
+                            <!--
+                            <a href="#about" class="button button-secondary"
+                                >Learn more</a
+                            >
+                            -->
+                        </div>
+                    </div>
+                    <div class="hero-image-container" data-reveal>
+                        <div class="hero-image-wrapper">
+                            <img
+                                src="pics/zsofia.jpg"
+                                alt="Zsófia Boros - Business Coach"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <!-- Subsection 1: Philosophy -->
+                <div class="about-row" data-reveal>
+                    <div class="about-text">
+                        <span class="section-kicker">About Me</span>
+                        <h2
+                            class="hero-title"
+                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                        >
+                            Hello, I am Zsófi
+                        </h2>
+                        <p>
+                            A Business & Mental Coach driven by the power of
+                            growth and self-awareness; an experienced
+                            international marketing leader, and a lifelong
+                            sports enthusiast. I believe in the power of
+                            coaching because I’ve seen and personally
+                            experienced how it can shift lives and careers from
+                            a standstill, providing fresh momentum and a new
+                            sense of direction.
+                        </p>
+                        <details class="accordion">
+                            <summary>My Philosophy</summary>
+                            <div class="accordion-content">
+                                <p>
+                                    As a coach, my promise is simple: I will
+                                    support you in overcoming the challenges
+                                    you’ve been struggling with alone. Yes, we
+                                    will solve them – TOGETHER! Whether it’s an
+                                    executive-level leadership or personal
+                                    dilemma, I will guide you through a
+                                    structured process within the framework of
+                                    the ICF (International Coaching Federation).
+                                    You bring the topic; I bring the framework.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img
+                            src="pics/introduction-talk.jpg"
+                            alt="Zsófia Boros Coaching"
+                        />
+                    </div>
+                </div>
+
+                <!-- Subsection 2: Corporate -->
+                <div class="about-row reverse" data-reveal>
+                    <div class="about-text">
+                        <span class="section-kicker">Corporate Experience</span>
+                        <h2
+                            class="hero-title"
+                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                        >
+                            I Understand the Corporate World
+                        </h2>
+                        <p>
+                            I don’t just understand, I lived it, through all its
+                            highs and lows. I bring over 10 years of
+                            international experience, most recently as a
+                            Marketing Director at Procter & Gamble. During this
+                            decade, I lived abroad, led multicultural and
+                            multifunctional teams, and was responsible for the
+                            strategic growth of multi-million dollar brands.
+                        </p>
+                        <details class="accordion">
+                            <summary>Been there, done that</summary>
+                            <div class="accordion-content">
+                                <p>
+                                    Throughout my career, I have navigated
+                                    complex market crises and celebrated major
+                                    successes. I know exactly what real
+                                    responsibility feels like. I have personally
+                                    experienced the weight of executive
+                                    expectations, the pressure, and the real
+                                    risk of burnout.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img
+                            src="pics/introduction-present.jpg"
+                            alt="Zsófia Boros Business Experience"
+                        />
+                    </div>
+                </div>
+
+                <!-- Subsection 3: Expat -->
+                <div class="about-row" data-reveal>
+                    <div class="about-text">
+                        <span class="section-kicker">Expat Experience</span>
+                        <h2
+                            class="hero-title"
+                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                        >
+                            Living and Working Abroad
+                        </h2>
+                        <p>
+                            I spent two years living as an expat in Switzerland.
+                            Through this, I learned firsthand that building a
+                            career, performing in a new role, and starting a
+                            fresh life from scratch far away from your usual
+                            support system is a massive challenge.
+                        </p>
+                        <details class="accordion">
+                            <summary>I know what it feels like</summary>
+                            <div class="accordion-content">
+                                <p>
+                                    Moving at the height of Covid meant spending
+                                    my first six months in lockdown with a
+                                    completely closed office. Yet, despite this
+                                    tough start, it became one of the most
+                                    defining and beautiful chapters of my life,
+                                    teaching me self-awareness, mental
+                                    resilience, and how to build new and keep
+                                    old connections across thousands of
+                                    kilometers.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img
+                            src="pics/introduction-toblerone.jpeg"
+                            alt="Zsófia Boros Expat Experience"
+                        />
+                    </div>
+                </div>
+
+                <!-- Subsection 4: Sports -->
+                <div class="about-row reverse" data-reveal>
+                    <div class="about-text">
+                        <span class="section-kicker">Sport Mindset</span>
+                        <h2
+                            class="hero-title"
+                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                        >
+                            Sport Mental Coaching
+                        </h2>
+                        <p>
+                            I am expanding my expertise in Sports Mental & Team
+                            Coaching to complement my business background. I
+                            believe sports are about more than physical
+                            endurance but they build the inner strength and
+                            resilience needed to manage high-pressure
+                            situations. This mindset translates perfectly from
+                            the pitch to the business world.
+                        </p>
+                        <details class="accordion">
+                            <summary>The Power of Mental Performance</summary>
+                            <div class="accordion-content">
+                                <p>
+                                    Sports have always been my anchor for mental
+                                    stamina and key energy source. Following 13
+                                    years of competitive handball, I continue to
+                                    challenge myself, whether it's a 30km run,
+                                    scuba diving, or tennis. Learning to
+                                    maintain sharp focus, staying calm under
+                                    pressure, and navigating failure all play a
+                                    vital role in my coaching process.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img
+                            src="pics/introduction-sport.jpg"
+                            alt="Zsófia Boros Sports Mindset"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coaching" class="coaching-section">
+            <div class="container">
+                <div class="coaching-intro">
+                    <span class="section-kicker">The Methodology</span>
+                    <h2
+                        class="hero-title"
+                        style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                    >
+                        What is Coaching?
+                    </h2>
+                    <p>
+                        For me, coaching is a
+                        <strong>creative partnership</strong>. It is a
+                        thought-provoking process centered on self-awareness. I
+                        am not giving you ready-made solutions, but we identify
+                        your inner resources and opportunities so you can move
+                        forward with greater authenticity whether in your career
+                        or your personal life.
+                    </p>
+                    <details class="accordion">
+                        <summary>Why work with me</summary>
+                        <div class="accordion-content">
+                            <p>
+                                True professional evolution requires more than
+                                just textbook theory. By combining an
+                                ICF-certified coaching framework with a decade
+                                of real-world leadership experience, I offer a
+                                partnership to elevate your career, impact, and
+                                personal growth.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="distinction-grid">
+                    <div class="distinction-card">
+                        <h3>ICF Certified Coaching</h3>
+                        <p>
+                            I bring the international gold standard of coaching,
+                            ensuring a highly professional and action-oriented
+                            framework.
+                        </p>
+                    </div>
+                    <div class="distinction-card">
+                        <h3>Corporate Leadership</h3>
+                        <p>
+                            Managing multi-million-dollar brands and diverse
+                            teams, I know organizational complexity and
+                            executive pressure.
+                        </p>
+                    </div>
+                    <div class="distinction-card">
+                        <h3>Expat Insights</h3>
+                        <p>
+                            I understand the unique emotional and professional
+                            shifts required to thrive, adapt, and build a
+                            successful life in a new country.
+                        </p>
+                    </div>
+                </div>
+
+                <span class="section-kicker">Support Scenarios</span>
+                <h2 class="hero-title" style="font-size: 2.5rem">
+                    How can I support you?
+                </h2>
+                <p style="margin-bottom: 40px">
+                    Coaching can address a wide range of challenges. Here are a
+                    few key areas where I partner with my clients most often.
+                </p>
+
+                <div class="scenarios-grid">
+                    <div class="scenario-card">
+                        <svg
+                            class="scenario-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                            ></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h3
+                            style="
+                                margin-bottom: 12px;
+                                font-family: &quot;Manrope&quot;, sans-serif;
+                                font-weight: 800;
+                                font-size: 1.1rem;
+                                color: var(--green-950);
+                            "
+                        >
+                            Leadership Challenges
+                        </h3>
+                        <p style="font-size: 0.95rem">
+                            New roles, promotions, or overcoming "executive
+                            loneliness" through structured thinking.
+                        </p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <svg
+                            class="scenario-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                            ></path>
+                        </svg>
+
+                        <h3
+                            style="
+                                margin-bottom: 12px;
+                                font-family: &quot;Manrope&quot;, sans-serif;
+                                font-weight: 800;
+                                font-size: 1.1rem;
+                                color: var(--green-950);
+                            "
+                        >
+                            International Transitions
+                        </h3>
+                        <p style="font-size: 0.95rem">
+                            Pressure to perform in a new job, overcoming
+                            relocation or navigating long-distance
+                            relationships.
+                        </p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <svg
+                            class="scenario-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M23 4v6h-6"></path>
+                            <path d="M1 20v-6h6"></path>
+                            <path
+                                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                            ></path>
+                        </svg>
+                        <h3
+                            style="
+                                margin-bottom: 12px;
+                                font-family: &quot;Manrope&quot;, sans-serif;
+                                font-weight: 800;
+                                font-size: 1.1rem;
+                                color: var(--green-950);
+                            "
+                        >
+                            Change & Stress
+                        </h3>
+                        <p style="font-size: 0.95rem">
+                            Career pivots, returning to work after a break, or
+                            active burnout prevention.
+                        </p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <svg
+                            class="scenario-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon
+                                points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+                            ></polygon>
+                        </svg>
+                        <h3
+                            style="
+                                margin-bottom: 12px;
+                                font-family: &quot;Manrope&quot;, sans-serif;
+                                font-weight: 800;
+                                font-size: 1.1rem;
+                                color: var(--green-950);
+                            "
+                        >
+                            Finding Direction
+                        </h3>
+                        <p style="font-size: 0.95rem">
+                            Consciously building your next chapter instead of
+                            just drifting with the current.
+                        </p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <svg
+                            class="scenario-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                            ></path>
+                        </svg>
+                        <h3
+                            style="
+                                margin-bottom: 12px;
+                                font-family: &quot;Manrope&quot;, sans-serif;
+                                font-weight: 800;
+                                font-size: 1.1rem;
+                                color: var(--green-950);
+                            "
+                        >
+                            Whatever is on your mind
+                        </h3>
+                        <p style="font-size: 0.95rem">
+                            If you feel stuck RIGHT NOW and need a structured,
+                            collaborative thinking process.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 80px">
+                    <span class="section-kicker">The Process</span>
+                    <h2 class="hero-title" style="font-size: 3rem">
+                        How do we work together?
+                    </h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 40px">
+                        An action- and results-oriented journey focused entirely
+                        on you.
+                    </p>
+                </div>
+
+                <div class="process-info">
+                    <div class="process-item">
+                        <h4>Introduction</h4>
+                        <p>
+                            Free 30-minute online call to define the framework.
+                        </p>
+                    </div>
+                    <div class="process-item">
+                        <h4>Session</h4>
+                        <p>50 minutes per session,<br />every 1–3 weeks.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>Duration</h4>
+                        <p>Typically 5–8 sessions for meaningful change.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>Location</h4>
+                        <p>Online or in person sessions based in Budapest.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="endorsement" class="endorsement-section">
+            <div class="container">
+                <span class="section-kicker">Testimonials</span>
+                <h2
+                    class="hero-title"
+                    style="
+                        font-size: clamp(2.2rem, 6vw, 3rem);
+                        margin-bottom: 0;
+                    "
+                >
+                    Client Endorsements
+                </h2>
+                <p
+                    style="
+                        text-align: center;
+                        font-size: 0.8rem;
+                        color: var(--gray-500);
+                        margin: 30px 0 0 0;
+                    "
+                    class="cta-mobile"
+                >
+                    ← Swipe to read more →
+                </p>
+
+                <div class="carousel-nav">
+                    <button class="nav-btn" id="prevBtn" aria-label="Previous">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="nav-btn" id="nextBtn" aria-label="Next">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="endorsement-carousel">
+                    <!-- Emese -->
+                    <div class="endorsement-card">
+                        <div class="endorsement-header">
+                            <img
+                                src="pics/emese.jpg"
+                                alt="Emese"
+                                class="endorsement-img"
+                            />
+                            <div class="endorsement-info">
+                                <h4>Emese</h4>
+                                <p>Sales Executive Director - FLP Hungary</p>
+                            </div>
+                        </div>
+                        <p class="endorsement-text">
+                            I had the opportunity to work with Zsófi in an
+                            Executive Business Coaching series as I was stepping
+                            into a new leadership role.
+                            <b
+                                >Zsófi didn’t offer tools but she created
+                                strategic clarity.</b
+                            >
+                            Together we explored the leadership attitude and
+                            decision patterns that are truly mine. Her questions
+                            helped me separate role expectations from my
+                            authentic self, allowing me to step into my new
+                            position with confidence.
+                            <b
+                                >I highly recommend her to leaders seeking clear
+                                self-alignment and a stable presence.</b
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Ferenc -->
+                    <div class="endorsement-card">
+                        <div class="endorsement-header">
+                            <img
+                                src="pics/ferenc.png"
+                                alt="Ferenc"
+                                class="endorsement-img"
+                            />
+                            <div class="endorsement-info">
+                                <h4>Ferenc</h4>
+                                <p>Professional Poker Player & Entrepreneur</p>
+                            </div>
+                        </div>
+                        <p class="endorsement-text">
+                            I’ve worked with several coaches before, but with
+                            Zsófi, it was the first time I felt someone is truly
+                            present and pours real energy into the process. Her
+                            questions often lead me in directions I wouldn't
+                            have reached on my own, and I’ve noticed the impact
+                            of our conversations in my daily life.
+                            <b
+                                >What’s also unique is how intense and focused
+                                each session is hence time just flies by. For
+                                me, this has clearly been a rewarding and
+                                valuable process.</b
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Dávid -->
+                    <div class="endorsement-card">
+                        <div class="endorsement-header">
+                            <img
+                                src="pics/david.jpg"
+                                alt="Dávid"
+                                class="endorsement-img"
+                            />
+                            <div class="endorsement-info">
+                                <h4>Dávid</h4>
+                                <p>Senior Supply Planner - Vodafone</p>
+                            </div>
+                        </div>
+                        <p class="endorsement-text">
+                            When I reached out to Zsófi, I felt I was completely
+                            pushing my own needs aside, with my goals ending up
+                            at the very bottom of my priority list. The most
+                            vital breakthrough during our work together was
+                            realizing the importance of setting healthy
+                            boundaries: I learned how to say no without guilt.
+                            The biggest shift is that I am finally moving toward
+                            my goals, gaining a huge boost in self-confidence
+                            along the way.
+                            <b
+                                >I make decisions more boldly now and truly
+                                believe in my ability to achieve what I set my
+                                mind to.</b
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Barbara -->
+                    <div class="endorsement-card">
+                        <div class="endorsement-header">
+                            <img
+                                src="pics/barbara.jpg"
+                                alt="Barbara"
+                                class="endorsement-img"
+                            />
+                            <div class="endorsement-info">
+                                <h4>Barbara</h4>
+                                <p>Construction Project Manager - CTP</p>
+                            </div>
+                        </div>
+                        <p class="endorsement-text">
+                            I was facing a setback that I couldn’t quite define
+                            on my own at first. Zsófi helped guide me to the
+                            root of the problem, and we resolved issues I hadn't
+                            even considered in the beginning. My most important
+                            realization was that when we dare to dig deep
+                            enough, it becomes much easier to shape myself.
+                            <b
+                                >The coaching process was so effective that the
+                                many question marks inside me settled much
+                                sooner than expected. Zsófi handles low points
+                                with professional care, I would wholeheartedly
+                                recommend her as a coach to anyone.</b
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Zsuzsa -->
+                    <div class="endorsement-card">
+                        <div class="endorsement-header">
+                            <img
+                                src="pics/zsuzsa.png"
+                                alt="Zsuzsa"
+                                class="endorsement-img"
+                            />
+                            <div class="endorsement-info">
+                                <h4>Zsuzsa</h4>
+                                <p>Team Leader - VOIS</p>
+                            </div>
+                        </div>
+                        <p class="endorsement-text">
+                            I reached out to Zsófi with a challenge I had been
+                            struggling with for quite some time, yet had been
+                            unable to take the necessary steps forward. Through
+                            her insightful questions, Zsófi didn't just gently
+                            guide my thinking, she played a key role in
+                            transforming the vague, shaping ideas in my head
+                            into something clear and tangible.
+                            <b
+                                >She kept me focused throughout, and our
+                                sessions were structured, dynamic, and genuinely
+                                enjoyable.</b
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Alex -->
+                    <div class="endorsement-card">
+                        <div class="endorsement-header">
+                            <img
+                                src="pics/alex.jpg"
+                                alt="Alex"
+                                class="endorsement-img"
+                            />
+                            <div class="endorsement-info">
+                                <h4>Alex</h4>
+                                <p>Initiative Leader - Procter & Gamble</p>
+                            </div>
+                        </div>
+                        <p class="endorsement-text">
+                            I was tired of the work I was doing and didn't see
+                            the perspective of where I wanted to move further so
+                            I could enjoy it as well. During the sessions I have
+                            realized, I know already how to regulate myself, I
+                            just needed to consciously choose it after a
+                            reminder. I've completed all the aligned steps that
+                            I had for myself and now, after clearing my mind, I
+                            can enjoy what I'm doing.
+                            <b
+                                >I would recommend Zsófi to those who are
+                                overthinkers to have their thoughts in order.</b
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <span class="section-kicker">Get in Touch</span>
+                <h2
+                    class="hero-title"
+                    style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                >
+                    Let's Start a Conversation
+                </h2>
+
+                <div style="margin-bottom: 3rem">
+                    <a
+                        href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                        class="button button-primary"
+                    >
+                        Book a Free Coffee Chat
+                    </a>
+                </div>
+
+                <div class="contact-grid">
+                    <a
+                        href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                        class="contact-card"
+                    >
+                        <div class="contact-icon-box">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                ></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value"
+                                >boros.zsofia@gmail.com</span
+                            >
+                        </div>
+                    </a>
+
+                    <a href="tel:+36206611198" class="contact-card">
+                        <div class="contact-icon-box">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+36 20 661 1198</span>
+                        </div>
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/in/zsofia-boros"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-card"
+                    >
+                        <div class="contact-icon-box">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                ></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">zsofia-boros</span>
+                        </div>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/zsofiaboros.coach"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-card"
+                    >
+                        <div class="contact-icon-box">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="18"
+                                    height="18"
+                                    rx="5"
+                                    ry="5"
+                                ></rect>
+                                <path
+                                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                ></path>
+                                <line
+                                    x1="17.5"
+                                    y1="6.5"
+                                    x2="17.51"
+                                    y2="6.5"
+                                ></line>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Instagram</span>
+                            <span class="contact-value">zsofiaboros.coach</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Zsófia Boros. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const menuToggle = document.getElementById("menuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            // Toggle mobile menu
+            menuToggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("is-active");
+            });
+
+            // Close mobile menu when clicking outside the header
+            document.addEventListener("click", (event) => {
+                const header = document.querySelector(".header");
+                const isClickInside = header.contains(event.target);
+
+                if (
+                    !isClickInside &&
+                    mobileMenu.classList.contains("is-active")
+                ) {
+                    mobileMenu.classList.remove("is-active");
+                }
+            });
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    document
+                        .querySelector(this.getAttribute("href"))
+                        .scrollIntoView({
+                            behavior: "smooth",
+                        });
+
+                    // Close mobile menu if open
+                    if (mobileMenu.classList.contains("is-active")) {
+                        mobileMenu.classList.remove("is-active");
+                    }
+                });
+            });
+
+            // Infinite Carousel Logic
+            const carousel = document.querySelector(".endorsement-carousel");
+            if (carousel) {
+                const originalCards = Array.from(
+                    carousel.querySelectorAll(".endorsement-card"),
+                );
+                const baseCardCount = originalCards.length; // Should be 3 unique cards
+
+                if (baseCardCount > 0) {
+                    // Store the original HTML content to re-insert after cloning
+                    const originalHTML = carousel.innerHTML;
+
+                    // Clear the carousel to build the new structure
+                    carousel.innerHTML = "";
+
+                    // 1. Prepend clones of the last `baseCardCount` cards
+                    for (let i = baseCardCount - 1; i >= 0; i--) {
+                        carousel.prepend(originalCards[i].cloneNode(true));
+                    }
+
+                    // 2. Add the original cards
+                    carousel.insertAdjacentHTML("beforeend", originalHTML);
+
+                    // 3. Append clones of the first `baseCardCount` cards
+                    for (let i = 0; i < baseCardCount; i++) {
+                        carousel.appendChild(originalCards[i].cloneNode(true));
+                    }
+
+                    // Now the carousel has the structure: [cloned_last_N, original_N, cloned_first_N]
+                    // The original cards start at index `baseCardCount`.
+
+                    let isJumping = false;
+                    let initialScrollPosition = 0;
+                    let stride = 0;
+
+                    const updateDimensions = () => {
+                        // Force re-calculation of offsets based on current layout
+                        const firstOriginal = carousel.children[baseCardCount];
+                        const secondOriginal =
+                            carousel.children[baseCardCount + 1];
+
+                        // Calculate actual distance between card centers
+                        stride =
+                            secondOriginal.offsetLeft -
+                            firstOriginal.offsetLeft;
+                        // Calculate the scroll position required to center the first original card
+                        initialScrollPosition =
+                            firstOriginal.offsetLeft -
+                            carousel.offsetWidth / 2 +
+                            firstOriginal.offsetWidth / 2;
+                    };
+
+                    // Initialize dimensions and starting position
+                    updateDimensions();
+                    carousel.scrollTo({
+                        left: initialScrollPosition,
+                        behavior: "auto",
+                    });
+
+                    // Recalculate on resize to prevent breaking the loop
+                    window.addEventListener("resize", updateDimensions);
+
+                    carousel.addEventListener("scroll", () => {
+                        if (isJumping) return;
+
+                        const scrollLeft = carousel.scrollLeft;
+                        const totalStride = baseCardCount * stride;
+
+                        // Teleport when we've scrolled one full set past the center
+                        // A 10px threshold handles sub-pixel rounding errors
+                        if (
+                            scrollLeft >=
+                            initialScrollPosition + totalStride - 10
+                        ) {
+                            isJumping = true;
+                            carousel.style.scrollSnapType = "none";
+                            carousel.scrollLeft = scrollLeft - totalStride;
+                            setTimeout(() => {
+                                carousel.style.scrollSnapType = "x mandatory";
+                                isJumping = false;
+                            }, 50);
+                        } else if (
+                            scrollLeft <=
+                            initialScrollPosition - totalStride + 10
+                        ) {
+                            isJumping = true;
+                            carousel.style.scrollSnapType = "none";
+                            carousel.scrollLeft = scrollLeft + totalStride;
+                            setTimeout(() => {
+                                carousel.style.scrollSnapType = "x mandatory";
+                                isJumping = false;
+                            }, 50);
+                        }
+                    });
+
+                    // Button Navigation
+                    const nextBtn = document.getElementById("nextBtn");
+                    const prevBtn = document.getElementById("prevBtn");
+
+                    nextBtn.addEventListener("click", () => {
+                        carousel.scrollBy({ left: stride, behavior: "smooth" });
+                    });
+
+                    prevBtn.addEventListener("click", () => {
+                        carousel.scrollBy({
+                            left: -stride,
+                            behavior: "smooth",
+                        });
+                    });
+
+                    // Keyboard Navigation
+                    window.addEventListener("keydown", (e) => {
+                        if (e.key === "ArrowRight") nextBtn.click();
+                        if (e.key === "ArrowLeft") prevBtn.click();
+                    });
+                }
+            }
+
+            // Theme Rotation Mechanism
+            const themes = ["theme-green", "theme-ochre"];
+            let currentThemeIndex = 0;
+            /*window.addEventListener('keydown', (e) => {
+            // Check for Space key and ensure user isn't typing in an input (if any were added)
+            if (e.code === 'Space' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault(); // Prevent page scrolling
+                document.body.classList.remove(themes[currentThemeIndex]);
+                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+                document.body.classList.add(themes[currentThemeIndex]);
+            }
+        });*/
+        </script>
+    </body>
+</html>

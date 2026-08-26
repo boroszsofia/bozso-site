@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="hu">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Zsófia Boros | Business Coach</title>
         <meta
             name="description"
-            content="ICF-certified Business Coach with 10+ years of international leadership experience."
+            content="ICF-certified Business Coach with 10+ years of international leadership experience. Support grounded in self-awareness and practical experience."
         />
         <meta property="og:title" content="Zsófia Boros | Business Coach" />
         <meta
             property="og:description"
-            content="ICF-certified Business Coach with 10+ years of international leadership experience."
+            content="ICF-certified Business Coach with 10+ years of international leadership experience. Support grounded in self-awareness and practical experience."
         />
         <meta
             property="og:image"
@@ -36,11 +36,11 @@
         <link rel="canonical" href="https://zsofiaboros.coach/" />
         <link rel="icon" type="image/png" href="pics/sun.png" />
         <link rel="apple-touch-icon" href="pics/sun.png" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;500;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;800&family=Playfair+Display:wght@500;600&display=swap"
             rel="stylesheet"
         />
         <script src="https://vercel.com/_vercel/insights/script.js"></script>
@@ -67,6 +67,7 @@
                 --radius-lg: 14px;
                 --radius-md: 10px;
                 --radius-sm: 8px;
+                --radius-xs: 3px;
             }
 
             /* Theme Definitions */
@@ -126,7 +127,7 @@
             h2,
             h3 {
                 font-family: "Cormorant Garamond", serif;
-                color: var(--green-950);
+                color: var(--green-800);
                 letter-spacing: -0.02em;
                 font-weight: 600;
             }
@@ -202,6 +203,7 @@
             .button-sm {
                 padding: 10px 18px;
                 font-size: 0.8rem;
+                border-radius: var(--radius-xs);
             }
 
             .cta-desktop {
@@ -265,6 +267,7 @@
                 display: flex;
                 align-items: center;
                 min-height: 90vh;
+                font-family: "DM Sans", Arial, sans-serif;
             }
 
             .hero-grid {
@@ -315,15 +318,57 @@
             }
 
             .hero-title {
-                font-size: clamp(3rem, 8vw, 4.5rem);
-                line-height: 1.1;
-                margin-bottom: 1.5rem;
+                font-family: "Playfair Display", Georgia, serif;
+                font-size: clamp(2.9rem, 5.3vw, 5.5rem);
+                line-height: 1.3;
+                letter-spacing: -0.035em;
+                margin-bottom: 2.2rem;
+            }
+
+            .hero .hero-title {
+                color: var(--green-700);
+            }
+
+            .hero-title .highlight {
+                background: linear-gradient(transparent 62%, #a8bd82 62%);
+                padding: 0 0.02em;
             }
 
             .hero-description {
-                font-size: 1.125rem;
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1.18rem;
                 max-width: 540px;
                 margin-bottom: 2.5rem;
+                color: var(--gray-700);
+            }
+
+            @media (max-width: 1023px) {
+                .hero-grid {
+                    gap: 28px;
+                }
+
+                .hero-content {
+                    display: contents;
+                }
+
+                .hero-content .hero-title {
+                    order: 1;
+                    margin-bottom: 0;
+                }
+
+                .hero-content .hero-description {
+                    order: 2;
+                    margin-bottom: 0;
+                }
+
+                .hero-image-container {
+                    order: 3;
+                }
+
+                .hero-content .cta-group {
+                    order: 4;
+                    justify-content: flex-start;
+                }
             }
 
             .cta-group {
@@ -339,6 +384,7 @@
                 display: inline-block;
                 text-align: center;
                 line-height: 1.2;
+                text-transform: uppercase;
             }
 
             .button-primary {
@@ -349,7 +395,7 @@
                 );
                 color: var(--white);
                 font-weight: 800;
-                border-radius: var(--radius-sm);
+                border-radius: var(--radius-xs);
                 box-shadow: var(--shadow);
             }
 
@@ -358,7 +404,7 @@
                 border: 1px solid var(--line);
                 color: var(--green-900);
                 font-weight: 800;
-                border-radius: var(--radius-sm);
+                border-radius: var(--radius-xs);
                 backdrop-filter: blur(8px);
             }
 
@@ -367,7 +413,7 @@
                 border-radius: var(--radius-xl);
                 overflow: hidden;
                 box-shadow: var(--shadow-strong);
-                aspect-ratio: 4/5;
+                aspect-ratio: 4 / 5;
                 background-color: var(--gray-200);
             }
 
@@ -378,12 +424,651 @@
                 display: block;
             }
 
+            .hero-image-wrapper .hero-badge {
+                position: absolute;
+                top: 18px;
+                right: 18px;
+                z-index: 2;
+                width: 104px;
+                height: 104px;
+                object-fit: contain;
+                filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.18));
+            }
+
+            .hero-identity {
+                position: absolute;
+                left: 18px;
+                right: auto;
+                bottom: 18px;
+                z-index: 2;
+                width: max-content;
+                max-width: calc(100% - 36px);
+                padding: 14px 18px;
+                background: rgba(251, 252, 251, 0.92);
+                border-left: 4px solid var(--green-600);
+                box-shadow: 0 8px 18px rgba(18, 29, 23, 0.16);
+            }
+
+            .hero-identity strong {
+                display: block;
+                color: var(--green-950);
+                font-family: "Playfair Display", Georgia, serif;
+                font-size: 1.18rem;
+                line-height: 1.2;
+            }
+
+            .hero-identity span {
+                display: block;
+                margin-top: 4px;
+                color: var(--green-700);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.02em;
+            }
+
+            .signs {
+                padding: 94px 0;
+                background: var(--gray-100);
+            }
+
+            .signs h2 {
+                margin-bottom: 38px;
+                text-align: left;
+                font-size: clamp(3rem, 5.5vw, 4.8rem);
+                line-height: 1.08;
+            }
+
+            .signs .yellow-underline {
+                background: linear-gradient(transparent 62%, #a8bd82 62%);
+                padding: 0 0.02em;
+            }
+
+            .sign-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 19px;
+            }
+
+            .sign-card {
+                min-height: 190px;
+                padding: 25px;
+                background: var(--white);
+                border: 1px solid var(--line);
+                border-left: 4px solid var(--green-600);
+                border-radius: var(--radius-sm);
+                box-shadow: 0 7px 18px rgba(18, 29, 23, 0.06);
+            }
+
+            .sign-card h3 {
+                margin-bottom: 12px;
+                color: var(--green-900);
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1.08rem;
+                font-weight: 700;
+                line-height: 1.35;
+            }
+
+            .sign-card p {
+                margin: 0;
+                color: var(--gray-700);
+                font-size: 1.02rem;
+                line-height: 1.55;
+            }
+
+            .sign-conclusion {
+                max-width: 880px;
+                margin: 56px 0 0;
+                text-align: left;
+            }
+
+            .sign-conclusion strong {
+                display: block;
+                margin-bottom: 10px;
+                color: var(--green-800);
+                font-family: "Playfair Display", Georgia, serif;
+                font-size: clamp(1.7rem, 3vw, 2.35rem);
+                line-height: 1.15;
+            }
+
+            .sign-conclusion p {
+                margin: 0;
+                color: var(--gray-700);
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .sign-conclusion .button {
+                margin-top: 22px;
+            }
+
+            .benefits-section {
+                padding: 100px 0;
+                background: #dce1dd;
+                color: var(--gray-700);
+            }
+
+            .benefits-section h2 {
+                margin-bottom: 18px;
+                color: var(--green-800);
+                font-size: clamp(2.5rem, 5vw, 4.2rem);
+            }
+
+            .benefits-section h3 {
+                color: var(--green-800);
+            }
+
+            .benefits-section .section-kicker {
+                color: var(--green-700);
+            }
+
+            .benefits-intro {
+                max-width: 760px;
+                margin-bottom: 42px;
+                color: var(--gray-700);
+                font-size: 1.08rem;
+                line-height: 1.65;
+            }
+
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+
+            .benefit-card {
+                min-height: 300px;
+                padding: 28px 24px;
+                background: var(--white);
+                border: 1px solid var(--line);
+                border-top: 3px solid var(--green-600);
+                border-radius: var(--radius-sm);
+                box-shadow: 0 10px 24px rgba(18, 29, 23, 0.06);
+            }
+
+            .benefit-icon {
+                width: 58px;
+                height: 58px;
+                margin-bottom: 28px;
+                padding: 14px;
+                color: var(--green-700);
+                background: rgba(70, 108, 89, 0.1);
+                border: 1px solid rgba(70, 108, 89, 0.3);
+                border-radius: 50%;
+            }
+
+            .benefit-icon svg {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            .benefit-card h3 {
+                margin-bottom: 12px;
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1.1rem;
+                line-height: 1.3;
+            }
+
+            .benefit-card p {
+                margin: 0;
+                color: var(--gray-700);
+                font-size: 0.96rem;
+                line-height: 1.55;
+            }
+
+            .benefits-not {
+                margin-top: 58px;
+                padding: 30px 34px;
+                background: var(--white);
+                border-left: 5px solid var(--ochre, #d6a62f);
+                box-shadow: 0 10px 24px rgba(18, 29, 23, 0.06);
+            }
+
+            .benefits-not h3 {
+                margin-bottom: 24px;
+                font-family: "Playfair Display", Georgia, serif;
+                font-size: clamp(1.8rem, 3vw, 2.5rem);
+                line-height: 1.15;
+            }
+
+            .benefits-not-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
+            .benefits-not-item {
+                display: grid;
+                grid-template-columns: 28px 1fr;
+                gap: 12px;
+                align-items: start;
+            }
+
+            .benefits-not-mark {
+                position: relative;
+                width: 24px;
+                height: 24px;
+                margin-top: 2px;
+                background: var(--ochre, #d6a62f);
+                border: 1px solid var(--ochre, #d6a62f);
+                border-radius: 50%;
+            }
+
+            .benefits-not-mark::before,
+            .benefits-not-mark::after {
+                content: "";
+                position: absolute;
+                top: 11px;
+                left: 5px;
+                width: 12px;
+                height: 2px;
+                background: var(--white);
+                transform: rotate(45deg);
+            }
+
+            .benefits-not-mark::after {
+                transform: rotate(-45deg);
+            }
+
+            .benefits-not-item h4 {
+                margin-bottom: 6px;
+                color: var(--green-900);
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+
+            .benefits-not-item p {
+                margin: 0;
+                color: var(--gray-700);
+                font-size: 0.94rem;
+                line-height: 1.5;
+            }
+
+            .source-testimonials {
+                padding: 100px 0;
+                background: var(--cream-card, var(--white));
+            }
+
+            .source-testimonials h2 {
+                margin-bottom: 18px;
+                color: var(--green-800);
+                font-size: clamp(2.5rem, 5vw, 4.2rem);
+                text-align: left;
+            }
+
+            .source-testimonials .title-line {
+                width: 70px;
+                height: 3px;
+                margin: 0 0 30px;
+                background: var(--ochre, #d6a62f);
+            }
+
+            .source-testimonial-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+
+            .source-testimonial-card {
+                min-height: 270px;
+                padding: 26px 24px;
+                border-radius: var(--radius-sm);
+                box-shadow: 0 8px 20px rgba(18, 29, 23, 0.07);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .source-testimonial-card:nth-child(1),
+            .source-testimonial-card:nth-child(5),
+            .source-testimonial-card:nth-child(9) {
+                background: var(--cream-card, var(--white));
+            }
+
+            .source-testimonial-card:nth-child(2),
+            .source-testimonial-card:nth-child(4),
+            .source-testimonial-card:nth-child(6),
+            .source-testimonial-card:nth-child(8) {
+                background: #f0e9d9;
+            }
+
+            .source-testimonial-card:nth-child(3),
+            .source-testimonial-card:nth-child(7) {
+                background: #dce4d7;
+            }
+
+            .source-testimonial-stars {
+                margin-bottom: 14px;
+                color: var(--ochre, #d6a62f);
+                letter-spacing: 2px;
+            }
+
+            .source-testimonial-card blockquote {
+                flex: 1;
+                margin: 0 0 18px;
+                color: var(--gray-700);
+                font:
+                    italic 1rem/1.55 Georgia,
+                    serif;
+            }
+
+            .source-testimonial-card blockquote strong {
+                color: var(--green-800);
+            }
+
+            .source-testimonial-card footer {
+                padding: 0;
+                background: transparent;
+                border: 0;
+                color: var(--green-800);
+                font-size: 0.82rem;
+                line-height: 1.35;
+            }
+
+            .source-testimonial-cta {
+                margin: 32px 0;
+            }
+
+            .source-testimonial-cta .button {
+                background: rgba(251, 252, 251, 0.72);
+                border-color: var(--green-600);
+                color: var(--green-800);
+            }
+
+            @media (max-width: 850px) {
+                .source-testimonials {
+                    padding-top: 40px;
+                    padding-bottom: 20px;
+                }
+
+                .source-testimonial-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .source-testimonial-card {
+                    min-height: 0;
+                }
+            }
+
+            .benefits-actions {
+                display: flex;
+                gap: 14px;
+                flex-wrap: wrap;
+                margin-top: 34px;
+            }
+
+            .benefits-actions .button-secondary {
+                background: rgba(251, 252, 251, 0.72);
+                border-color: var(--green-600);
+                color: var(--green-800);
+            }
+
+            @media (max-width: 850px) {
+                .benefits-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 560px) {
+                .benefits-section {
+                    padding: 72px 0 40px;
+                }
+
+                .benefits-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .benefit-card {
+                    min-height: 0;
+                }
+
+                .benefits-not {
+                    padding: 24px 22px;
+                }
+
+                .benefits-not-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
+                .benefits-actions {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .benefits-actions .button {
+                    width: auto;
+                }
+            }
+
+            @media (max-width: 850px) {
+                .sign-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 560px) {
+                .signs {
+                    padding: 64px 0;
+                }
+
+                .signs h2 {
+                    margin-bottom: 30px;
+                }
+
+                .sign-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .sign-card p {
+                    font-size: 1.08rem;
+                }
+
+                .sign-conclusion p {
+                    font-size: 1.05rem;
+                }
+
+                .sign-conclusion {
+                    margin-top: 42px;
+                }
+            }
+
             /* About Me Section Styles */
             .about-section {
                 padding: 100px 0;
-                background: var(--white);
+                background: #dce1dd;
                 position: relative;
                 z-index: 1;
+            }
+
+            .about-intro-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+                gap: 64px;
+                align-items: center;
+            }
+
+            .about-intro-copy h2 {
+                margin-bottom: 26px;
+                color: var(--green-800);
+                font-size: clamp(3rem, 5.5vw, 4.8rem);
+                line-height: 1.08;
+            }
+
+            .about-intro-copy p {
+                max-width: 620px;
+                color: var(--gray-700);
+                font-size: 1.08rem;
+                line-height: 1.7;
+            }
+
+            .about-intro-copy p + p {
+                margin-top: 20px;
+            }
+
+            .about-intro-copy strong {
+                color: var(--green-800);
+            }
+
+            .about-values {
+                padding-left: 18px;
+                border-left: 3px solid var(--green-700);
+            }
+
+            .about-intro-highlight {
+                background: linear-gradient(transparent 62%, #a8bd82 62%);
+                padding: 0 0.02em;
+            }
+
+            .about-intro-copy .button {
+                margin-top: 18px;
+                width: max-content;
+                max-width: 100%;
+            }
+
+            .about-intro-copy .button-secondary {
+                background: rgba(251, 252, 251, 0.72);
+                border-color: var(--green-600);
+                color: var(--green-800);
+            }
+
+            .about-intro-image {
+                width: 100%;
+                aspect-ratio: 4 / 5;
+                object-fit: cover;
+                display: block;
+                border-radius: var(--radius-xl);
+                box-shadow: var(--shadow-strong);
+            }
+
+            @media (max-width: 850px) {
+                .about-intro-grid {
+                    grid-template-columns: 1fr;
+                    gap: 28px;
+                }
+
+                .about-section {
+                    padding-top: 28px;
+                    padding-bottom: 40px;
+                }
+
+                .about-intro-copy {
+                    display: contents;
+                }
+
+                .about-intro-copy h2 {
+                    order: 1;
+                    margin-bottom: 0;
+                }
+
+                .about-intro-copy .about-lead {
+                    order: 2;
+                }
+
+                .about-intro-grid > div:last-child {
+                    order: 3;
+                }
+
+                .about-intro-copy .about-background {
+                    order: 4;
+                }
+
+                .about-intro-copy .about-values {
+                    order: 5;
+                    margin-top: 0;
+                }
+
+                .about-intro-copy .about-coaching {
+                    order: 6;
+                    margin-top: 0;
+                }
+
+                .about-intro-copy .button {
+                    order: 7;
+                }
+
+                .about-intro-image {
+                    max-height: 520px;
+                }
+            }
+
+            .faq-section {
+                padding: 100px 0;
+                background: var(--white);
+            }
+
+            .faq-section h2 {
+                margin-bottom: 18px;
+                color: var(--green-800);
+                font-size: clamp(2.4rem, 5vw, 4rem);
+            }
+
+            .faq-title-line {
+                width: 70px;
+                height: 3px;
+                margin-bottom: 30px;
+                background: var(--ochre, #d6a62f);
+            }
+
+            .faq-list {
+                max-width: 920px;
+            }
+
+            .faq-item {
+                margin-bottom: 12px;
+                padding: 18px 22px;
+                background: #f6f8f6;
+                border: 1px solid var(--line);
+                border-radius: var(--radius-sm);
+                cursor: pointer;
+            }
+
+            .faq-item summary {
+                position: relative;
+                padding-right: 32px;
+                cursor: pointer;
+                list-style: none;
+                color: var(--green-900);
+                font-family: "DM Sans", Arial, sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1.45;
+            }
+
+            .faq-item summary::after {
+                content: "+";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                color: var(--green-700);
+                font-size: 1.3rem;
+                line-height: 1;
+            }
+
+            .faq-item[open] summary::after {
+                content: "-";
+            }
+
+            .faq-item p {
+                margin: 14px 18px 0 0;
+                color: var(--gray-700);
+                font-size: 0.98rem;
+                line-height: 1.65;
+            }
+
+            @media (max-width: 560px) {
+                .faq-section {
+                    padding: 40px 0 72px;
+                }
+
+                .faq-item {
+                    padding: 16px 18px;
+                }
+
+                .faq-item p {
+                    margin-right: 0;
+                }
             }
 
             .about-row {
@@ -495,7 +1180,7 @@
 
             @media (min-width: 768px) {
                 .distinction-grid {
-                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
                 }
             }
 
@@ -715,6 +1400,63 @@
             /* Contact Section */
             .contact-section {
                 padding: 100px 0;
+                background: #dce1dd;
+            }
+
+            .contact-intro {
+                max-width: 680px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .contact-intro p {
+                max-width: 560px;
+                margin: 0 auto 28px;
+                font-size: 1.1rem;
+                color: var(--gray-600);
+            }
+
+            .contact-title-line {
+                width: 70px;
+                height: 3px;
+                margin: 0 auto 30px;
+                background: var(--ochre, #d6a62f);
+            }
+
+            .contact-points {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 24px;
+                margin-top: 40px;
+                color: var(--green-800);
+                font-size: 0.9rem;
+                font-weight: 700;
+            }
+
+            .contact-points span::before {
+                content: "✓";
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                margin: 0 7px -5px 0;
+                border-radius: 50%;
+                color: var(--white);
+                font-size: 0.78rem;
+                line-height: 1;
+                background-color: var(--ochre, #d6a62f);
+            }
+
+            @media (max-width: 560px) {
+                .contact-points {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: max-content;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
             }
 
             .contact-grid {
@@ -873,28 +1615,28 @@
                             <span></span>
                             <span></span>
                         </button>
-                        <a href="#" class="logo">
+                        <a href="#top" class="logo">
                             <img src="pics/sun.png" alt="" class="logo-icon" />
-                            Zsófia Boros
+                            Boros Zsófia
                         </a>
                     </div>
 
                     <nav class="nav-desktop">
-                        <a href="#about">About Me</a>
-                        <a href="#coaching">Coaching</a>
-                        <a href="#endorsement">Endorsement</a>
+                        <a href="coaching.html">Coaching</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="about.html">About Me</a>
                         <a href="#contact">Contact</a>
-                        <a href="/hu">Hu | En</a>
+                        <a href="/hu/index.html">Hu | En</a>
                     </nav>
 
                     <div class="header-right">
                         <a
-                            href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                            href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Inquiry%20%7C%20Book%20Your%20Free%20Initial%20Call&body=Hi%20Zsófi%2C%0D%0A%0D%0AI%27d%20like%20to%20schedule%20a%20free%20initial%20conversation.%20I%27m%20interested%20in%20your%20coaching%20process%20and%20how%20we%20could%20work%20together.%0D%0A%0D%0ABest%20regards%2C"
                             class="button button-primary button-sm"
                         >
-                            <span class="cta-mobile">Book a Chat</span>
+                            <span class="cta-mobile">Book A CHAT</span>
                             <span class="cta-desktop"
-                                >Book a Free Coffee Chat</span
+                                >Book Free Consultation</span
                             >
                         </a>
                     </div>
@@ -903,56 +1645,37 @@
             <div class="mobile-menu" id="mobileMenu">
                 <div class="container">
                     <nav class="nav-mobile">
-                        <a href="#about">About Me</a>
-                        <a href="#coaching">Coaching</a>
-                        <a href="#endorsement">Endorsement</a>
+                        <a href="coaching.html">Coaching</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="about.html">About Me</a>
                         <a href="#contact">Contact</a>
-                        <a href="/hu">Hu | En</a>
+                        <a href="/hu/index.html">Hu | En</a>
                     </nav>
                 </div>
             </div>
         </header>
 
-        <section class="hero">
+        <section class="hero" id="top">
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content" data-reveal>
-                        <span class="section-kicker"
-                            >Business & Mental Coach</span
-                        >
-                        <h1 class="hero-title">Zsófia Boros</h1>
-                        <h2
-                            style="
-                                font-size: 2rem;
-                                margin-bottom: 2rem;
-                                margin-right: 2rem;
-                                line-height: 1.3;
-                                font-style: italic;
-                                color: var(--gray-700);
-                            "
-                        >
-                            Empowering you to build on your unique strengths as
-                            an ICF-certified business coach.
-                        </h2>
+                        <h1 class="hero-title">
+                            Are you successful outside, but
+                            <span class="highlight"
+                                >never feel good enough?</span
+                            >
+                        </h1>
                         <p class="hero-description">
-                            If you are ready to consciously design your next
-                            chapter, you are in the right place. I provide a
-                            collaborative thinking process for professionals,
-                            internationals, and leaders to turn challenges into
-                            growth and build a path aligned with their
-                            strengths.
+                            I work with high-achievers who want to reach their
+                            goals while staying true to themselves — without
+                            constant self-doubt and inner pressure.
                         </p>
                         <div class="cta-group">
                             <a
-                                href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                                href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Inquiry%20%7C%20Book%20Your%20Free%20Initial%20Call&body=Hi%20Zsófi%2C%0D%0A%0D%0AI%27d%20like%20to%20schedule%20a%20free%20initial%20conversation.%20I%27m%20interested%20in%20your%20coaching%20process%20and%20how%20we%20could%20work%20together.%0D%0A%0D%0ABest%20regards%2C"
                                 class="button button-primary"
-                                >Book a Free Coffee Chat</a
+                                >Book Free Consultation</a
                             >
-                            <!--
-                            <a href="#about" class="button button-secondary"
-                                >Learn more</a
-                            >
-                            -->
                         </div>
                     </div>
                     <div class="hero-image-container" data-reveal>
@@ -961,719 +1684,633 @@
                                 src="pics/zsofia.jpg"
                                 alt="Zsófia Boros - Business Coach"
                             />
+                            <img
+                                class="hero-badge"
+                                src="pics/icf-badge.png"
+                                alt="ICF certification badge"
+                            />
+                            <div class="hero-identity">
+                                <strong>Boros Zsófia</strong>
+                                <span
+                                    >Business &amp; Mental Coach · ICF ACC</span
+                                >
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="signs" id="neked-szol">
+            <div class="container">
+                <h2>
+                    <span class="yellow-underline">Sounds familiar?</span>
+                </h2>
+                <div class="sign-grid">
+                    <article class="sign-card">
+                        <h3>
+                            <span class="yellow-underline"
+                                >1. Performance = Your worth
+                            </span>
+                        </h3>
+                        <p>
+                            You only feel worthy enough when you're constantly
+                            performing well.
+                        </p>
+                    </article>
+                    <article class="sign-card">
+                        <h3>
+                            <span class="yellow-underline"
+                                >2. You keep raising the bar
+                            </span>
+                        </h3>
+                        <p>
+                            You perform well, yet never feel good enough, so you
+                            raise your bar higher.
+                        </p>
+                    </article>
+                    <article class="sign-card">
+                        <h3>
+                            <span class="yellow-underline"
+                                >3. Rarely celebrate your wins</span
+                            >
+                        </h3>
+                        <p>
+                            The moment you reach an important goal, your are
+                            already on the next one, without celebrating.
+                        </p>
+                    </article>
+                    <article class="sign-card">
+                        <h3>
+                            <span class="yellow-underline"
+                                >4. Dependent on external validation</span
+                            >
+                        </h3>
+                        <p>
+                            How you feel and see yourself depends largely on
+                            what others think.
+                        </p>
+                    </article>
+                    <article class="sign-card">
+                        <h3>
+                            <span class="yellow-underline"
+                                >5. You never stop</span
+                            >
+                        </h3>
+                        <p>
+                            You struggle to switch off, your mind keeps going,
+                            and rest often feels like wasted time.
+                        </p>
+                    </article>
+                </div>
+                <div class="sign-conclusion">
+                    <strong>Two or more sound familiar?</strong>
+                    <p>
+                        You're not alone, and you don't have to keep going this
+                        way.
+                    </p>
+                    <a
+                        class="button button-primary"
+                        href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Inquiry%20%7C%20Book%20Your%20Free%20Initial%20Call&body=Hi%20Zsófi%2C%0D%0A%0D%0AI%27d%20like%20to%20schedule%20a%20free%20initial%20conversation.%20I%27m%20interested%20in%20your%20coaching%20process%20and%20how%20we%20could%20work%20together.%0D%0A%0D%0ABest%20regards%2C"
+                        >Book Free Consultation</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="coaching" class="benefits-section">
+            <div class="container">
+                <h2>
+                    <span class="yellow-underline">Why Coaching?</span>
+                </h2>
+                <p class="benefits-intro">
+                    In coaching, we explore what drives you, what drains you,
+                    and how you can move toward your goals without constant need
+                    to prove yourself and self-doubt.
+                </p>
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="8.5"></circle>
+                                <path d="M8 14.5 10.5 12l2 1.5L16 9"></path>
+                                <path d="M16 9h-3"></path>
+                            </svg>
+                        </div>
+                        <h3>Clearer Self-Awareness</h3>
+                        <p>
+                            You realize your strengths, your patterns, and what
+                            you can genuinely build on.
+                        </p>
+                    </article>
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 3v18"></path>
+                                <path d="M5 8.5 12 5l7 3.5L12 12 5 8.5Z"></path>
+                                <path
+                                    d="M7.5 10v4.5c0 1.4 2 2.5 4.5 2.5s4.5-1.1 4.5-2.5V10"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3>Reset your own measure</h3>
+                        <p>
+                            You learn to recognize and celebrate yur wins and
+                            your achievement, without guilt.
+                        </p>
+                    </article>
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M12 4a7.5 7.5 0 0 0-4.5 13.5c.9.7 1.5 1.3 1.5 2.5h6c0-1.2.6-1.8 1.5-2.5A7.5 7.5 0 0 0 12 4Z"
+                                ></path>
+                                <path d="M9.5 22h5"></path>
+                                <path
+                                    d="M10 14.5c.8.6 1.4.8 2 .8s1.2-.2 2-.8"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3>Inner Balance</h3>
+                        <p>
+                            You recognize your inner critical voice and discover
+                            your inner supporter too.
+                        </p>
+                    </article>
+                    <article class="benefit-card">
+                        <div class="benefit-icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M4 19h16"></path>
+                                <path d="M6 16V9"></path>
+                                <path d="M10 16V5"></path>
+                                <path d="M14 16v-3"></path>
+                                <path d="M18 16V7"></path>
+                                <path d="m15 5 3-2 2 3"></path>
+                            </svg>
+                        </div>
+                        <h3>Perform, without burnout</h3>
+                        <p>
+                            You move toward your goals, without fully draining
+                            yourself.
+                        </p>
+                    </article>
+                </div>
+                <div class="benefits-not">
+                    <h3>You don't get</h3>
+                    <div class="benefits-not-grid">
+                        <article class="benefits-not-item">
+                            <div
+                                class="benefits-not-mark"
+                                aria-hidden="true"
+                            ></div>
+                            <div>
+                                <h4>Advice</h4>
+                                <p>
+                                    I don't tell you what to do. I help you find
+                                    your own answers.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="benefits-not-item">
+                            <div
+                                class="benefits-not-mark"
+                                aria-hidden="true"
+                            ></div>
+                            <div>
+                                <h4>Empty motivational quotes</h4>
+                                <p>
+                                    We work together with your real situation
+                                    and challenges.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="benefits-not-item">
+                            <div
+                                class="benefits-not-mark"
+                                aria-hidden="true"
+                            ></div>
+                            <div>
+                                <h4>One-Size-Fits-All Solutions</h4>
+                                <p>
+                                    There's no universal formula. We discover
+                                    together what works for you.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="benefits-actions">
+                    <a
+                        class="button button-primary"
+                        href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Inquiry%20%7C%20Book%20Your%20Free%20Initial%20Call&body=Hi%20Zsófi%2C%0D%0A%0D%0AI%27d%20like%20to%20schedule%20a%20free%20initial%20conversation.%20I%27m%20interested%20in%20your%20coaching%20process%20and%20how%20we%20could%20work%20together.%0D%0A%0D%0ABest%20regards%2C"
+                        >Book Free Consultation</a
+                    >
+                    <a
+                        class="button button-secondary"
+                        href="coaching.html"
+                        style="width: 255px"
+                        >More about Coaching</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="source-testimonials" id="endorsement">
+            <div class="container">
+                <h2>Clients said...</h2>
+                <div class="title-line" aria-hidden="true"></div>
+                <div class="source-testimonial-grid">
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "<strong
+                                >She did not offer me tools, she created
+                                strategic clarity</strong
+                            >: what leadership attitude, decision patterns, and
+                            communication style are truly mine, that I can
+                            consciously build on."
+                        </blockquote>
+                        <footer>
+                            <strong>Emese</strong><br />Sales Executive Director
+                            · FLP Hungary
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "With Zsófi, I felt
+                            <strong
+                                >for the first time that someone is truly
+                                present and pours real energy to the
+                                process</strong
+                            >. Her questions often led me in directions I would
+                            not have reached alone, and I've noticed the impact
+                            in my everyday life."
+                        </blockquote>
+                        <footer>
+                            <strong>Ferenc</strong><br />Professional Poker
+                            Player &amp; Entrepreneur
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "<strong>I learned to say no without guilt</strong>.
+                            I make decisions more confidently and truly believe
+                            I can follow through on them. During our work
+                            together, I received deeply supportive, inspiring,
+                            and empowering guidance."
+                        </blockquote>
+                        <footer>
+                            <strong>Dávid</strong><br />Senior Supply Planner ·
+                            Vodafone
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "I reached out to Zsófi because I felt stuck while
+                            planning my future. As a tennis coach, I know how to
+                            help others reach their goals, but this time I
+                            needed an outside perspective myself."
+                        </blockquote>
+                        <footer>
+                            <strong>Bence</strong><br />Tennis Coach
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "At first I reached out to Zsófi with my temporary
+                            dip in motivation, but I got much more from our work
+                            together.
+                            <strong
+                                >My long-standing patterns also came into focus,
+                                such as people-pleasing pressure and my lack of
+                                intentional rest.</strong
+                            >"
+                        </blockquote>
+                        <footer>
+                            <strong>Rebeka</strong><br />Design Project
+                            Coordinator · Roche
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "I completed all the aligned steps I set for, and
+                            now that my mind is clear,
+                            <strong>I enjoy what I do again</strong>. I
+                            wholeheartedly recommend Zsófi to anyone who tends
+                            to overthink."
+                        </blockquote>
+                        <footer>
+                            <strong>Alex</strong><br />Initiative Leader ·
+                            Procter &amp; Gamble
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "After the first two sessions, it was already clear
+                            that some of my challenges came from deeper limiting
+                            beliefs. Working with Zsófi
+                            <strong
+                                >helped me strengthen my mental resilience and
+                                build positive habits</strong
+                            >
+                            in both life and work."
+                        </blockquote>
+                        <footer>
+                            <strong>Kristof</strong><br />Senior Brand Manager ·
+                            Procter &amp; Gamble
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "After completing my international assignment, I
+                            started working with Zsófi.
+                            <strong
+                                >Her powerful questions helped me regain focus
+                                in everyday life,</strong
+                            >
+                            and played a key role in helping me handle the
+                            emotional ups and downs of relocating."
+                        </blockquote>
+                        <footer>
+                            <strong>Agnes</strong><br />Business Controller ·
+                            Bosch Rexroth
+                        </footer>
+                    </article>
+                    <article class="source-testimonial-card">
+                        <div
+                            class="source-testimonial-stars"
+                            aria-label="5 stars"
+                        >
+                            ★★★★★
+                        </div>
+                        <blockquote>
+                            "<strong
+                                >My biggest realization was that real success
+                                starts from within.</strong
+                            >
+                            I wholeheartedly recommend Zsófi to anyone building
+                            inner stability, especially high achievers who
+                            struggle to believe they are already enough."
+                        </blockquote>
+                        <footer>
+                            <strong>Ugurgul</strong><br />Purchases Supply
+                            Manager · Procter &amp; Gamble
+                        </footer>
+                    </article>
+                </div>
+                <div class="source-testimonial-cta">
+                    <a class="button button-secondary" href="testimonials.html"
+                        >More testimonials</a
+                    >
                 </div>
             </div>
         </section>
 
         <section id="about" class="about-section">
-            <div class="container">
-                <!-- Subsection 1: Philosophy -->
-                <div class="about-row" data-reveal>
-                    <div class="about-text">
-                        <span class="section-kicker">About Me</span>
-                        <h2
-                            class="hero-title"
-                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
-                        >
-                            Hello, I am Zsófi
-                        </h2>
-                        <p>
-                            A Business & Mental Coach driven by the power of
-                            growth and self-awareness; an experienced
-                            international marketing leader, and a lifelong
-                            sports enthusiast. I believe in the power of
-                            coaching because I’ve seen and personally
-                            experienced how it can shift lives and careers from
-                            a standstill, providing fresh momentum and a new
-                            sense of direction.
-                        </p>
-                        <details class="accordion">
-                            <summary>My Philosophy</summary>
-                            <div class="accordion-content">
-                                <p>
-                                    As a coach, my promise is simple: I will
-                                    support you in overcoming the challenges
-                                    you’ve been struggling with alone. Yes, we
-                                    will solve them – TOGETHER! Whether it’s an
-                                    executive-level leadership or personal
-                                    dilemma, I will guide you through a
-                                    structured process within the framework of
-                                    the ICF (International Coaching Federation).
-                                    You bring the topic; I bring the framework.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="hero-image-wrapper">
-                        <img
-                            src="pics/introduction-talk.jpg"
-                            alt="Zsófia Boros Coaching"
-                        />
-                    </div>
-                </div>
+            <div class="container about-intro-grid">
+                <div class="about-intro-copy" data-reveal>
+                    <h2>Hello, I am Zsófi!</h2>
 
-                <!-- Subsection 2: Corporate -->
-                <div class="about-row reverse" data-reveal>
-                    <div class="about-text">
-                        <span class="section-kicker">Corporate Experience</span>
-                        <h2
-                            class="hero-title"
-                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                    <p class="about-lead">
+                        <strong
+                            >I am an ICF ACC credentialed Business and Mental
+                            Coach.</strong
                         >
-                            I Understand the Corporate World
-                        </h2>
-                        <p>
-                            I don’t just understand, I lived it, through all its
-                            highs and lows. I bring over 10 years of
-                            international experience, most recently as a
-                            Marketing Director at Procter & Gamble. During this
-                            decade, I lived abroad, led multicultural and
-                            multifunctional teams, and was responsible for the
-                            strategic growth of multi-million dollar brands.
-                        </p>
-                        <details class="accordion">
-                            <summary>Been there, done that</summary>
-                            <div class="accordion-content">
-                                <p>
-                                    Throughout my career, I have navigated
-                                    complex market crises and celebrated major
-                                    successes. I know exactly what real
-                                    responsibility feels like. I have personally
-                                    experienced the weight of executive
-                                    expectations, the pressure, and the real
-                                    risk of burnout.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="hero-image-wrapper">
-                        <img
-                            src="pics/introduction-present.jpg"
-                            alt="Zsófia Boros Business Experience"
-                        />
-                    </div>
-                </div>
-
-                <!-- Subsection 3: Expat -->
-                <div class="about-row" data-reveal>
-                    <div class="about-text">
-                        <span class="section-kicker">Expat Experience</span>
-                        <h2
-                            class="hero-title"
-                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                    </p>
+                    <p class="about-background">
+                        Over a decade, I worked in multinational leadership
+                        environments where the
+                        <strong
+                            >"am I really good enough?" feeling was part of my
+                            daily life.</strong
                         >
-                            Living and Working Abroad
-                        </h2>
-                        <p>
-                            I spent two years living as an expat in Switzerland.
-                            Through this, I learned firsthand that building a
-                            career, performing in a new role, and starting a
-                            fresh life from scratch far away from your usual
-                            support system is a massive challenge.
-                        </p>
-                        <details class="accordion">
-                            <summary>I know what it feels like</summary>
-                            <div class="accordion-content">
-                                <p>
-                                    Moving at the height of Covid meant spending
-                                    my first six months in lockdown with a
-                                    completely closed office. Yet, despite this
-                                    tough start, it became one of the most
-                                    defining and beautiful chapters of my life,
-                                    teaching me self-awareness, mental
-                                    resilience, and how to build new and keep
-                                    old connections across thousands of
-                                    kilometers.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="hero-image-wrapper">
-                        <img
-                            src="pics/introduction-toblerone.jpeg"
-                            alt="Zsófia Boros Expat Experience"
-                        />
-                    </div>
-                </div>
-
-                <!-- Subsection 4: Sports -->
-                <div class="about-row reverse" data-reveal>
-                    <div class="about-text">
-                        <span class="section-kicker">Sport Mindset</span>
-                        <h2
-                            class="hero-title"
-                            style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                        I experienced firsthand how easy it is to tie your worth
+                        to your results. This can drive you for a long time,
+                        while the inner pressure to constantly prove yourself
+                        can become physically and mentally exhausting.
+                    </p>
+                    <p class="about-values">
+                        <strong
+                            >I understand the corporate world, and I also know
+                            what it feels like to look successful on the outside
+                            while constantly doubting yourself on the
+                            inside.</strong
                         >
-                            Sport Mental Coaching
-                        </h2>
-                        <p>
-                            I am expanding my expertise in Sports Mental & Team
-                            Coaching to complement my business background. I
-                            believe sports are about more than physical
-                            endurance but they build the inner strength and
-                            resilience needed to manage high-pressure
-                            situations. This mindset translates perfectly from
-                            the pitch to the business world.
-                        </p>
-                        <details class="accordion">
-                            <summary>The Power of Mental Performance</summary>
-                            <div class="accordion-content">
-                                <p>
-                                    Sports have always been my anchor for mental
-                                    stamina and key energy source. Following 13
-                                    years of competitive handball, I continue to
-                                    challenge myself, whether it's a 30km run,
-                                    scuba diving, or tennis. Learning to
-                                    maintain sharp focus, staying calm under
-                                    pressure, and navigating failure all play a
-                                    vital role in my coaching process.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="hero-image-wrapper">
-                        <img
-                            src="pics/introduction-sport.jpg"
-                            alt="Zsófia Boros Sports Mindset"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="coaching" class="coaching-section">
-            <div class="container">
-                <div class="coaching-intro">
-                    <span class="section-kicker">The Methodology</span>
-                    <h2
-                        class="hero-title"
-                        style="font-size: clamp(2.2rem, 6vw, 3rem)"
+                    </p>
+                    <p class="about-coaching">
+                        In coaching, I do not hand out ready-made solutions.
+                        With focused questions, I help you get closer to seeing
+                        your worth more clearly.
+                        <span class="about-intro-highlight"
+                            >Because true success comes from within — and you
+                            are already enough</span
+                        >
+                    </p>
+                    <a class="button button-secondary" href="about.html"
+                        >More about Me</a
                     >
-                        What is Coaching?
-                    </h2>
-                    <p>
-                        For me, coaching is a
-                        <strong>creative partnership</strong>. It is a
-                        thought-provoking process centered on self-awareness. I
-                        am not giving you ready-made solutions, but we identify
-                        your inner resources and opportunities so you can move
-                        forward with greater authenticity whether in your career
-                        or your personal life.
-                    </p>
-                    <details class="accordion">
-                        <summary>Why work with me</summary>
-                        <div class="accordion-content">
-                            <p>
-                                True professional evolution requires more than
-                                just textbook theory. By combining an
-                                ICF-certified coaching framework with a decade
-                                of real-world leadership experience, I offer a
-                                partnership to elevate your career, impact, and
-                                personal growth.
-                            </p>
-                        </div>
-                    </details>
                 </div>
-
-                <div class="distinction-grid">
-                    <div class="distinction-card">
-                        <h3>ICF Certified Coaching</h3>
-                        <p>
-                            I bring the international gold standard of coaching,
-                            ensuring a highly professional and action-oriented
-                            framework.
-                        </p>
-                    </div>
-                    <div class="distinction-card">
-                        <h3>Corporate Leadership</h3>
-                        <p>
-                            Managing multi-million-dollar brands and diverse
-                            teams, I know organizational complexity and
-                            executive pressure.
-                        </p>
-                    </div>
-                    <div class="distinction-card">
-                        <h3>Expat Insights</h3>
-                        <p>
-                            I understand the unique emotional and professional
-                            shifts required to thrive, adapt, and build a
-                            successful life in a new country.
-                        </p>
-                    </div>
-                </div>
-
-                <span class="section-kicker">Support Scenarios</span>
-                <h2 class="hero-title" style="font-size: 2.5rem">
-                    How can I support you?
-                </h2>
-                <p style="margin-bottom: 40px">
-                    Coaching can address a wide range of challenges. Here are a
-                    few key areas where I partner with my clients most often.
-                </p>
-
-                <div class="scenarios-grid">
-                    <div class="scenario-card">
-                        <svg
-                            class="scenario-icon"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                            ></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                        <h3
-                            style="
-                                margin-bottom: 12px;
-                                font-family: &quot;Manrope&quot;, sans-serif;
-                                font-weight: 800;
-                                font-size: 1.1rem;
-                                color: var(--green-950);
-                            "
-                        >
-                            Leadership Challenges
-                        </h3>
-                        <p style="font-size: 0.95rem">
-                            New roles, promotions, or overcoming "executive
-                            loneliness" through structured thinking.
-                        </p>
-                    </div>
-
-                    <div class="scenario-card">
-                        <svg
-                            class="scenario-icon"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                            ></path>
-                        </svg>
-
-                        <h3
-                            style="
-                                margin-bottom: 12px;
-                                font-family: &quot;Manrope&quot;, sans-serif;
-                                font-weight: 800;
-                                font-size: 1.1rem;
-                                color: var(--green-950);
-                            "
-                        >
-                            International Transitions
-                        </h3>
-                        <p style="font-size: 0.95rem">
-                            Pressure to perform in a new job, overcoming
-                            relocation or navigating long-distance
-                            relationships.
-                        </p>
-                    </div>
-
-                    <div class="scenario-card">
-                        <svg
-                            class="scenario-icon"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path d="M23 4v6h-6"></path>
-                            <path d="M1 20v-6h6"></path>
-                            <path
-                                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
-                            ></path>
-                        </svg>
-                        <h3
-                            style="
-                                margin-bottom: 12px;
-                                font-family: &quot;Manrope&quot;, sans-serif;
-                                font-weight: 800;
-                                font-size: 1.1rem;
-                                color: var(--green-950);
-                            "
-                        >
-                            Change & Stress
-                        </h3>
-                        <p style="font-size: 0.95rem">
-                            Career pivots, returning to work after a break, or
-                            active burnout prevention.
-                        </p>
-                    </div>
-
-                    <div class="scenario-card">
-                        <svg
-                            class="scenario-icon"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polygon
-                                points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
-                            ></polygon>
-                        </svg>
-                        <h3
-                            style="
-                                margin-bottom: 12px;
-                                font-family: &quot;Manrope&quot;, sans-serif;
-                                font-weight: 800;
-                                font-size: 1.1rem;
-                                color: var(--green-950);
-                            "
-                        >
-                            Finding Direction
-                        </h3>
-                        <p style="font-size: 0.95rem">
-                            Consciously building your next chapter instead of
-                            just drifting with the current.
-                        </p>
-                    </div>
-
-                    <div class="scenario-card">
-                        <svg
-                            class="scenario-icon"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                            ></path>
-                        </svg>
-                        <h3
-                            style="
-                                margin-bottom: 12px;
-                                font-family: &quot;Manrope&quot;, sans-serif;
-                                font-weight: 800;
-                                font-size: 1.1rem;
-                                color: var(--green-950);
-                            "
-                        >
-                            Whatever is on your mind
-                        </h3>
-                        <p style="font-size: 0.95rem">
-                            If you feel stuck RIGHT NOW and need a structured,
-                            collaborative thinking process.
-                        </p>
-                    </div>
-                </div>
-
-                <div style="margin-top: 80px">
-                    <span class="section-kicker">The Process</span>
-                    <h2 class="hero-title" style="font-size: 3rem">
-                        How do we work together?
-                    </h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 40px">
-                        An action- and results-oriented journey focused entirely
-                        on you.
-                    </p>
-                </div>
-
-                <div class="process-info">
-                    <div class="process-item">
-                        <h4>Introduction</h4>
-                        <p>
-                            Free 30-minute online call to define the framework.
-                        </p>
-                    </div>
-                    <div class="process-item">
-                        <h4>Session</h4>
-                        <p>50 minutes per session,<br />every 1–3 weeks.</p>
-                    </div>
-                    <div class="process-item">
-                        <h4>Duration</h4>
-                        <p>Typically 5–8 sessions for meaningful change.</p>
-                    </div>
-                    <div class="process-item">
-                        <h4>Location</h4>
-                        <p>Online or in person sessions based in Budapest.</p>
-                    </div>
+                <div data-reveal>
+                    <img
+                        class="about-intro-image"
+                        src="pics/introduction-talk.jpg"
+                        alt="Boros Zsofia in a coaching session"
+                    />
                 </div>
             </div>
         </section>
 
-        <section id="endorsement" class="endorsement-section">
+        <section id="faq" class="faq-section">
             <div class="container">
-                <span class="section-kicker">Testimonials</span>
-                <h2
-                    class="hero-title"
-                    style="
-                        font-size: clamp(2.2rem, 6vw, 3rem);
-                        margin-bottom: 0;
-                    "
-                >
-                    Client Endorsements
-                </h2>
-                <p
-                    style="
-                        text-align: center;
-                        font-size: 0.8rem;
-                        color: var(--gray-500);
-                        margin: 30px 0 0 0;
-                    "
-                    class="cta-mobile"
-                >
-                    ← Swipe to read more →
-                </p>
-
-                <div class="carousel-nav">
-                    <button class="nav-btn" id="prevBtn" aria-label="Previous">
-                        <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <line x1="19" y1="12" x2="5" y2="12"></line>
-                            <polyline points="12 19 5 12 12 5"></polyline>
-                        </svg>
-                    </button>
-                    <button class="nav-btn" id="nextBtn" aria-label="Next">
-                        <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="endorsement-carousel">
-                    <!-- Emese -->
-                    <div class="endorsement-card">
-                        <div class="endorsement-header">
-                            <img
-                                src="pics/emese.jpg"
-                                alt="Emese"
-                                class="endorsement-img"
-                            />
-                            <div class="endorsement-info">
-                                <h4>Emese</h4>
-                                <p>Sales Executive Director - FLP Hungary</p>
-                            </div>
-                        </div>
-                        <p class="endorsement-text">
-                            I had the opportunity to work with Zsófi in an
-                            Executive Business Coaching series as I was stepping
-                            into a new leadership role.
-                            <b
-                                >Zsófi didn’t offer tools but she created
-                                strategic clarity.</b
-                            >
-                            Together we explored the leadership attitude and
-                            decision patterns that are truly mine. Her questions
-                            helped me separate role expectations from my
-                            authentic self, allowing me to step into my new
-                            position with confidence.
-                            <b
-                                >I highly recommend her to leaders seeking clear
-                                self-alignment and a stable presence.</b
-                            >
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-title-line" aria-hidden="true"></div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>
+                            1. What does it mean that you are an ICF ACC
+                            credentialed coach?
+                        </summary>
+                        <p>
+                            ICF - International Coaching Federation is the most
+                            recognized coaching organization in the world. ACC
+                            credentialing requires at least 60+ hours of
+                            accredited training and 100+ hours of verified
+                            client practice, both of which I exceed. It is a
+                            quality guarantee that our work follows strong
+                            ethics and a structured methodology.
                         </p>
-                    </div>
-
-                    <!-- Ferenc -->
-                    <div class="endorsement-card">
-                        <div class="endorsement-header">
-                            <img
-                                src="pics/ferenc.png"
-                                alt="Ferenc"
-                                class="endorsement-img"
-                            />
-                            <div class="endorsement-info">
-                                <h4>Ferenc</h4>
-                                <p>Professional Poker Player & Entrepreneur</p>
-                            </div>
-                        </div>
-                        <p class="endorsement-text">
-                            I’ve worked with several coaches before, but with
-                            Zsófi, it was the first time I felt someone is truly
-                            present and pours real energy into the process. Her
-                            questions often lead me in directions I wouldn't
-                            have reached on my own, and I’ve noticed the impact
-                            of our conversations in my daily life.
-                            <b
-                                >What’s also unique is how intense and focused
-                                each session is hence time just flies by. For
-                                me, this has clearly been a rewarding and
-                                valuable process.</b
-                            >
+                    </details>
+                    <details class="faq-item">
+                        <summary>
+                            2. How do I know if coaching is right for me?
+                        </summary>
+                        <p>
+                            If you look successful on the outside but struggle
+                            with the constant inner pressure and the need to
+                            prove yourself, this process is likely for you. Your
+                            life does not need to be falling apart; coaching
+                            helps you build a more authentic way of operating.
                         </p>
-                    </div>
-
-                    <!-- Dávid -->
-                    <div class="endorsement-card">
-                        <div class="endorsement-header">
-                            <img
-                                src="pics/david.jpg"
-                                alt="Dávid"
-                                class="endorsement-img"
-                            />
-                            <div class="endorsement-info">
-                                <h4>Dávid</h4>
-                                <p>Senior Supply Planner - Vodafone</p>
-                            </div>
-                        </div>
-                        <p class="endorsement-text">
-                            When I reached out to Zsófi, I felt I was completely
-                            pushing my own needs aside, with my goals ending up
-                            at the very bottom of my priority list. The most
-                            vital breakthrough during our work together was
-                            realizing the importance of setting healthy
-                            boundaries: I learned how to say no without guilt.
-                            The biggest shift is that I am finally moving toward
-                            my goals, gaining a huge boost in self-confidence
-                            along the way.
-                            <b
-                                >I make decisions more boldly now and truly
-                                believe in my ability to achieve what I set my
-                                mind to.</b
-                            >
+                    </details>
+                    <details class="faq-item">
+                        <summary>
+                            3. What is the difference between coaching and
+                            therapy?
+                        </summary>
+                        <p>
+                            A coach is like a performance trainer: we build on
+                            your current strengths to help you reach your future
+                            goals. A therapist focuses more on healing deeper
+                            wounds rooted in the past.
                         </p>
-                    </div>
-
-                    <!-- Barbara -->
-                    <div class="endorsement-card">
-                        <div class="endorsement-header">
-                            <img
-                                src="pics/barbara.jpg"
-                                alt="Barbara"
-                                class="endorsement-img"
-                            />
-                            <div class="endorsement-info">
-                                <h4>Barbara</h4>
-                                <p>Construction Project Manager - CTP</p>
-                            </div>
-                        </div>
-                        <p class="endorsement-text">
-                            I was facing a setback that I couldn’t quite define
-                            on my own at first. Zsófi helped guide me to the
-                            root of the problem, and we resolved issues I hadn't
-                            even considered in the beginning. My most important
-                            realization was that when we dare to dig deep
-                            enough, it becomes much easier to shape myself.
-                            <b
-                                >The coaching process was so effective that the
-                                many question marks inside me settled much
-                                sooner than expected. Zsófi handles low points
-                                with professional care, I would wholeheartedly
-                                recommend her as a coach to anyone.</b
-                            >
+                    </details>
+                    <details class="faq-item">
+                        <summary>
+                            4. How much time does this require in a busy life?
+                        </summary>
+                        <p>
+                            We usually meet every 1-3 weeks for 50-minute
+                            sessions. Between sessions, you continue with
+                            practical reflections that fit into everyday life.
+                            The process is personalized, and the goal is not to
+                            add pressure but to create clarity and energy.
                         </p>
-                    </div>
-
-                    <!-- Zsuzsa -->
-                    <div class="endorsement-card">
-                        <div class="endorsement-header">
-                            <img
-                                src="pics/zsuzsa.png"
-                                alt="Zsuzsa"
-                                class="endorsement-img"
-                            />
-                            <div class="endorsement-info">
-                                <h4>Zsuzsa</h4>
-                                <p>Team Leader - VOIS</p>
-                            </div>
-                        </div>
-                        <p class="endorsement-text">
-                            I reached out to Zsófi with a challenge I had been
-                            struggling with for quite some time, yet had been
-                            unable to take the necessary steps forward. Through
-                            her insightful questions, Zsófi didn't just gently
-                            guide my thinking, she played a key role in
-                            transforming the vague, shaping ideas in my head
-                            into something clear and tangible.
-                            <b
-                                >She kept me focused throughout, and our
-                                sessions were structured, dynamic, and genuinely
-                                enjoyable.</b
-                            >
+                    </details>
+                    <details class="faq-item">
+                        <summary>5. Do we meet online or in person?</summary>
+                        <p>
+                            We adapt to your schedule. Sessions can be fully
+                            online from anywhere in the world, and in-person
+                            sessions are also available in Budapest, District
+                            XIII.
                         </p>
-                    </div>
-
-                    <!-- Alex -->
-                    <div class="endorsement-card">
-                        <div class="endorsement-header">
-                            <img
-                                src="pics/alex.jpg"
-                                alt="Alex"
-                                class="endorsement-img"
-                            />
-                            <div class="endorsement-info">
-                                <h4>Alex</h4>
-                                <p>Initiative Leader - Procter & Gamble</p>
-                            </div>
-                        </div>
-                        <p class="endorsement-text">
-                            I was tired of the work I was doing and didn't see
-                            the perspective of where I wanted to move further so
-                            I could enjoy it as well. During the sessions I have
-                            realized, I know already how to regulate myself, I
-                            just needed to consciously choose it after a
-                            reminder. I've completed all the aligned steps that
-                            I had for myself and now, after clearing my mind, I
-                            can enjoy what I'm doing.
-                            <b
-                                >I would recommend Zsófi to those who are
-                                overthinkers to have their thoughts in order.</b
-                            >
+                    </details>
+                    <details class="faq-item">
+                        <summary>
+                            6. What is a free 30-minute consultation?
+                        </summary>
+                        <p>
+                            It is a simple conversation, to discuss your current
+                            situation, clarify your questions, and I explain how
+                            I work. We check if we have the right fit for
+                            working together. It is fully free, online, and
+                            comes with no obligation.
                         </p>
-                    </div>
+                    </details>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact-section">
             <div class="container">
-                <span class="section-kicker">Get in Touch</span>
-                <h2
-                    class="hero-title"
-                    style="font-size: clamp(2.2rem, 6vw, 3rem)"
-                >
-                    Let's Start a Conversation
-                </h2>
-
-                <div style="margin-bottom: 3rem">
+                <div class="contact-intro">
+                    <h2
+                        class="hero-title"
+                        style="font-size: clamp(2.4rem, 6vw, 3.2rem)"
+                    >
+                        You don't have to keep running in circles.
+                    </h2>
+                    <div class="contact-title-line" aria-hidden="true"></div>
+                    <p>
+                        If you feel it's time for change — that's enough. Let's
+                        talk. Book a free 30-minute conversation to see how I
+                        can support you.
+                    </p>
                     <a
-                        href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                        href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Inquiry%20%7C%20Request%20Free%20Consultation&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%27d%20like%20to%20book%20a%20free%2030-minute%20introductory%20conversation.%20I%27m%20interested%20in%20your%20coaching%20process%20and%20how%20we%20could%20work%20together.%0D%0A%0D%0ABest%20regards%2C"
                         class="button button-primary"
                     >
-                        Book a Free Coffee Chat
+                        BOOK FREE CONSULTATION
                     </a>
+                    <div
+                        class="contact-points"
+                        aria-label="Conversation details"
+                    >
+                        <span>30 minutes</span>
+                        <span>Free</span>
+                        <span>No obligation</span>
+                        <span>Confidential conversation</span>
+                    </div>
                 </div>
 
                 <div class="contact-grid">
                     <a
-                        href="mailto:boros.zsofia@gmail.com?subject=🔆 Coaching%20Inquiry%20%7C%20Book%20a%20Free%20Coffee%20Chat&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI’ve%20visited%20your%20website%20and%20would%20love%20to%20learn%20more%20about%20your%20coaching%20process.%20I’m%20interested%20in%20booking%20a%20free%2030-minute%20virtual%20coffee%20chat%20to%20see%20how%20we%20could%20partner%20together.%0D%0A%0D%0ABest%20regards%2C"
+                        href="mailto:boros.zsofia@gmail.com?subject=🔆%20Coaching%20Inquiry%20%7C%20Request%20Free%20Consultation&body=Hello%20Zs%C3%B3fi%2C%0D%0A%0D%0AI%27d%20like%20to%20book%20a%20free%2030-minute%20introductory%20conversation.%20I%27m%20interested%20in%20your%20coaching%20process%20and%20how%20we%20could%20work%20together.%0D%0A%0D%0ABest%20regards%2C"
                         class="contact-card"
                     >
                         <div class="contact-icon-box">
@@ -1834,6 +2471,25 @@
                     if (mobileMenu.classList.contains("is-active")) {
                         mobileMenu.classList.remove("is-active");
                     }
+                });
+            });
+
+            // Make entire FAQ item clickable (not only summary text)
+            document.querySelectorAll(".faq-item").forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    if (event.target.closest("summary")) {
+                        return;
+                    }
+
+                    if (
+                        event.target.closest(
+                            "a, button, input, textarea, select, label",
+                        )
+                    ) {
+                        return;
+                    }
+
+                    item.open = !item.open;
                 });
             });
 
