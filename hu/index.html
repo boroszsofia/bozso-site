@@ -2441,24 +2441,30 @@
                 carousel.insertAdjacentHTML("beforeend", originalHTML);
 
                 // 3. Append clones of the first `baseCardCount` cards
-                for (let i = 0; i < baseCardCount; i++) { carousel.appendChild(originalCards[i].cloneNode(true)); } // Now the
-        carousel has the structure: [cloned_last_N, original_N, cloned_first_N] // The original cards start at index
-                    `baseCardCount`.let isJumping = false; let initialScrollPosition = 0; let stride = 0; const updateDimensions = () => {
-                        // Force re-calculation of offsets based on current layout
-                        const firstOriginal = carousel.children[baseCardCount];
-                        const secondOriginal =
-                            carousel.children[baseCardCount + 1];
+                for (let i = 0; i < baseCardCount; i++) {
+                    carousel.appendChild(originalCards[i].cloneNode(true));
+                }
+                // The carousel is [cloned_last_N, original_N, cloned_first_N].
+                // The original cards start at index baseCardCount.
+                let isJumping = false;
+                let initialScrollPosition = 0;
+                let stride = 0;
+                const updateDimensions = () => {
+                    // Force re-calculation of offsets based on current layout
+                    const firstOriginal = carousel.children[baseCardCount];
+                    const secondOriginal =
+                        carousel.children[baseCardCount + 1];
 
-                        // Calculate actual distance between card centers
-                        stride =
-                            secondOriginal.offsetLeft -
-                            firstOriginal.offsetLeft;
-                        // Calculate the scroll position required to center the first original card
-                        initialScrollPosition =
-                            firstOriginal.offsetLeft -
-                            carousel.offsetWidth / 2 +
-                            firstOriginal.offsetWidth / 2;
-                    };
+                    // Calculate actual distance between card centers
+                    stride =
+                        secondOriginal.offsetLeft -
+                        firstOriginal.offsetLeft;
+                    // Calculate the scroll position required to center the first original card
+                    initialScrollPosition =
+                        firstOriginal.offsetLeft -
+                        carousel.offsetWidth / 2 +
+                        firstOriginal.offsetWidth / 2;
+                };
 
                 // Initialize dimensions and starting position
                 updateDimensions();
