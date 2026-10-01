@@ -554,8 +554,18 @@
         }
 
         .booking-section {
-            padding: 40px 0 80px;
+            padding: 100px 0;
             background: #17382d;
+        }
+
+        .booking-section .container {
+            max-width: 1120px;
+        }
+
+        .booking-section .contact-intro {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .booking-section h2 {
@@ -564,6 +574,16 @@
 
         .booking-section p {
             color: rgba(251, 252, 251, 0.82);
+        }
+
+        .booking-section .contact-intro p {
+            max-width: 560px;
+            margin: 0 auto 28px;
+            font-size: 1.1rem;
+        }
+
+        .booking-section .cta-title-line {
+            margin-bottom: 30px;
         }
 
         .booking-section .booking-form-note {
@@ -579,6 +599,12 @@
             border-radius: 12px;
             background: var(--white);
             box-shadow: var(--shadow-strong);
+        }
+
+        .booking-section .booking-form button {
+            padding: 16px 26px;
+            font-size: 0.98rem;
+            text-transform: none;
         }
 
         .booking-form label {
@@ -708,7 +734,9 @@
                     <a href="../hu/ugyfelvelemenyek.html">Ajánlások</a>
                     <a href="#top">Rólam</a>
                     <a href="#booking">Kapcsolat</a>
-                    <a href="../about.html">Hu | En</a>
+                    <a href="../about.html" aria-label="Switch to English" title="Switch to English"><span
+                            aria-hidden="true"><img src="../pics/brit%20z%C3%A1szl%C3%B3.png" alt="" width="28"
+                                height="20" style="object-fit: contain; vertical-align: middle;"></span></a>
                 </nav>
 
                 <div class="header-right">
@@ -726,7 +754,9 @@
                     <a href="../hu/ugyfelvelemenyek.html">Ajánlások</a>
                     <a href="#top">Rólam</a>
                     <a href="#booking">Kapcsolat</a>
-                    <a href="../about.html">Hu | En</a>
+                    <a href="../about.html" aria-label="Switch to English" title="Switch to English"><span
+                            aria-hidden="true"><img src="../pics/brit%20z%C3%A1szl%C3%B3.png" alt="" width="28"
+                                height="20" style="object-fit: contain; vertical-align: middle;"></span></a>
                 </nav>
             </div>
         </div>
@@ -967,45 +997,46 @@
         </div>
     </section>
 
-    <section class="cta-section" id="kapcsolat">
+    <section class="booking-section" id="kapcsolat">
         <div class="container">
-            <h2 class="section-title">Szívesen dolgoznál velem?</h2>
-            <div class="cta-title-line" aria-hidden="true"></div>
-            <p>
-                Foglalj egy ingyenes 30 perces konzultációt, és nézzük meg,
-                hogyan tudlak támogatni.
-            </p>
-            <a class="button button-primary" href="#booking">Ingyenes
-                konzultáció foglalása</a>
-        </div>
-    </section>
-
-    <section class="cta-section booking-section" id="booking">
-        <div class="container">
-            <h2 class="section-title">Kérj ingyenes konzultációt</h2>
-            <form id="booking-form" class="booking-form" action="https://formspree.io/f/xnpnlgaz" method="POST">
-                <input type="hidden" name="_subject" value="Jelentkezés ingyenes konzultációra">
-                <div class="booking-result booking-result-success" data-fs-success role="status" aria-live="polite">
-                    Köszönöm, megkaptam a jelentkezésed. Ez még nem végleges időpontfoglalás. Hamarosan e-mailben
-                    jelentkezem az időpont egyeztetéséhez; a megbeszélt alkalomra Google Meet-meghívót küldök. Ha nem
-                    találod a levelem, nézd meg a levélszemét mappát is.</div>
-                <div class="booking-result booking-result-error" data-fs-error role="alert">Nem sikerült elküldeni a
-                    jelentkezést. Kérlek, próbáld újra néhány perc múlva.</div>
-                <label for="booking-name">Név
-                    <input id="booking-name" name="name" type="text" autocomplete="name" data-fs-field required>
-                </label>
-                <label for="booking-email">E-mail-cím
-                    <input id="booking-email" name="email" type="email" autocomplete="email" data-fs-field required>
-                </label>
-                <label for="booking-time">Mikor lenne neked megfelelő az első alkalom?
-                    <textarea id="booking-time" name="preferred_time" rows="3"
-                        placeholder="Például: kedd délelőtt vagy csütörtök 14 óra után" data-fs-field
-                        required></textarea>
-                </label>
-                <button class="button button-primary" type="submit" data-fs-submit-btn>Jelentkezés elküldése</button>
-                <p class="booking-form-note">A megadott adatokat kizárólag a kapcsolatfelvételhez és az időpont
-                    egyeztetéséhez használom. Ez még nem végleges időpontfoglalás.</p>
-            </form>
+            <div class="contact-intro">
+                <h2 class="hero-title" style="font-size: clamp(2.4rem, 6vw, 3.2rem)">
+                    Nem kell tovább ugyanazokat a köröket futnod.
+                </h2>
+                <div class="cta-title-line" aria-hidden="true"></div>
+                <p>
+                    Elég, ha érzed, hogy valamin szeretnél változtatni. Egyeztessünk egy ingyenes, 30 perces
+                    beszélgetést,
+                    és nézzük meg, miben tudlak támogatni.
+                </p>
+                <div id="booking">
+                    <form id="booking-form" class="booking-form" action="https://formspree.io/f/xnpnlgaz" method="POST">
+                        <input type="hidden" name="_subject" value="Jelentkezés ingyenes konzultációra">
+                        <div class="booking-result booking-result-success" data-fs-success role="status"
+                            aria-live="polite">
+                            Köszönöm, megkaptam az időpontjaidat. Hamarosan e-mailben jelentkezem a részletekkel.
+                        </div>
+                        <div class="booking-result booking-result-error" data-fs-error role="alert">Nem sikerült
+                            elküldeni a
+                            jelentkezést. Kérlek, próbáld újra néhány perc múlva.</div>
+                        <label for="booking-name">Név
+                            <input id="booking-name" name="name" type="text" autocomplete="name" data-fs-field required>
+                        </label>
+                        <label for="booking-email">E-mail-cím
+                            <input id="booking-email" name="email" type="email" autocomplete="email" data-fs-field
+                                required>
+                        </label>
+                        <label for="booking-time">Melyik időpontok jók neked a 30 perces online konzultációra?*
+                            <textarea id="booking-time" name="preferred_time" rows="3"
+                                placeholder="Írj 2–3 számodra megfelelő időpontot, én pedig ezek valamelyikére 24 órán belül küldöm a Google Meet-meghívót."
+                                data-fs-field required></textarea>
+                        </label>
+                        <button class="button button-primary" type="submit" data-fs-submit-btn>Időpontot kérek</button>
+                        <p class="booking-form-note">A megadott adatokat kizárólag a kapcsolatfelvételhez és az időpont
+                            egyeztetéséhez használom. Ez még nem végleges időpontfoglalás.</p>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
