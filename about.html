@@ -242,6 +242,18 @@
             border-bottom: 1px solid var(--line);
         }
 
+        .nav-mobile a.nav-booking-cta {
+            background: linear-gradient(135deg, var(--green-600), var(--green-700));
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .nav-mobile a.nav-booking-cta:hover,
+        .nav-mobile a.nav-booking-cta:focus-visible {
+            background: var(--green-700);
+            color: var(--white);
+        }
+
         .nav-mobile a:last-child {
             border-bottom: none;
         }
@@ -742,7 +754,7 @@
                 </nav>
 
                 <div class="header-right">
-                    <a href="#booking" class="button button-primary button-sm">
+                    <a href="https://calendly.com/boros-zsofia/freecall" class="button button-primary button-sm">
                         <span class="cta-mobile">BOOK A CHAT</span>
                         <span class="cta-desktop">Request Free Consultation</span>
                     </a>
@@ -756,6 +768,7 @@
                     <a href="testimonials.html">Testimonials</a>
                     <a href="#top">About Me</a>
                     <a href="#booking">Contact</a>
+                    <a class="nav-booking-cta" href="https://calendly.com/boros-zsofia/freecall">Free consultation</a>
                     <a href="/hu/rolam.html" aria-label="Switch to Hungarian" title="Switch to Hungarian"><span
                             aria-hidden="true"><img src="pics/Magyar%20z%C3%A1szl%C3%B3.png" alt="" width="34"
                                 height="24" style="object-fit: contain; vertical-align: middle;"></span></a>
@@ -772,7 +785,9 @@
                     <span class="green-highlight">Hi, I'm Zsófi!</span>
                 </h1>
                 <p class="icf-qualification">
-                    ICF ACC credentialed Business & Mental Coach.
+                    I am an ICF ACC-credentialed Business and Mental Coach with over 10 years of international
+                    leadership experience. I’m currently studying schema coaching to better understand what drives human
+                    behaviour.
                 </p>
             </div>
             <div class="story-grid intro-story-grid">
@@ -846,9 +861,9 @@
     <section class="story-section" id="expat">
         <div class="container">
             <div class="story-heading">
-                <span class="section-kicker">Expat Years in Switzerland</span>
+                <span class="section-kicker">Living and Working Abroadland</span>
                 <h2 class="section-title sm">
-                    <span class="green-highlight">Living and Working Abroad</span>
+                    <span class="green-highlight">Expat Coaching</span>
                 </h2>
             </div>
             <div class="story-grid">
@@ -880,9 +895,9 @@
     <section class="story-section alt" id="sport">
         <div class="container">
             <div class="story-heading">
-                <span class="section-kicker">Sport Mental and Team Coaching</span>
+                <span class="section-kicker">Sport and Mental Strength</span>
                 <h2 class="section-title sm">
-                    <span class="green-highlight">Sport and Mental Strength</span>
+                    <span class="green-highlight">Sport Mental and Team Coaching</span>
                 </h2>
             </div>
             <div class="story-grid">
@@ -901,12 +916,12 @@
                             strength and mindset that matter both in sport
                             and in business.
                         </strong>
-                        <br /><br />
+                        <br />
                         It taught me to stay focused, remain calm under
                         pressure, and handle setbacks. These skills often
-                        appear in coaching. Building on my athletic and
-                        leadership experience, I am currently completing a
-                        Sport Mental Coaching and Team Coach qualification.
+                        appear in coaching. <strong>As the co-founder of Mental Ascend, I also support athletes in
+                            developing
+                            their mental performance.</strong>
                     </p>
                 </div>
                 <div class="story-image">
@@ -1005,33 +1020,8 @@
                     how I can support you.
                 </p>
                 <div id="booking">
-                    <form id="booking-form" class="booking-form" action="https://formspree.io/f/xnpnlgaz" method="POST">
-                        <input type="hidden" name="_subject" value="Free consultation request">
-                        <div class="booking-result booking-result-success" data-fs-success role="status"
-                            aria-live="polite">
-                            Thank you, I have received your available times. I'll email you shortly with the details.
-                        </div>
-                        <div class="booking-result booking-result-error" data-fs-error role="alert">Your request could
-                            not
-                            be sent. Please try again in a few minutes.</div>
-                        <label for="booking-name">Name
-                            <input id="booking-name" name="name" type="text" autocomplete="name" data-fs-field required>
-                        </label>
-                        <label for="booking-email">Email address
-                            <input id="booking-email" name="email" type="email" autocomplete="email" data-fs-field
-                                required>
-                        </label>
-                        <label for="booking-time">Which times would work for you for a 30-minute online consultation? *
-                            <textarea id="booking-time" name="preferred_time" rows="3"
-                                placeholder="Share 2-3 possible time slots, and I'll send a Google Meet invitation for one of them within 24 hours."
-                                data-fs-field required></textarea>
-                        </label>
-                        <button class="button button-primary" type="submit" data-fs-submit-btn>Book Free
-                            Consultation</button>
-                        <p class="booking-form-note">I will use your details only to respond and arrange a time. This is
-                            not
-                            a confirmed booking.</p>
-                    </form>
+                    <a class="button button-primary" href="https://calendly.com/boros-zsofia/freecall">Book Free
+                        Consultation</a>
                 </div>
             </div>
         </div>
@@ -1063,16 +1053,6 @@
             }
         });
     </script>
-    <script>
-        window.formspree = window.formspree || function () {
-            (window.formspree.q = window.formspree.q || []).push(arguments);
-        };
-        window.formspree("initForm", {
-            formElement: "#booking-form",
-            formId: "xnpnlgaz",
-        });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 
 </html>

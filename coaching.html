@@ -242,6 +242,18 @@
             border-bottom: 1px solid var(--line);
         }
 
+        .nav-mobile a.nav-booking-cta {
+            background: linear-gradient(135deg, var(--green-600), var(--green-700));
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .nav-mobile a.nav-booking-cta:hover,
+        .nav-mobile a.nav-booking-cta:focus-visible {
+            background: var(--green-700);
+            color: var(--white);
+        }
+
         .nav-mobile a:last-child {
             border-bottom: none;
         }
@@ -459,6 +471,11 @@
             color: var(--green-800);
             font-weight: 700;
             line-height: 1.5;
+        }
+
+        .service-price a {
+            color: inherit;
+            text-underline-offset: 3px;
         }
 
         .service-price .price-label {
@@ -809,7 +826,7 @@
                 </nav>
 
                 <div class="header-right">
-                    <a href="#booking" class="button button-primary button-sm">
+                    <a href="https://calendly.com/boros-zsofia/freecall" class="button button-primary button-sm">
                         <span class="cta-mobile">BOOK A CHAT</span>
                         <span class="cta-desktop">Book Free Consultation</span>
                     </a>
@@ -823,6 +840,7 @@
                     <a href="testimonials.html">Testimonials</a>
                     <a href="about.html">About Me</a>
                     <a href="#booking">Contact</a>
+                    <a class="nav-booking-cta" href="https://calendly.com/boros-zsofia/freecall">Free consultation</a>
                     <a href="/hu/coaching.html" aria-label="Switch to Hungarian" title="Switch to Hungarian"><span
                             aria-hidden="true"><img src="pics/Magyar%20z%C3%A1szl%C3%B3.png" alt="" width="34"
                                 height="24" style="object-fit: contain; vertical-align: middle;"></span></a>
@@ -874,8 +892,8 @@
                     </div>
                     <div class="service-price">
                         <span class="price-label">Price</span>
-                        20,000 HUF / session*<br />
-                        100,000 HUF / 5 + 1 bonus session*
+                        70 EUR / session*<br />
+                        350 EUR / 5 + 1 bonus session*
                     </div>
                 </article>
                 <article class="service-card">
@@ -893,7 +911,8 @@
                     </div>
                     <div class="service-price">
                         <span class="price-label">Price</span>
-                        Discussed during consultation
+                        70 EUR / session*<br />
+                        350 EUR / 5 + 1 bonus session*
                     </div>
                 </article>
                 <article class="service-card">
@@ -910,8 +929,8 @@
                         </ul>
                     </div>
                     <div class="service-price">
-                        <span class="price-label">Price</span>
-                        Discussed during consultation
+                        <span class="price-label">Details</span>
+                        <a href="https://www.mentalascend.hu" target="_blank" rel="noopener noreferrer">See details at www.mentalascend.hu</a>
                     </div>
                 </article>
                 <article class="service-card">
@@ -1004,33 +1023,7 @@
                     how I can support you.
                 </p>
                 <div id="booking">
-                    <form id="booking-form" class="booking-form" action="https://formspree.io/f/xnpnlgaz" method="POST">
-                        <input type="hidden" name="_subject" value="Free consultation request">
-                        <div class="booking-result booking-result-success" data-fs-success role="status"
-                            aria-live="polite">
-                            Thank you, I have received your available times. I'll email you shortly with the details.
-                        </div>
-                        <div class="booking-result booking-result-error" data-fs-error role="alert">Your request could
-                            not
-                            be sent. Please try again in a few minutes.</div>
-                        <label for="booking-name">Name
-                            <input id="booking-name" name="name" type="text" autocomplete="name" data-fs-field required>
-                        </label>
-                        <label for="booking-email">Email address
-                            <input id="booking-email" name="email" type="email" autocomplete="email" data-fs-field
-                                required>
-                        </label>
-                        <label for="booking-time">Which times would work for you for a 30-minute online consultation? *
-                            <textarea id="booking-time" name="preferred_time" rows="3"
-                                placeholder="Share 2-3 possible time slots, and I'll send a Google Meet invitation for one of them within 24 hours."
-                                data-fs-field required></textarea>
-                        </label>
-                        <button class="button button-primary" type="submit" data-fs-submit-btn>Book Free
-                            Consultation</button>
-                        <p class="booking-form-note">I will use your details only to respond and arrange a time. This is
-                            not
-                            a confirmed booking.</p>
-                    </form>
+                    <a class="button button-primary" href="https://calendly.com/boros-zsofia/freecall">Book Free Consultation</a>
                 </div>
             </div>
         </div>
@@ -1062,16 +1055,6 @@
             }
         });
     </script>
-    <script>
-        window.formspree = window.formspree || function () {
-            (window.formspree.q = window.formspree.q || []).push(arguments);
-        };
-        window.formspree("initForm", {
-            formElement: "#booking-form",
-            formId: "xnpnlgaz",
-        });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 
 </html>
